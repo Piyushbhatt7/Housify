@@ -46,7 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
 
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.only(left: 20, right: 20),
                     child: Form(
                       key: _formkey,
                       child: Column(
@@ -108,7 +108,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             
                             }, 
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.blue
+                              backgroundColor: Colors.pinkAccent
                             ),
                             
                             child: const Text("Login", style: TextStyle(fontSize: 22.0, color: Colors.white, fontWeight: FontWeight.bold),)
