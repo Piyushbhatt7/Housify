@@ -21,7 +21,9 @@ class _SplashScreenState extends State<SplashScreen> {
             Colors.amberAccent,
           ],
              begin: FractionalOffset(0, 0),
-             end: FractionalOffset(1, 0)
+             end: FractionalOffset(1, 0),
+             stops: [0,1],
+             tileMode: TileMode.clamp
           )
         ),
       ),
