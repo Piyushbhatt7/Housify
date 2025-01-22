@@ -8,6 +8,13 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+
+ final _formkey = GlobalKey<FormState>();
+ TextEditingController _emailTextEditingController = TextEditingController();
+ TextEditingController _passwordTextEditingController = TextEditingController();
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,6 +44,26 @@ class _LoginScreenState extends State<LoginScreen> {
                         color: Colors.white
                     ),
                   ),
+
+                  Form(
+                    key: _formkey,
+                    child: Column(
+                      children: [
+
+                        TextFormField(
+                          decoration: const InputDecoration(
+                            labelText: "Email",
+                          ),
+                          style:  const TextStyle(
+                            fontSize: 24,
+                          ),
+                          controller: _emailTextEditingController,
+                        )
+                      ],
+                    ),
+                       
+
+                  )
           ],
         ),
       )
