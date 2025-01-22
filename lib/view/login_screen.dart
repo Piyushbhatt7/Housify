@@ -26,12 +26,14 @@ class _LoginScreenState extends State<LoginScreen> {
         child: ListView(
           children: [
             Image.asset("images/logo.png"),
+               
                 const Text(
-                    "Welcome to Housify",
+                    "hello friend, \nWelcome back",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 28,
+                        fontSize: 30,
+                        letterSpacing: 3,
                         color: Colors.white
                     ),
                   ),
