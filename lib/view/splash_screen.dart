@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -14,32 +13,32 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          
-          gradient: LinearGradient(
-            colors: [
+            gradient: LinearGradient(
+          colors: [
             Colors.pinkAccent,
             Colors.amberAccent,
           ],
-             begin: FractionalOffset(0, 0),
-             end: FractionalOffset(1, 0),
-             stops: [0,1],
-             tileMode: TileMode.clamp,
-          )
-        ),
-        
+          begin: FractionalOffset(0, 0),
+          end: FractionalOffset(1, 0),
+          stops: [0, 1],
+          tileMode: TileMode.clamp,
+        )),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-
             children: [
-
-                Image.asset("images/splash.png"),
-
-                Text("Welcome to Housify", style: TextStyle(fontWeight: FontWeight.bold),)  
+              Image.asset("images/splash.png"),
+              Text(
+                "Welcome to Housify",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 28,
+                    color: Colors.white),
+              )
             ],
           ),
         ),
-     
       ),
     );
   }
