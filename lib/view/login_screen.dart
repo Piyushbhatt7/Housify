@@ -45,76 +45,82 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
 
-                  Form(
-                    key: _formkey,
-                    child: Column(
-                      children: [
-
-                        Padding(
-                          padding: const EdgeInsets.only(top: 26.0),
-                          child: TextFormField(
-                            decoration: const InputDecoration(
-                              labelText: "Email",
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Form(
+                      key: _formkey,
+                      child: Column(
+                        children: [
+                    
+                          Padding(
+                            padding: const EdgeInsets.only(top: 26.0),
+                            child: TextFormField(
+                              decoration: const InputDecoration(
+                                labelText: "Email",
+                              ),
+                              style:  const TextStyle(
+                                fontSize: 24,
+                              ),
+                              controller: _emailTextEditingController,
+                              validator: (valueEmail) {
+                            
+                                if(!valueEmail!.contains("@"))
+                                
+                                {
+                                    return "Please write valid email";   
+                                }
+                            
+                                    return null; 
+                              },
                             ),
-                            style:  const TextStyle(
-                              fontSize: 24,
-                            ),
-                            controller: _emailTextEditingController,
-                            validator: (valueEmail) {
-                          
-                              if(!valueEmail!.contains("@"))
-                              
-                              {
-                                  return "Please write valid email";   
-                              }
-                          
-                                  return null; 
-                            },
+                    
                           ),
-
-                        ),
-
-                           Padding(
-                          padding:  EdgeInsets.only(top: 21.0),
-                          child: TextFormField(
-                            decoration: const InputDecoration(
-                              labelText: "Password",
+                    
+                             Padding(
+                            padding:  EdgeInsets.only(top: 21.0),
+                            child: TextFormField(
+                              decoration: const InputDecoration(
+                                labelText: "Password",
+                              ),
+                              style:  const TextStyle(
+                                fontSize: 24,
+                              ),
+                              controller: _passwordTextEditingController,
+                              validator: (valuePassword) {
+                            
+                                if(valuePassword!.length < 6 )
+                                
+                                {
+                                    return "Password must be atleast 6 or more characters";   
+                                }
+                            
+                                    return null; 
+                              },
                             ),
-                            style:  const TextStyle(
-                              fontSize: 24,
-                            ),
-                            controller: _passwordTextEditingController,
-                            validator: (valuePassword) {
-                          
-                              if(valuePassword!.length < 6 )
-                              
-                              {
-                                  return "Password must be atleast 6 or more characters";   
-                              }
-                          
-                                  return null; 
-                            },
+                    
                           ),
-
-                        ),
-
-                        ElevatedButton(
-                          onPressed: ()
-                        {
-
-                        }, 
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.blue
-                        ),
-                        
-                        child: const Text("Login", style: TextStyle(fontSize: 22.0, color: Colors.white, fontWeight: FontWeight.bold),)
-                        
-                        )
-                        
-                      ],
+                    
+                          Padding(
+                            padding: const EdgeInsets.only(top: 25.0),
+                            child: ElevatedButton(
+                              onPressed: ()
+                            {
+                            
+                            }, 
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.blue
+                            ),
+                            
+                            child: const Text("Login", style: TextStyle(fontSize: 22.0, color: Colors.white, fontWeight: FontWeight.bold),)
+                            
+                            ),
+                          )
+                          
+                        ],
+                      ),
+                         
+                    
                     ),
-                       
-
                   )
           ],
         ),
