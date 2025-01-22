@@ -142,6 +142,32 @@ class _SignupScreenState extends State<SignupScreen> {
                               style:  const TextStyle(
                                 fontSize: 24,
                               ),
+                              controller: _firstNameTextEditingController,
+                              obscureText: true,
+                              validator: (valueFirstName) {
+                            
+                                if(valueFirstName!.isEmpty )
+                                
+                                {
+                                    return "Please write your first name";   
+                                }
+                            
+                                    return null; 
+                              },
+                              textCapitalization: TextCapitalization.words,
+                            ),
+                    
+                          ),
+
+                          Padding(
+                            padding:  EdgeInsets.only(top: 21.0),
+                            child: TextFormField(
+                              decoration: const InputDecoration(
+                                labelText: "LastName",
+                              ),
+                              style:  const TextStyle(
+                                fontSize: 24,
+                              ),
                               controller: _passwordTextEditingController,
                               obscureText: true,
                               validator: (valuePassword) {
