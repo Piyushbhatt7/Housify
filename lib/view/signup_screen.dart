@@ -70,11 +70,24 @@ class _SignupScreenState extends State<SignupScreen> {
             ),
 
             const Text("Tell us about you:", style: TextStyle(
-              fontSize: 30.0,
+              fontSize: 28.0,
               fontWeight: FontWeight.bold,
-              color: Colors.pinkAccent,
+              color: Colors.pink,
             ),
             textAlign: TextAlign.center,
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Form(
+              
+                key: _formkey,
+                child: Column(
+                  children: [
+                    
+                  ],
+                ),
+              ),
             )
           ],
         ),
