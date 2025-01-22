@@ -58,6 +58,15 @@ class _SignupScreenState extends State<SignupScreen> {
           stops: [0, 1],
           tileMode: TileMode.clamp,
         )),
+
+        child: ListView(
+          children: [
+
+            Image.asset("images/signup.png",
+            width: 240, 
+            )
+          ],
+        ),
       ),
     );
   }
