@@ -102,7 +102,12 @@ class _LoginScreenState extends State<LoginScreen> {
                           onPressed: ()
                         {
 
-                        }, child: const Text("Login", style: TextStyle(fontSize: 22.0, color: Colors.white, fontWeight: FontWeight.bold),)
+                        }, 
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.blue
+                        ),
+                        
+                        child: const Text("Login", style: TextStyle(fontSize: 22.0, color: Colors.white, fontWeight: FontWeight.bold),)
                         
                         )
                         
