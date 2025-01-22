@@ -15,7 +15,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
  TextEditingController _emailTextEditingController = TextEditingController();
  TextEditingController _passwordTextEditingController = TextEditingController();
- 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,7 +77,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     
                           ),
                     
-                             Padding(
+                            Padding(
                             padding:  EdgeInsets.only(top: 21.0),
                             child: TextFormField(
                               decoration: const InputDecoration(
