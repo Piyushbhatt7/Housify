@@ -27,7 +27,24 @@ class _LoginScreenState extends State<LoginScreen> {
         )),
 
         child: Center(
-          child: Padding(padding: const EdgeInsets.fromLTRB(50, 50, 50, 0)),
+          child: Padding(padding: const EdgeInsets.fromLTRB(50, 50, 50, 0),
+          
+          child: Column(
+            children: [
+              Image.asset("images/logo.png"),
+              const Text(
+                  "Welcome to Housify",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 28,
+                      color: Colors.white
+                      ),
+                ),
+            ],
+          ),
+          
+          ),
         ),
         ),
       ),
