@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:housify/view/signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -120,7 +121,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           
                           TextButton(onPressed: ()
                           {
-                               Get.to(page)
+                               Get.to(SignupScreen());
                           }, 
                           child: Text("Don't have an account? Create here",
                           
