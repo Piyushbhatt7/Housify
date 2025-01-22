@@ -50,24 +50,27 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Column(
                       children: [
 
-                        TextFormField(
-                          decoration: const InputDecoration(
-                            labelText: "Email",
+                        Padding(
+                          padding: const EdgeInsets.only(top: 26.0),
+                          child: TextFormField(
+                            decoration: const InputDecoration(
+                              labelText: "Email",
+                            ),
+                            style:  const TextStyle(
+                              fontSize: 24,
+                            ),
+                            controller: _emailTextEditingController,
+                            validator: (valueEmail) {
+                          
+                              if(!valueEmail!.contains("@"))
+                              
+                              {
+                                  return "Please write valid email";   
+                              }
+                          
+                                  return null; 
+                            },
                           ),
-                          style:  const TextStyle(
-                            fontSize: 24,
-                          ),
-                          controller: _emailTextEditingController,
-                          validator: (valueEmail) {
-
-                            if(!valueEmail!.contains("@"))
-                            
-                            {
-                                return "Please write valid email";   
-                            }
-
-                                return null; 
-                          },
                         ),
                       ],
                     ),
