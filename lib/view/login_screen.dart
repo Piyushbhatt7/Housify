@@ -41,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 30,
+                        fontSize: 28,
                         letterSpacing: 3,
                         color: Colors.white
                     ),
@@ -88,6 +88,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 fontSize: 24,
                               ),
                               controller: _passwordTextEditingController,
+                              obscureText: true,
                               validator: (valuePassword) {
                             
                                 if(valuePassword!.length < 6 )
@@ -127,8 +128,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           
                              style: TextStyle(
                               color: Colors.white,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w400,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500,
                              ),)
                           )
                         ],
