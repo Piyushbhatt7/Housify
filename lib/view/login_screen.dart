@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -119,14 +120,14 @@ class _LoginScreenState extends State<LoginScreen> {
                           
                           TextButton(onPressed: ()
                           {
-
+                               Get.to(page)
                           }, 
                           child: Text("Don't have an account? Create here",
                           
                              style: TextStyle(
                               color: Colors.white,
                               fontSize: 18,
-                              fontWeight: FontWeight.w600,
+                              fontWeight: FontWeight.w400,
                              ),)
                           )
                         ],
