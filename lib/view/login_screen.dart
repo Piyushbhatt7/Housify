@@ -58,7 +58,14 @@ class _LoginScreenState extends State<LoginScreen> {
                             fontSize: 24,
                           ),
                           controller: _emailTextEditingController,
-                        )
+                          validator: (valueEmail) {
+
+                            if(!valueEmail.contains("@"))
+                            {
+
+                            }
+                          },
+                        ),
                       ],
                     ),
                        
