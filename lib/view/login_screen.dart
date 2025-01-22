@@ -60,10 +60,13 @@ class _LoginScreenState extends State<LoginScreen> {
                           controller: _emailTextEditingController,
                           validator: (valueEmail) {
 
-                            if(!valueEmail.contains("@"))
+                            if(!valueEmail!.contains("@"))
+                            
                             {
-
+                                return "Please write valid email";   
                             }
+
+                                return null; 
                           },
                         ),
                       ],
