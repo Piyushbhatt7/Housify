@@ -23,9 +23,18 @@ class _SplashScreenState extends State<SplashScreen> {
              begin: FractionalOffset(0, 0),
              end: FractionalOffset(1, 0),
              stops: [0,1],
-             tileMode: TileMode.clamp
+             tileMode: TileMode.clamp,
           )
         ),
+        
+        child: Center(
+          child: Column(
+            children: [
+              
+            ],
+          ),
+        ),
+     
       ),
     );
   }
