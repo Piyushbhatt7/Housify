@@ -80,11 +80,83 @@ class _SignupScreenState extends State<SignupScreen> {
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Form(
-              
                 key: _formkey,
                 child: Column(
                   children: [
                     
+                     Padding(
+                            padding: const EdgeInsets.only(top: 20.0),
+                            child: TextFormField(
+                              decoration: const InputDecoration(
+                                labelText: "Email",
+                              ),
+                              style:  const TextStyle(
+                                fontSize: 25,
+                              ),
+                              controller: _emailTextEditingController,
+                              validator: (text) {
+                            
+                                if(text!.isEmpty)
+                                
+                                {
+                                    return "Please write valid email";   
+                                }
+                            
+                                    return null; 
+                              },
+                            ),
+                    
+                          ),
+
+                          Padding(
+                            padding:  EdgeInsets.only(top: 20.0),
+                            child: TextFormField(
+                              decoration: const InputDecoration(
+                                labelText: "Password",
+                              ),
+                              style:  const TextStyle(
+                                fontSize: 24,
+                              ),
+                              controller: _passwordTextEditingController,
+                              obscureText: true,
+                              validator: (valuePassword) {
+                            
+                                if(valuePassword!.length < 6 )
+                                
+                                {
+                                    return "Password must be atleast 6 or more characters";   
+                                }
+                            
+                                    return null; 
+                              },
+                            ),
+                    
+                          ),
+
+                          Padding(
+                            padding:  EdgeInsets.only(top: 21.0),
+                            child: TextFormField(
+                              decoration: const InputDecoration(
+                                labelText: "FirstName",
+                              ),
+                              style:  const TextStyle(
+                                fontSize: 24,
+                              ),
+                              controller: _passwordTextEditingController,
+                              obscureText: true,
+                              validator: (valuePassword) {
+                            
+                                if(valuePassword!.length < 6 )
+                                
+                                {
+                                    return "Password must be atleast 6 or more characters";   
+                                }
+                            
+                                    return null; 
+                              },
+                            ),
+                    
+                          ),
                   ],
                 ),
               ),
