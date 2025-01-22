@@ -15,11 +15,13 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Container(
         decoration: BoxDecoration(
           
-          gradient: LinearGradient(colors: [
+          gradient: LinearGradient(
+            colors: [
             Colors.pinkAccent,
             Colors.amberAccent,
           ],
-          
+             begin: FractionalOffset(0, 0),
+             end: FractionalOffset(1, 0)
           )
         ),
       ),
