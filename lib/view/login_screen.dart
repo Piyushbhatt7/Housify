@@ -108,7 +108,8 @@ class _LoginScreenState extends State<LoginScreen> {
                             
                             }, 
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.pinkAccent
+                              backgroundColor: Colors.pinkAccent,
+                              padding: EdgeInsets.symmetric(horizontal: 60,)
                             ),
                             
                             child: const Text("Login", style: TextStyle(fontSize: 22.0, color: Colors.white, fontWeight: FontWeight.bold),)
@@ -116,6 +117,15 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                           )
                           
+                          TextButton(onPressed: ()
+                          {
+
+                          }, child: Text("Don't have an account? Create here",
+                          
+                             style: TextStyle(
+                              color: Colors.blue,
+                             ),)
+                          )
                         ],
                       ),
                          
