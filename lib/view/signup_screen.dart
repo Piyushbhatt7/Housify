@@ -62,8 +62,19 @@ class _SignupScreenState extends State<SignupScreen> {
         child: ListView(
           children: [
 
-            Image.asset("images/signup.png",
-            width: 240, 
+            Padding(
+              padding: const EdgeInsets.only(left: 25.0, right: 25,),
+              child: Image.asset("images/signup.png",
+              width: 240, 
+              ),
+            ),
+
+            const Text("Tell us about you:", style: TextStyle(
+              fontSize: 30.0,
+              fontWeight: FontWeight.bold,
+              color: Colors.pinkAccent,
+            ),
+            textAlign: TextAlign.center,
             )
           ],
         ),
