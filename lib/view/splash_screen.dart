@@ -28,13 +28,16 @@ class _SplashScreenState extends State<SplashScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset("images/splash.png"),
-              Text(
-                "Welcome to Housify",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 28,
-                    color: Colors.white),
+              Padding(
+                padding: const EdgeInsets.only(top: 18.0),
+                child: Text(
+                  "Welcome to Housify",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 28,
+                      color: Colors.white),
+                ),
               )
             ],
           ),
