@@ -39,7 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       fontWeight: FontWeight.bold,
                       fontSize: 28,
                       color: Colors.white
-                      ),
+                  ),
                 ),
             ],
           ),
