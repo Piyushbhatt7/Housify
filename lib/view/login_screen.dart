@@ -15,7 +15,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
         child: Container(
           decoration: BoxDecoration(
-            gradient: LinearGradient(
+          gradient: LinearGradient(
           colors: [
             Colors.pinkAccent,
             Colors.amberAccent,
@@ -25,6 +25,10 @@ class _LoginScreenState extends State<LoginScreen> {
           stops: [0, 1],
           tileMode: TileMode.clamp,
         )),
+
+        child: Center(
+          child: Padding(padding: const EdgeInsets.fromLTRB(50, 50, 50, 0)),
+        ),
         ),
       ),
     );
