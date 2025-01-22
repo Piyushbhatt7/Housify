@@ -71,7 +71,41 @@ class _LoginScreenState extends State<LoginScreen> {
                                   return null; 
                             },
                           ),
+
                         ),
+
+                           Padding(
+                          padding:  EdgeInsets.only(top: 21.0),
+                          child: TextFormField(
+                            decoration: const InputDecoration(
+                              labelText: "Password",
+                            ),
+                            style:  const TextStyle(
+                              fontSize: 24,
+                            ),
+                            controller: _passwordTextEditingController,
+                            validator: (valuePassword) {
+                          
+                              if(valuePassword!.length < 6 )
+                              
+                              {
+                                  return "Password must be atleast 6 or more characters";   
+                              }
+                          
+                                  return null; 
+                            },
+                          ),
+
+                        ),
+
+                        ElevatedButton(
+                          onPressed: ()
+                        {
+
+                        }, child: const Text("Login", style: TextStyle(fontSize: 22.0, color: Colors.white, fontWeight: FontWeight.bold),)
+                        
+                        )
+                        
                       ],
                     ),
                        
