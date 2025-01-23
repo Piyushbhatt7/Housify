@@ -192,7 +192,6 @@ class _SignupScreenState extends State<SignupScreen> {
                                 fontSize: 24,
                               ),
                               controller: _cityTextEditingController,
-                              obscureText: true,
                               validator: (valueCity) {
                             
                                 if(valueCity!.isEmpty )
@@ -205,7 +204,6 @@ class _SignupScreenState extends State<SignupScreen> {
                               },
                               textCapitalization: TextCapitalization.words,
                             ),
-                    
                           ),
                   ],
                 ),
