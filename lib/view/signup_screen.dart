@@ -140,7 +140,6 @@ class _SignupScreenState extends State<SignupScreen> {
                                 fontSize: 24,
                               ),
                               controller: _firstNameTextEditingController,
-                              obscureText: true,
                               validator: (valueFirstName) {
                             
                                 if(valueFirstName!.isEmpty )
@@ -166,10 +165,9 @@ class _SignupScreenState extends State<SignupScreen> {
                                 fontSize: 24,
                               ),
                               controller: _lastNameTextEditingController,
-                              obscureText: true,
-                              validator: (valuePassword) {
+                              validator: (valueLastName) {
                             
-                                if(valuePassword!.length < 6 )
+                                if(valueLastName!.length < 6 )
                                 
                                 {
                                     return "Please write your last name";   
@@ -195,7 +193,7 @@ class _SignupScreenState extends State<SignupScreen> {
                               ),
                               controller: _firstNameTextEditingController,
                               obscureText: true,
-                              validator: (valueLastName) {
+                              validator: () {
                             
                                 if(valueLastName!.isEmpty )
                                 
