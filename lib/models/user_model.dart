@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/material.dart';
 
 class UserModel {
     
@@ -12,11 +13,11 @@ class UserModel {
     DocumentSnapshot? snapshot;
     
     UserModel({
-   String? id;
-   String? firstName;
-   String? lastName;
-   String? fullName;
-   MemoryImage? displayImage;
+   
+   String id = "",
+   String firstName = "",
+   String lastName = "",
+   MemoryImage? displayImage,
        this.email = "",
        this.password = "",
        this.bio = "",
