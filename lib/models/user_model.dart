@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class UserModel {
     
     String? email;
@@ -7,7 +9,8 @@ class UserModel {
     String? country;
     bool?  isHost;
     bool? isCurrentlyHosting;
+    DocumentSnapshot? snapshot;
     
-
+    
     
 }
