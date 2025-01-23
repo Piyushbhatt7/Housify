@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 class SignupScreen extends StatefulWidget {
@@ -8,6 +10,7 @@ class SignupScreen extends StatefulWidget {
 }
 
 class _SignupScreenState extends State<SignupScreen> {
+
   TextEditingController _emailTextEditingController = TextEditingController();
   TextEditingController _passwordTextEditingController = TextEditingController();
   TextEditingController _firstNameTextEditingController = TextEditingController();
@@ -17,6 +20,8 @@ class _SignupScreenState extends State<SignupScreen> {
   TextEditingController _bioTextEditingController = TextEditingController();
 
   final _formkey = GlobalKey<FormState>();
+
+  File? imageFileOfUser;
 
   @override
   Widget build(BuildContext context) {
@@ -271,7 +276,15 @@ class _SignupScreenState extends State<SignupScreen> {
                   ],
                 ),
               ),
+            ),
+            
+            MaterialButton(onPressed: ()
+            {
+               
+            },
+               child: , 
             )
+         
           ],
         ),
       ),
