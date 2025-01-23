@@ -206,6 +206,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             ),
                           ),
 
+                          
                            Padding(
                             padding:  EdgeInsets.only(top: 21.0),
                             child: TextFormField(
@@ -218,7 +219,7 @@ class _SignupScreenState extends State<SignupScreen> {
                               controller: _countryTextEditingController,
                               validator: (valueCountry) {
                             
-                                if(valueCity!.isEmpty )
+                                if(valueCountry!.isEmpty )
                                 
                                 {
                                     return "Please provide your city name";   
