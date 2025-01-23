@@ -11,6 +11,15 @@ class ContactModel {
    ContactModel ({
       
       this.id = "",
+      this.firstName = "",
+      this.lastName = "",
+      this.displayImage,
    });
+
+   String getFullNameOfUser() {
+
+     return fullName = firstName! + " " + lastName!;
+     
+   }
 
 }
