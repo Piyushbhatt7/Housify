@@ -231,6 +231,31 @@ class _SignupScreenState extends State<SignupScreen> {
                               textCapitalization: TextCapitalization.words,
                             ),
                           ),
+
+
+                           Padding(
+                            padding:  EdgeInsets.only(top: 21.0),
+                            child: TextFormField(
+                              decoration: const InputDecoration(
+                                labelText: "City",
+                              ),
+                              style:  const TextStyle(
+                                fontSize: 24,
+                              ),
+                              controller: _bioTextEditingController,
+                              validator: (valueBio) {
+                            
+                                if(valueBio!.isEmpty )
+                                
+                                {
+                                    return "Please write your bio";   
+                                }
+                            
+                                    return null; 
+                              },
+                              textCapitalization: TextCapitalization.words,
+                            ),
+                          ),
                   ],
                 ),
               ),
