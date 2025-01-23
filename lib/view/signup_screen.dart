@@ -81,6 +81,8 @@ class _SignupScreenState extends State<SignupScreen> {
                 child: Column(
                   children: [
                     
+
+                    // Email
                      Padding(
                             padding: const EdgeInsets.only(top: 20.0),
                             child: TextFormField(
@@ -91,9 +93,9 @@ class _SignupScreenState extends State<SignupScreen> {
                                 fontSize: 25,
                               ),
                               controller: _emailTextEditingController,
-                              validator: (text) {
+                              validator: (valueEmail) {
                             
-                                if(text!.isEmpty)
+                                if(valueEmail!.isEmpty)
                                 
                                 {
                                     return "Please write valid email";   
@@ -105,6 +107,8 @@ class _SignupScreenState extends State<SignupScreen> {
                     
                           ),
 
+
+                         // Password
                           Padding(
                             padding:  EdgeInsets.only(top: 20.0),
                             child: TextFormField(
@@ -237,7 +241,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             padding:  EdgeInsets.only(top: 21.0),
                             child: TextFormField(
                               decoration: const InputDecoration(
-                                labelText: "City",
+                                labelText: "Bio",
                               ),
                               style:  const TextStyle(
                                 fontSize: 24,
