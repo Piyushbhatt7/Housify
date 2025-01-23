@@ -12,7 +12,11 @@ class UserModel {
     DocumentSnapshot? snapshot;
     
     UserModel({
-
+   String? id;
+   String? firstName;
+   String? lastName;
+   String? fullName;
+   MemoryImage? displayImage;
        this.email = "",
        this.password = "",
        this.bio = "",

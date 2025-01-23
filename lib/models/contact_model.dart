@@ -32,4 +32,6 @@ class ContactModel {
          displayImage: displayImage,
        );
      }
+
+     
 }
