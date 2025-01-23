@@ -1,7 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:housify/models/contact_model.dart';
 
-class UserModel {
+class UserModel extends ContactModel{
     
     String? email;
     String? password;
