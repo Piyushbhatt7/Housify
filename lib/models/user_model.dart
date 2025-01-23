@@ -41,7 +41,10 @@ class UserModel extends ContactModel{
             "email": email,
             "firstName": firstName,
             "lastName": lastName,
-
+            "isHost": false,
+            "myPostingIds": [],
+            "savedPostingIDs": [],
+            "earnings": 0,
          };
       }
 }
