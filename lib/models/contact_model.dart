@@ -7,5 +7,10 @@ class ContactModel {
    String? lastName;
    String? fullName;
    MemoryImage? displayImage;
-   
+
+   ContactModel ({
+      
+      this.id = "",
+   });
+
 }
