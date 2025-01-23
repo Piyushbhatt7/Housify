@@ -160,7 +160,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             padding:  EdgeInsets.only(top: 21.0),
                             child: TextFormField(
                               decoration: const InputDecoration(
-                                labelText: "LastName",
+                                labelText: "Password",
                               ),
                               style:  const TextStyle(
                                 fontSize: 24,
@@ -177,7 +177,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             
                                     return null; 
                               },
-                              textCapitalization: TextCapitalization.words,
+                             
                             ),
                     
                           ),
