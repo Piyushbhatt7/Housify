@@ -165,7 +165,7 @@ class _SignupScreenState extends State<SignupScreen> {
                               style:  const TextStyle(
                                 fontSize: 24,
                               ),
-                              controller: _passwordTextEditingController,
+                              controller: _lastNameTextEditingController,
                               obscureText: true,
                               validator: (valuePassword) {
                             
