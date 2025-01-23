@@ -5,7 +5,9 @@ class UserModel {
     String? bio;
     String? city;
     String? country;
-    String?  isHost;
-    String? isCurrentlyHosting;
+    bool?  isHost;
+    bool? isCurrentlyHosting;
+    
+
     
 }
