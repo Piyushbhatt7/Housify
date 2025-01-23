@@ -285,6 +285,7 @@ class _SignupScreenState extends State<SignupScreen> {
                child: imageFileOfUser == null 
                       ? const Icon(Icons.add_a_photo) 
                       : CircleAvatar(
+                          backgroundColor: Colors.pink,
                           radius: MediaQuery.of(context).size.width / 5.0,
                           child: CircleAvatar(
                              backgroundImage: FileImage(imageFileOfUser!),
