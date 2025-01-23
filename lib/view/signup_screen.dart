@@ -186,19 +186,19 @@ class _SignupScreenState extends State<SignupScreen> {
                             padding:  EdgeInsets.only(top: 21.0),
                             child: TextFormField(
                               decoration: const InputDecoration(
-                                labelText: "FirstName",
+                                labelText: "City",
                               ),
                               style:  const TextStyle(
                                 fontSize: 24,
                               ),
-                              controller: _firstNameTextEditingController,
+                              controller: _cityTextEditingController,
                               obscureText: true,
-                              validator: () {
+                              validator: (valueCity) {
                             
-                                if(valueLastName!.isEmpty )
+                                if(valueCity!.isEmpty )
                                 
                                 {
-                                    return "Please write your first name";   
+                                    return "Please provide your city name";   
                                 }
                             
                                     return null; 
