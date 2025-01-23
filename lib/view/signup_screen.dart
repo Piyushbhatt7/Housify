@@ -161,6 +161,9 @@ class _SignupScreenState extends State<SignupScreen> {
                     
                           ),
 
+
+
+                          // LastName
                           Padding(
                             padding:  EdgeInsets.only(top: 21.0),
                             child: TextFormField(
@@ -187,7 +190,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           ),
 
 
-
+                           // City
                            Padding(
                             padding:  EdgeInsets.only(top: 21.0),
                             child: TextFormField(
