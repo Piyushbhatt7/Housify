@@ -46,5 +46,7 @@ class UserModel extends ContactModel{
             "savedPostingIDs": [],
             "earnings": 0,
          };
+
+         await FirebaseFirestore
       }
 }
