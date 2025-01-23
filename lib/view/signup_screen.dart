@@ -216,7 +216,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                 fontSize: 24,
                               ),
                               controller: _countryTextEditingController,
-                              validator: (valueCity) {
+                              validator: (valueCountry) {
                             
                                 if(valueCity!.isEmpty )
                                 
