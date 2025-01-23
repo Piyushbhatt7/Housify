@@ -295,7 +295,26 @@ class _SignupScreenState extends State<SignupScreen> {
                             ),
                         ), 
               ),
-            )
+            ),
+                          
+                          // button
+
+                          Padding(
+                            padding: const EdgeInsets.only(top: 25.0),
+                            child: ElevatedButton(
+                              onPressed: ()
+                            {
+                            
+                            }, 
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.pinkAccent,
+                              padding: EdgeInsets.symmetric(horizontal: 60,)
+                            ),
+                            
+                            child: const Text("Login", style: TextStyle(fontSize: 22.0, color: Colors.white, fontWeight: FontWeight.bold),)
+                            
+                            ),
+                          ),
          
           ],
         ),
