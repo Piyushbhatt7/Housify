@@ -206,6 +206,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             ),
                           ),
 
+
                           
                            Padding(
                             padding:  EdgeInsets.only(top: 21.0),
@@ -222,7 +223,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                 if(valueCountry!.isEmpty )
                                 
                                 {
-                                    return "Please provide your city name";   
+                                    return "Please provide your country name";   
                                 }
                             
                                     return null; 
