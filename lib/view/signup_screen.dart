@@ -278,20 +278,23 @@ class _SignupScreenState extends State<SignupScreen> {
               ),
             ),
             
-            MaterialButton(onPressed: ()
-            {
-               
-            },
-               child: imageFileOfUser == null 
-                      ? const Icon(Icons.add_a_photo) 
-                      : CircleAvatar(
-                          backgroundColor: Colors.pink,
-                          radius: MediaQuery.of(context).size.width / 5.0,
-                          child: CircleAvatar(
-                             backgroundImage: FileImage(imageFileOfUser!),
-                             radius: MediaQuery.of(context).size.width / 5.0,
-                          ),
-                      ), 
+            Padding(
+              padding: const EdgeInsets.only(top: 28.0),
+              child: MaterialButton(onPressed: ()
+              {
+                 
+              },
+                 child: imageFileOfUser == null 
+                        ? const Icon(Icons.add_a_photo) 
+                        : CircleAvatar(
+                            backgroundColor: Colors.pink,
+                            radius: MediaQuery.of(context).size.width / 5.0,
+                            child: CircleAvatar(
+                               backgroundImage: FileImage(imageFileOfUser!),
+                               radius: MediaQuery.of(context).size.width / 5.0,
+                            ),
+                        ), 
+              ),
             )
          
           ],
