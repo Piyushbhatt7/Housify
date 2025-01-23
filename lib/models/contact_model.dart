@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:housify/models/user_model.dart';
 
 class ContactModel {
    
@@ -19,7 +20,9 @@ class ContactModel {
    String getFullNameOfUser() {
 
      return fullName = firstName! + " " + lastName!;
-     
-   }
 
+   }
+     UserModel createUserFromContact() {
+       
+     }
 }
