@@ -300,18 +300,17 @@ class _SignupScreenState extends State<SignupScreen> {
                           // button
 
                           Padding(
-                            padding: const EdgeInsets.only(top: 25.0),
+                            padding: const EdgeInsets.only(top: 25.0, right: 40.0, left: 40.0),
                             child: ElevatedButton(
                               onPressed: ()
                             {
                             
                             }, 
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.pinkAccent,
-                              padding: EdgeInsets.symmetric(horizontal: 60,)
+                              backgroundColor: Colors.pink,
                             ),
                             
-                            child: const Text("Login", style: TextStyle(fontSize: 22.0, color: Colors.white, fontWeight: FontWeight.bold),)
+                            child: const Text("SignUp", style: TextStyle(fontSize: 22.0, color: Colors.white, fontWeight: FontWeight.bold),)
                             
                             ),
                           ),
