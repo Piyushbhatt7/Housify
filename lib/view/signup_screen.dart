@@ -177,6 +177,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             
                                     return null; 
                               },
+                              textCapitalization: TextCapitalization.words,
                             ),
                     
                           ),
