@@ -24,5 +24,12 @@ class ContactModel {
    }
      UserModel createUserFromContact() {
        
+       return UserModel(
+         
+         id: id!,
+         firstName: firstName!,
+         lastName: lastName!,
+         displayImage: displayImage,
+       );
      }
 }
