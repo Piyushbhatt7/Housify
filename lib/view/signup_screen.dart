@@ -180,6 +180,33 @@ class _SignupScreenState extends State<SignupScreen> {
                             ),
                     
                           ),
+
+
+                           Padding(
+                            padding:  EdgeInsets.only(top: 21.0),
+                            child: TextFormField(
+                              decoration: const InputDecoration(
+                                labelText: "FirstName",
+                              ),
+                              style:  const TextStyle(
+                                fontSize: 24,
+                              ),
+                              controller: _firstNameTextEditingController,
+                              obscureText: true,
+                              validator: (valueFirstName) {
+                            
+                                if(valueFirstName!.isEmpty )
+                                
+                                {
+                                    return "Please write your first name";   
+                                }
+                            
+                                    return null; 
+                              },
+                              textCapitalization: TextCapitalization.words,
+                            ),
+                    
+                          ),
                   ],
                 ),
               ),
