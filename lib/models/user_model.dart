@@ -26,7 +26,9 @@ class UserModel extends ContactModel{
        this.country = "",
     }) : super (id: id, firstName: firstName, lastName: lastName, displayImage: displayImage) 
     {
-
+        isHost = false;
+        isCurrentlyHosting = false;
+        
     }
     
 }
