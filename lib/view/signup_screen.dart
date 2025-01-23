@@ -300,7 +300,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           // button
 
                           Padding(
-                            padding: const EdgeInsets.only(top: 25.0, right: 40.0, left: 40.0),
+                            padding: const EdgeInsets.only(top: 26.0, right: 60.0, left: 60.0),
                             child: ElevatedButton(
                               onPressed: ()
                             {
@@ -314,6 +314,9 @@ class _SignupScreenState extends State<SignupScreen> {
                             
                             ),
                           ),
+
+
+                          const SizedBox(height: 60,),
          
           ],
         ),
