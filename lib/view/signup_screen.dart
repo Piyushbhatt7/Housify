@@ -287,7 +287,8 @@ class _SignupScreenState extends State<SignupScreen> {
                       : CircleAvatar(
                           radius: MediaQuery.of(context).size.width / 5.0,
                           child: CircleAvatar(
-                            
+                             backgroundImage: FileImage(imageFileOfUser!),
+                             radius: MediaQuery.of(context).size.width / 5.0,
                           ),
                       ), 
             )
