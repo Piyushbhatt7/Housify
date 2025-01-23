@@ -103,7 +103,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                     
                           Padding(
-                            padding: const EdgeInsets.only(top: 25.0),
+                            padding: const EdgeInsets.only(top: 30.0),
                             child: ElevatedButton(
                               onPressed: ()
                             {
