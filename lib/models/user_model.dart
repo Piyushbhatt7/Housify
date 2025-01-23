@@ -11,6 +11,13 @@ class UserModel {
     bool? isCurrentlyHosting;
     DocumentSnapshot? snapshot;
     
-    
+    UserModel({
+
+       this.email = "",
+       this.password = "",
+       this.bio = "",
+       this.city = "",
+       this.country = "",
+    });
     
 }
