@@ -24,7 +24,8 @@ class UserModel extends ContactModel{
        this.bio = "",
        this.city = "",
        this.country = "",
-    }) : super () {
+    }) : super (id: id, firstName: firstName, lastName: lastName, displayImage: displayImage) 
+    {
 
     }
     
