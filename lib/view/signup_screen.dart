@@ -282,7 +282,14 @@ class _SignupScreenState extends State<SignupScreen> {
             {
                
             },
-               child: , 
+               child: imageFileOfUser == null 
+                      ? const Icon(Icons.add_a_photo) 
+                      : CircleAvatar(
+                          radius: MediaQuery.of(context).size.width / 5.0,
+                          child: CircleAvatar(
+                            
+                          ),
+                      ), 
             )
          
           ],
