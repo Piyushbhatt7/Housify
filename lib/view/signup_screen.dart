@@ -160,7 +160,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             padding:  EdgeInsets.only(top: 21.0),
                             child: TextFormField(
                               decoration: const InputDecoration(
-                                labelText: "Password",
+                                labelText: "LastName",
                               ),
                               style:  const TextStyle(
                                 fontSize: 24,
@@ -172,12 +172,12 @@ class _SignupScreenState extends State<SignupScreen> {
                                 if(valuePassword!.length < 6 )
                                 
                                 {
-                                    return "Password must be atleast 6 or more characters";   
+                                    return "Please write your last name";   
                                 }
                             
                                     return null; 
                               },
-                             
+                              textCapitalization: TextCapitalization.words,
                             ),
                     
                           ),
