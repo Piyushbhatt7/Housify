@@ -216,7 +216,8 @@ class _SignupScreenState extends State<SignupScreen> {
                           ),
 
 
-                          
+                         
+                          // Country
                            Padding(
                             padding:  EdgeInsets.only(top: 21.0),
                             child: TextFormField(
@@ -242,6 +243,8 @@ class _SignupScreenState extends State<SignupScreen> {
                           ),
 
 
+
+                           // Bio
                            Padding(
                             padding:  EdgeInsets.only(top: 21.0),
                             child: TextFormField(
