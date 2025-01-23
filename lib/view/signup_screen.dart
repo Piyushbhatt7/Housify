@@ -205,6 +205,30 @@ class _SignupScreenState extends State<SignupScreen> {
                               textCapitalization: TextCapitalization.words,
                             ),
                           ),
+
+                           Padding(
+                            padding:  EdgeInsets.only(top: 21.0),
+                            child: TextFormField(
+                              decoration: const InputDecoration(
+                                labelText: "Country",
+                              ),
+                              style:  const TextStyle(
+                                fontSize: 24,
+                              ),
+                              controller: _countryTextEditingController,
+                              validator: (valueCity) {
+                            
+                                if(valueCity!.isEmpty )
+                                
+                                {
+                                    return "Please provide your city name";   
+                                }
+                            
+                                    return null; 
+                              },
+                              textCapitalization: TextCapitalization.words,
+                            ),
+                          ),
                   ],
                 ),
               ),
