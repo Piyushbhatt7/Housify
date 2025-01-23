@@ -183,6 +183,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           ),
 
 
+
                            Padding(
                             padding:  EdgeInsets.only(top: 21.0),
                             child: TextFormField(
@@ -194,9 +195,9 @@ class _SignupScreenState extends State<SignupScreen> {
                               ),
                               controller: _firstNameTextEditingController,
                               obscureText: true,
-                              validator: (valueFirstName) {
+                              validator: (valueLastName) {
                             
-                                if(valueFirstName!.isEmpty )
+                                if(valueLastName!.isEmpty )
                                 
                                 {
                                     return "Please write your first name";   
