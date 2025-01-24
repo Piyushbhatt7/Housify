@@ -47,6 +47,6 @@ class UserModel extends ContactModel{
             "earnings": 0,
          };
 
-         await FirebaseFirestore.instance.doc("users").collection(collectionPath)
+         await FirebaseFirestore.instance.collection("users").doc(id).set(dataMap);
       }
 }
