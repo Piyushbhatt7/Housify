@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:housify/models/app_constants.dart';
 
 class UserViewModel {
@@ -17,7 +18,11 @@ class UserViewModel {
               AppConstants.currentUser.bio = bio;
               AppConstants.currentUser.password = password;
 
-            await  saveUserToFirestore(bio, city, country, email, firstName, lastName, currentUserId);
+            await  saveUserToFirestore(bio, city, country, email, firstName, lastName, currentUserId).whenComplete(()
+            {
+                saveAndUploadImageToFirebase(imageFileOfUser, currentUserId);
+            });
+
       });
   }
    
@@ -38,5 +43,13 @@ class UserViewModel {
          };
 
          await FirebaseFirestore.instance.collection("users").doc(id).set(dataMap);
+      }
+
+      saveAndUploadImageToFirebase(imageFileOfUser, currentUserId) async
+      {
+          Reference referenceStorage = FirebaseStorage.instance.ref()
+          .child("userImages")
+          .child("currentUserId")
+          .child(currentUserId + ".png");
       }
 }
