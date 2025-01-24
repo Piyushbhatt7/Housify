@@ -1,10 +1,16 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 class UserViewModel {
 
-  signUp(email, password, firstName, lastName, city, country, bio, imageFileOfUser)
+  signUp(email, password, firstName, lastName, city, country, bio, imageFileOfUser) async
   {
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: password).then((valueResult) 
+      {
 
+           valueResult.user!.uid; 
+      });
   }
    
     Future<void> saveUserToFirestore (bio, city, country, email, firstName, lastName, id) async 
