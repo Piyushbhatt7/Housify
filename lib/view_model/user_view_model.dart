@@ -39,7 +39,7 @@ class UserViewModel {
 
      catch(e)
      {
-       Get.snackbar("Error", message)
+       Get.snackbar("Error", e.toString());
      }
   }
    
