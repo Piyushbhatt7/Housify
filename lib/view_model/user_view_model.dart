@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 
 class UserViewModel {
 
@@ -8,8 +7,12 @@ class UserViewModel {
   {
       await FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: password).then((valueResult) 
       {
+          if (valueResult != null)
+          {
+              String currentUserId = valueResult.user!.uid; 
 
-           valueResult.user!.uid; 
+
+          }
       });
   }
    
