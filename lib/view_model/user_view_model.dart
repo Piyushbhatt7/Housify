@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:housify/models/app_constants.dart';
 
 class UserViewModel {
@@ -21,10 +22,12 @@ class UserViewModel {
               AppConstants.currentUser.bio = bio;
               AppConstants.currentUser.password = password;
 
-            await  saveUserToFirestore(bio, city, country, email, firstName, lastName, currentUserId).whenComplete(()
+            await  saveUserToFirestore(bio, city, country, email, firstName, lastName, currentUserId).whenComplete(() async
             {
-                addImageToFirebaseStorage(imageFileOfUser, currentUserId);
+              await addImageToFirebaseStorage(imageFileOfUser, currentUserId);
             });
+
+            Get.snackbar("Congratulation", "your account has been created successfully")
 
       });
   }
