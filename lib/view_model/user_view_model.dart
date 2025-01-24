@@ -14,7 +14,9 @@ class UserViewModel {
 
     Get.snackbar("Please wait", "we are creating your account");
 
-      await FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: password).then((valueResult) async
+     try 
+     {
+         await FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: password).then((valueResult) async
       {
           String currentUserId = valueResult.user!.uid; 
               AppConstants.currentUser.id = currentUserId;
@@ -33,6 +35,12 @@ class UserViewModel {
             Get.snackbar("Congratulation", "your account has been created successfully");
 
       });
+     }
+
+     catch(e)
+     {
+       Get.snackbar("Error", message)
+     }
   }
    
     Future<void> saveUserToFirestore (bio, city, country, email, firstName, lastName, id) async 
