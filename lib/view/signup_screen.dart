@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:housify/global.dart';
+import 'package:image_picker/image_picker.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -284,7 +285,7 @@ class _SignupScreenState extends State<SignupScreen> {
               padding: const EdgeInsets.only(top: 28.0),
               child: MaterialButton(onPressed: () async
               {
-                 var imageFile
+                 var imageFile = await ImagePicker().pickImage(source: ImageSource.gallery);
               },
                  child: imageFileOfUser == null 
                         ? const Icon(Icons.add_a_photo) 
