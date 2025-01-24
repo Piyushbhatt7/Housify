@@ -282,9 +282,9 @@ class _SignupScreenState extends State<SignupScreen> {
             
             Padding(
               padding: const EdgeInsets.only(top: 28.0),
-              child: MaterialButton(onPressed: ()
+              child: MaterialButton(onPressed: () async
               {
-                 
+                 var imageFile
               },
                  child: imageFileOfUser == null 
                         ? const Icon(Icons.add_a_photo) 
