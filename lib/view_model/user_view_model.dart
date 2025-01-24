@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:housify/models/app_constants.dart';
 
 class UserViewModel {
 
@@ -11,7 +12,8 @@ class UserViewModel {
           {
               String currentUserId = valueResult.user!.uid; 
 
-
+              AppConstants.currentUser.id = currentUserId;
+              
           }
       });
   }
