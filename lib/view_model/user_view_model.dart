@@ -13,6 +13,13 @@ class UserViewModel {
               String currentUserId = valueResult.user!.uid; 
 
               AppConstants.currentUser.id = currentUserId;
+              AppConstants.currentUser.email = email;
+              AppConstants.currentUser.firstName = firstName;
+              AppConstants.currentUser.city = city;
+              AppConstants.currentUser.country = country;
+              AppConstants.currentUser.bio = bio;
+              AppConstants.currentUser.password = password;
+
               
           }
       });
