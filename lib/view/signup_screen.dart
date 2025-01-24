@@ -286,6 +286,11 @@ class _SignupScreenState extends State<SignupScreen> {
               child: MaterialButton(onPressed: () async
               {
                  var imageFile = await ImagePicker().pickImage(source: ImageSource.gallery);
+
+                 if(imageFile == null)
+                 {
+                   
+                 }
               },
                  child: imageFileOfUser == null 
                         ? const Icon(Icons.add_a_photo) 
