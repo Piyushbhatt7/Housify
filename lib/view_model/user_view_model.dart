@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -21,7 +23,7 @@ class UserViewModel {
 
             await  saveUserToFirestore(bio, city, country, email, firstName, lastName, currentUserId).whenComplete(()
             {
-                saveAndUploadImageToFirebase(imageFileOfUser, currentUserId);
+                addImageToFirebaseStorage(imageFileOfUser, currentUserId);
             });
 
       });
@@ -46,7 +48,7 @@ class UserViewModel {
          await FirebaseFirestore.instance.collection("users").doc(id).set(dataMap);
       }
 
-      saveAndUploadImageToFirebase(imageFileOfUser, currentUserId) async
+      addImageToFirebaseStorage(File imageFileOfUser, currentUserId) async
       {
           Reference referenceStorage = FirebaseStorage.instance.ref()
           .child("userImages")
