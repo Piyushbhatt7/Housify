@@ -308,6 +308,12 @@ class _SignupScreenState extends State<SignupScreen> {
                               if(_formkey.currentState!.validate() || imageFileOfUser == null)
                               {
                                 Get.snackbar("Field Missing!", "Please choose image and fill out complete sign up form");
+                                return;
+                              }
+
+                              if(_emailTextEditingController.text.isEmpty && _passwordTextEditingController.text.isEmpty)
+                              {
+                                Get.snackbar("Field Missing", "Please fill out complete signup form")
                               }
                             }, 
                             style: ElevatedButton.styleFrom(
