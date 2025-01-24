@@ -313,7 +313,8 @@ class _SignupScreenState extends State<SignupScreen> {
 
                               if(_emailTextEditingController.text.isEmpty && _passwordTextEditingController.text.isEmpty)
                               {
-                                Get.snackbar("Field Missing", "Please fill out complete signup form")
+                                Get.snackbar("Field Missing", "Please fill out complete signup form");
+                                return;
                               }
                             }, 
                             style: ElevatedButton.styleFrom(
