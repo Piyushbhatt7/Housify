@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:flutter/material.dart';
 import 'package:housify/models/app_constants.dart';
 
 class UserViewModel {
@@ -51,5 +52,9 @@ class UserViewModel {
           .child("userImages")
           .child("currentUserId")
           .child(currentUserId + ".png");
+
+          await referenceStorage.putFile(imageFileOfUser).whenComplete(() {});
+
+          AppConstants.currentUser.displayImage = MemoryImage(imageFileOfUser.readAsBytesSync());
       }
 }
