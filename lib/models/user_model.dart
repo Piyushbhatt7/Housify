@@ -13,7 +13,7 @@ class UserModel extends ContactModel{
     bool? isCurrentlyHosting;
     DocumentSnapshot? snapshot;
     
-    UserModel({
+   UserModel({
    
    String id = "",
    String firstName = "",
