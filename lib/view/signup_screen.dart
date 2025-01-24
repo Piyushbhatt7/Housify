@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -304,7 +305,10 @@ class _SignupScreenState extends State<SignupScreen> {
                             child: ElevatedButton(
                               onPressed: ()
                             {
-                              if(_formkey.currentState.validate() || image)
+                              if(_formkey.currentState!.validate() || imageFileOfUser == null)
+                              {
+                                Get.snackbar("Field Missing!", "Please choose image and fill out complete sign up form");
+                              }
                             }, 
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.pink,
