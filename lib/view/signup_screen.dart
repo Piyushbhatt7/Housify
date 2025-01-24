@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:housify/global.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -316,6 +317,15 @@ class _SignupScreenState extends State<SignupScreen> {
                                 Get.snackbar("Field Missing", "Please fill out complete signup form");
                                 return;
                               }
+
+                              userViewModel.signUp(
+                                _emailTextEditingController.text.trim(),
+                                _passwordTextEditingController.text.trim(),
+                                _firstNameTextEditingController.text.trim(),
+                                _lastNameTextEditingController.text.trim(),
+                                _cityTextEditingController.text.trim(),
+                                _countryTextEditingController.text.trim(),
+                              );
                             }, 
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.pink,
