@@ -17,7 +17,7 @@ class UserViewModel {
               AppConstants.currentUser.bio = bio;
               AppConstants.currentUser.password = password;
 
-              saveUserToFirestore(bio, city, country, email, firstName, lastName, id)
+              saveUserToFirestore(bio, city, country, email, firstName, lastName, currentUserId);
       });
   }
    
