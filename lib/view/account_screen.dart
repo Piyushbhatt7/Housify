@@ -47,6 +47,9 @@ class _AccountScreenState extends State<AccountScreen> {
                             children: [
                                 Text(
                                   AppConstants.currentUser.getFullNameOfUser(),
+                                  style: const TextStyle(
+
+                                  ),
                                 )
                             ],
                           )
