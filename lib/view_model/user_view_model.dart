@@ -5,6 +5,7 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:housify/models/app_constants.dart';
+import 'package:housify/view/account_screen.dart';
 
 class UserViewModel {
 
@@ -31,7 +32,8 @@ class UserViewModel {
             {
               await addImageToFirebaseStorage(imageFileOfUser, currentUserID);
             });
-
+            
+            Get.to(AccountScreen());
             Get.snackbar("Congratulation", "your account has been created successfully");
 
       });
@@ -76,6 +78,8 @@ class UserViewModel {
 
       login(email, password) async
       {
+        
+        Get.snackbar("Please wait ", "checking your crendentials");
         try
         {
            FirebaseAuth.instance.signInWithEmailAndPassword(
@@ -89,7 +93,8 @@ class UserViewModel {
               await getUserInfoFromFirestore(currentUserID);
               await getImageFromStrorage(currentUserID);
 
-              
+              Get.snackbar("Logged-In", "you are logged-in successfully");
+              Get.to(AccountScreen());
 
            
             });

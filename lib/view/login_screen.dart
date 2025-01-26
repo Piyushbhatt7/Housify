@@ -106,10 +106,11 @@ class _LoginScreenState extends State<LoginScreen> {
                           Padding(
                             padding: const EdgeInsets.only(top: 30.0),
                             child: ElevatedButton(
-                              onPressed: ()
+                              onPressed: () async
                             {
                                  if(_formkey.currentState!.validate()){
-                                   userViewModel.login(_emailTextEditingController.text.trim(), _passwordTextEditingController.text.trim());
+                                   
+                                   await userViewModel.login(_emailTextEditingController.text.trim(), _passwordTextEditingController.text.trim());
                                  }
                             }, 
                             style: ElevatedButton.styleFrom(
