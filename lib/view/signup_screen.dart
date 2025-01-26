@@ -316,7 +316,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             child: ElevatedButton(
                               onPressed: ()
                             {
-                              if(_formkey.currentState!.validate() || imageFileOfUser == null)
+                              if(!_formkey.currentState!.validate() || imageFileOfUser == null)
                               {
                                 Get.snackbar("Field Missing!", "Please choose image and fill out complete sign up form");
                                 return;
@@ -339,6 +339,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                 imageFileOfUser,
                               );
                             }, 
+
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.pink,
                             ),
