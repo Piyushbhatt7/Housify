@@ -287,9 +287,9 @@ class _SignupScreenState extends State<SignupScreen> {
               {
                  var imageFile = await ImagePicker().pickImage(source: ImageSource.gallery);
 
-                 if(imageFile == null)
+                 if(imageFile != null)
                  {
-                    imageFileOfUser = File (imageFile!.path);
+                    imageFileOfUser = File (imageFile.path);
 
                     setState(() {
                         imageFileOfUser;
