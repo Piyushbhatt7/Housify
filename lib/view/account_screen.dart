@@ -10,6 +10,10 @@ class AccountScreen extends StatefulWidget {
 class _AccountScreenState extends State<AccountScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(25, 50, 20, 0)
+            ),
+    );
   }
 }
