@@ -49,7 +49,7 @@ class _AccountScreenState extends State<AccountScreen> {
                                   AppConstants.currentUser.getFullNameOfUser(),
                                   style: const TextStyle(
                                         fontSize: 25,
-                                        
+                                        fontWeight: FontWeight.bold,
                                   ),
                                 )
                             ],
