@@ -18,6 +18,7 @@ class UserViewModel {
          await FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: password).then((result) async
       {
           String currentUserID = result.user!.uid; 
+
               AppConstants.currentUser.id = currentUserID;
               AppConstants.currentUser.firstName = firstName;
               AppConstants.currentUser.city = city;
@@ -65,7 +66,7 @@ class UserViewModel {
       {
           Reference referenceStorage = FirebaseStorage.instance.ref()
           .child("userImages")
-          .child("currentUserId")
+          .child(currentUserId)
           .child(currentUserId + ".png");
 
           await referenceStorage.putFile(imageFileOfUser).whenComplete(() {});
