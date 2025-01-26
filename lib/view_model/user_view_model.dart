@@ -96,8 +96,8 @@ class UserViewModel {
         }
       }
 
-      getUserInfoFromFirestore() async
+      getUserInfoFromFirestore(userID) async
       {
-        DocumentSnapshot snapshot = await FirebaseFirestore.instance.collection('users').doc(user).get();
+        DocumentSnapshot snapshot = await FirebaseFirestore.instance.collection('users').doc(userID).get();
       }
 }
