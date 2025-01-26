@@ -19,11 +19,11 @@ class UserViewModel {
       {
           String currentUserID = result.user!.uid; 
               AppConstants.currentUser.id = currentUserID;
-              AppConstants.currentUser.email = email;
               AppConstants.currentUser.firstName = firstName;
               AppConstants.currentUser.city = city;
               AppConstants.currentUser.country = country;
               AppConstants.currentUser.bio = bio;
+              AppConstants.currentUser.email = email;
               AppConstants.currentUser.password = password;
 
             await  saveUserToFirestore(bio, city, country, email, firstName, lastName, currentUserID).whenComplete(() async
