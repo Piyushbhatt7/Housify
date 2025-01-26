@@ -26,6 +26,7 @@ class _AccountScreenState extends State<AccountScreen> {
                           MaterialButton(
                             child: CircleAvatar(
                               backgroundColor: Colors.black,
+                              radius: MediaQuery.of(context).size.width / 4.5,
                             ),
                             onPressed: ()
                           {
