@@ -84,7 +84,8 @@ class UserViewModel {
             ).then((result)
             {
               String currentUserID =  result.user!.uid;
-              AppConstants
+              AppConstants.currentUser.id = currentUserID;
+           
             })
         }
 
