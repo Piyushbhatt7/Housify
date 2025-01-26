@@ -74,7 +74,7 @@ class UserViewModel {
           AppConstants.currentUser.displayImage = MemoryImage(imageFileOfUser.readAsBytesSync());
       }
 
-      login() async
+      login(email, password) async
       {
         try
         {
