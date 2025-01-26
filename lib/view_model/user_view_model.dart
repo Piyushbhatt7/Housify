@@ -87,6 +87,7 @@ class UserViewModel {
               AppConstants.currentUser.id = currentUserID;
 
               await getUserInfoFromFirestore(currentUserID);
+              await getImageFromStrorage(currentUserID);
 
            
             });
