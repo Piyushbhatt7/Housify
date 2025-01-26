@@ -12,7 +12,12 @@ class _AccountScreenState extends State<AccountScreen> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(25, 50, 20, 0)
+            padding: const EdgeInsets.fromLTRB(25, 50, 20, 0),
+            child: Column(
+              children: [
+                
+              ],
+            ),
             ),
     );
   }
