@@ -25,18 +25,20 @@ class _AccountScreenState extends State<AccountScreen> {
                     child: Column(
                       children: [
                           MaterialButton(
+                             onPressed: ()
+                          {
+                            
+                          },
                             child: CircleAvatar(
                               backgroundColor: Colors.black,
                               radius: MediaQuery.of(context).size.width / 4.5,
                               child: CircleAvatar(
                                 backgroundImage: AppConstants.currentUser.displayImage,
-                                radius: MediaQuery.of(context).size.width / 4.5,
+                                radius: MediaQuery.of(context).size.width / 4.6,
                               ),
                             ),
-                            onPressed: ()
-                          {
-                            
-                          })
+                           
+                          )
                       ],
                     ),
                   ),
