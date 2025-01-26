@@ -83,7 +83,8 @@ class UserViewModel {
             password: password,
             ).then((result)
             {
-               result.user!.uid;
+              String currentUserID =  result.user!.uid;
+              AppConstants
             })
         }
 
