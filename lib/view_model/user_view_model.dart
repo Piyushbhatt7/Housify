@@ -128,6 +128,6 @@ class UserViewModel {
         .child(userID + ".png")
         .getData(1024 * 1024);
 
-        MemoryImage(imageDataInBytes!);
+        AppConstants.currentUser.displayImage =  MemoryImage(imageDataInBytes!);
       }
 }
