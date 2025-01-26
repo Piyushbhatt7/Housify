@@ -73,4 +73,17 @@ class UserViewModel {
 
           AppConstants.currentUser.displayImage = MemoryImage(imageFileOfUser.readAsBytesSync());
       }
+
+      login() async
+      {
+        try
+        {
+           
+        }
+
+        catch(e)
+        {
+          Get.snackbar("Error", e.toString());
+        }
+      }
 }
