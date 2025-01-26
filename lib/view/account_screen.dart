@@ -23,7 +23,14 @@ class _AccountScreenState extends State<AccountScreen> {
                   child: Center(
                     child: Column(
                       children: [
-
+                          MaterialButton(
+                            child: CircleAvatar(
+                              backgroundColor: Colors.black,
+                            ),
+                            onPressed: ()
+                          {
+                            
+                          })
                       ],
                     ),
                   ),
