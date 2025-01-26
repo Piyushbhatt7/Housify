@@ -41,7 +41,7 @@ class _AccountScreenState extends State<AccountScreen> {
                           ),
 
                           const SizedBox(height: 10,),
-
+                      // name and email  
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
@@ -57,7 +57,6 @@ class _AccountScreenState extends State<AccountScreen> {
                                   AppConstants.currentUser.email.toString(),
                                   style: const TextStyle(
                                         fontSize: 15,
-                                        fontWeight: FontWeight.bold,
                                   ),
                                 )
                             ],
