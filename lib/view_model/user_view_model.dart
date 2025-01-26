@@ -85,6 +85,7 @@ class UserViewModel {
             {
               String currentUserID =  result.user!.uid;
               AppConstants.currentUser.id = currentUserID;
+              
 
            
             });
@@ -107,7 +108,7 @@ class UserViewModel {
         AppConstants.currentUser.bio = snapshot["bio"] ?? "";
         AppConstants.currentUser.city = snapshot["city"] ?? "";
         AppConstants.currentUser.country = snapshot["country"] ?? "";
-        AppConstants.currentUser.isHost = snapshot["isHost"] ?? "";
+        AppConstants.currentUser.isHost = snapshot["isHost"] ?? false;
         
 
 
