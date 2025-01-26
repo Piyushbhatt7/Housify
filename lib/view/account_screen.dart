@@ -17,7 +17,17 @@ class _AccountScreenState extends State<AccountScreen> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                
+                // user info
+                 Padding(
+                  padding: EdgeInsets.only(bottom: 30.0),
+                  child: Center(
+                    child: Column(
+                      children: [
+
+                      ],
+                    ),
+                  ),
+                 )
               ],
             ),
             ),
