@@ -24,6 +24,8 @@ class _AccountScreenState extends State<AccountScreen> {
                   child: Center(
                     child: Column(
                       children: [
+
+                        // image
                           MaterialButton(
                              onPressed: ()
                           {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:housify/global.dart';
 import 'package:housify/view/signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -108,7 +109,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               onPressed: ()
                             {
                                  if(_formkey.currentState!.validate()){
-                                   
+                                   userViewModel.login(_emailTextEditingController.text.trim(), password)
                                  }
                             }, 
                             style: ElevatedButton.styleFrom(
