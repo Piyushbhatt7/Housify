@@ -81,11 +81,12 @@ class UserViewModel {
            FirebaseAuth.instance.signInWithEmailAndPassword(
             email: email, 
             password: password,
-            ).then((result)
+            ).then((result) async
             {
               String currentUserID =  result.user!.uid;
               AppConstants.currentUser.id = currentUserID;
-              
+
+              await getUserInfoFromFirestore(currentUserID);
 
            
             });
