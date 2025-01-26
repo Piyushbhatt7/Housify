@@ -89,6 +89,8 @@ class UserViewModel {
               await getUserInfoFromFirestore(currentUserID);
               await getImageFromStrorage(currentUserID);
 
+              
+
            
             });
         }
