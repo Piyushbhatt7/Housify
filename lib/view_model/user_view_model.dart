@@ -15,9 +15,9 @@ class UserViewModel {
 
      try 
      {
-         await FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: password).then((valueResult) async
+         await FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: password).then((result) async
       {
-          String currentUserId = valueResult.user!.uid; 
+          String currentUserId = result.user!.uid; 
               AppConstants.currentUser.id = currentUserId;
               AppConstants.currentUser.email = email;
               AppConstants.currentUser.firstName = firstName;
