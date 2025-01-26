@@ -48,7 +48,15 @@ class _AccountScreenState extends State<AccountScreen> {
                                 Text(
                                   AppConstants.currentUser.getFullNameOfUser(),
                                   style: const TextStyle(
-                                        fontSize: 25,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+
+                                Text(
+                                  AppConstants.currentUser.email.toString(),
+                                  style: const TextStyle(
+                                        fontSize: 15,
                                         fontWeight: FontWeight.bold,
                                   ),
                                 )
