@@ -114,4 +114,12 @@ class UserViewModel {
 
 
       }
+
+      getImageFromStrorage()
+      {
+        if(AppConstants.currentUser.displayImage == null)
+        {
+          return AppConstants.currentUser.displayImage;
+        }
+      }
 }
