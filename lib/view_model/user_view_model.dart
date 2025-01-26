@@ -125,6 +125,7 @@ class UserViewModel {
         final imageDataInBytes = await FirebaseStorage.instance.ref()
         .child("userImages")
         .child(userID)
-        .child(userID + ".png");
+        .child(userID + ".png")
+        .getData(1024 * 1024);
       }
 }
