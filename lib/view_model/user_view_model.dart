@@ -85,6 +85,7 @@ class UserViewModel {
             {
               String currentUserID =  result.user!.uid;
               AppConstants.currentUser.id = currentUserID;
+
            
             });
         }
@@ -93,5 +94,10 @@ class UserViewModel {
         {
           Get.snackbar("Error", e.toString());
         }
+      }
+
+      getUserInfoFromFirestore() async
+      {
+        DocumentSnapshot snapshot = await FirebaseFirestore.instance.collection('users').doc(user).get();
       }
 }
