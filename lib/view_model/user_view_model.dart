@@ -78,7 +78,7 @@ class UserViewModel {
       {
         try
         {
-           
+           FirebaseAuth.instance.signInWithEmailAndPassword(email: email, password: password)
         }
 
         catch(e)
