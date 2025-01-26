@@ -184,7 +184,7 @@ class _SignupScreenState extends State<SignupScreen> {
                               controller: _lastNameTextEditingController,
                               validator: (valueLastName) {
                             
-                                if(valueLastName!.length < 6 )
+                                if(valueLastName!.length < 4 )
                                 
                                 {
                                     return "Please write your last name";   
@@ -273,7 +273,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             
                                     return null; 
                               },
-                              textCapitalization: TextCapitalization.words,
+                              // textCapitalization: TextCapitalization.words,
                             ),
                           ),
                   ],
