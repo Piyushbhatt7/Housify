@@ -109,7 +109,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               onPressed: ()
                             {
                                  if(_formkey.currentState!.validate()){
-                                   userViewModel.login(_emailTextEditingController.text.trim(), password)
+                                   userViewModel.login(_emailTextEditingController.text.trim(), _passwordTextEditingController.text.trim());
                                  }
                             }, 
                             style: ElevatedButton.styleFrom(
