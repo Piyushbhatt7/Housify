@@ -15,7 +15,7 @@ class _AccountScreenState extends State<AccountScreen> {
             padding: const EdgeInsets.fromLTRB(25, 50, 20, 0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
-              
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 
               ],
