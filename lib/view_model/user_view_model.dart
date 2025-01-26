@@ -127,5 +127,7 @@ class UserViewModel {
         .child(userID)
         .child(userID + ".png")
         .getData(1024 * 1024);
+
+        MemoryImage(imageDataInBytes!);
       }
 }
