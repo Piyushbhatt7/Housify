@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:housify/models/app_constants.dart';
 
 class AccountScreen extends StatefulWidget {
   const AccountScreen({super.key});
@@ -27,6 +28,9 @@ class _AccountScreenState extends State<AccountScreen> {
                             child: CircleAvatar(
                               backgroundColor: Colors.black,
                               radius: MediaQuery.of(context).size.width / 4.5,
+                              child: CircleAvatar(
+                                backgroundImage: AppConstants.currentUser.displayImage,
+                              ),
                             ),
                             onPressed: ()
                           {
