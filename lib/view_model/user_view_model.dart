@@ -129,5 +129,7 @@ class UserViewModel {
         .getData(1024 * 1024);
 
         AppConstants.currentUser.displayImage =  MemoryImage(imageDataInBytes!);
+
+        return AppConstants.currentUser.displayImage;
       }
 }
