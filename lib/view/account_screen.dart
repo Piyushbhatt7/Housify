@@ -30,6 +30,7 @@ class _AccountScreenState extends State<AccountScreen> {
                               radius: MediaQuery.of(context).size.width / 4.5,
                               child: CircleAvatar(
                                 backgroundImage: AppConstants.currentUser.displayImage,
+                                radius: MediaQuery.of(context).size.width / 4.5,
                               ),
                             ),
                             onPressed: ()
