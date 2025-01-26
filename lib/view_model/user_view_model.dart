@@ -86,7 +86,7 @@ class UserViewModel {
               String currentUserID =  result.user!.uid;
               AppConstants.currentUser.id = currentUserID;
            
-            })
+            });
         }
 
         catch(e)
