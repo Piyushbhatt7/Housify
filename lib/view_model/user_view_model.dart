@@ -115,11 +115,13 @@ class UserViewModel {
 
       }
 
-      getImageFromStrorage()
+      getImageFromStrorage() async
       {
         if(AppConstants.currentUser.displayImage == null)
         {
           return AppConstants.currentUser.displayImage;
         }
+
+        final imageDataInBytes = await FirebaseStorage.instance.ref()
       }
 }
