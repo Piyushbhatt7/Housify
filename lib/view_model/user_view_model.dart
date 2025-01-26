@@ -17,8 +17,8 @@ class UserViewModel {
      {
          await FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: password).then((result) async
       {
-          String currentUserId = result.user!.uid; 
-              AppConstants.currentUser.id = currentUserId;
+          String currentUserID = result.user!.uid; 
+              AppConstants.currentUser.id = currentUserID;
               AppConstants.currentUser.email = email;
               AppConstants.currentUser.firstName = firstName;
               AppConstants.currentUser.city = city;
@@ -26,9 +26,9 @@ class UserViewModel {
               AppConstants.currentUser.bio = bio;
               AppConstants.currentUser.password = password;
 
-            await  saveUserToFirestore(bio, city, country, email, firstName, lastName, currentUserId).whenComplete(() async
+            await  saveUserToFirestore(bio, city, country, email, firstName, lastName, currentUserID).whenComplete(() async
             {
-              await addImageToFirebaseStorage(imageFileOfUser, currentUserId);
+              await addImageToFirebaseStorage(imageFileOfUser, currentUserID);
             });
 
             Get.snackbar("Congratulation", "your account has been created successfully");
