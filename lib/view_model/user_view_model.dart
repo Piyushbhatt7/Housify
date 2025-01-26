@@ -115,7 +115,7 @@ class UserViewModel {
 
       }
 
-      getImageFromStrorage() async
+      getImageFromStrorage(userID) async
       {
         if(AppConstants.currentUser.displayImage == null)
         {
@@ -123,5 +123,8 @@ class UserViewModel {
         }
 
         final imageDataInBytes = await FirebaseStorage.instance.ref()
+        .child("userImages")
+        .child(userID)
+        .child(userID + ".png");
       }
 }
