@@ -9,6 +9,24 @@ class AccountScreen extends StatefulWidget {
 }
 
 class _AccountScreenState extends State<AccountScreen> {
+
+  modifyHostingMode()
+  {
+    if(AppConstants.currentUser.isHost!)
+    {
+      if(AppConstants.currentUser.isCurrentlyHosting!)
+      {
+         AppConstants.currentUser.isCurrentlyHosting = false;
+      }
+      else {
+
+      }
+    }
+
+    else {
+
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -72,7 +90,9 @@ class _AccountScreenState extends State<AccountScreen> {
                  ListView(
                   shrinkWrap: true,
                   children: [
-                       
+             
+             // "Personal Information",
+          
              Container(
             decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -93,11 +113,11 @@ class _AccountScreenState extends State<AccountScreen> {
         {
 
         },
-         child: ListTile(
-          contentPadding: const EdgeInsets.all(0.0),
+         child: const ListTile(
+          contentPadding: EdgeInsets.all(0.0),
           leading: Text(
             "Personal Information",
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 18.5,
               fontWeight: FontWeight.normal,
             ),
@@ -109,7 +129,45 @@ class _AccountScreenState extends State<AccountScreen> {
          ),
         ),
                       ),
-                      
+
+              // guest mode and host mode
+               Container(
+            decoration: BoxDecoration(
+            gradient: LinearGradient(
+          colors: [
+            Colors.pinkAccent,
+            Colors.amberAccent,
+          ],
+          begin: FractionalOffset(0, 0),
+          end: FractionalOffset(1, 0),
+          stops: [0, 1],
+          tileMode: TileMode.clamp,
+        )),
+
+        child: MaterialButton(
+          height: MediaQuery.of(context).size.height/9.1,
+
+          onPressed: ()
+        {
+            modifyHostingMode();
+        },
+         child: const ListTile(
+          contentPadding: EdgeInsets.all(0.0),
+          leading: Text(
+            "Personal Information",
+            style: TextStyle(
+              fontSize: 18.5,
+              fontWeight: FontWeight.normal,
+            ),
+          ),
+          trailing: Icon(
+            size: 34,
+            Icons.hotel_class_outlined
+          ),
+         ),
+        ),
+                      ),
+                       
                   ],
                  )
               ],
