@@ -44,7 +44,7 @@ class _GuestHomeScreenState extends State<GuestHomeScreen> {
 
     activeIcon: Icon(
       IconData,
-      color: Colors.pinkd,
+      color: Colors.pink,
     )
     );
  }
