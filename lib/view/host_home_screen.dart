@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:housify/view/HostScreens/booking_screen.dart';
+import 'package:housify/view/HostScreens/my_posting_screen.dart';
 import 'package:housify/view/guestScreens/account_screen.dart';
 import 'package:housify/view/guestScreens/explore_screen.dart';
 import 'package:housify/view/guestScreens/inbox_screen.dart';
@@ -26,8 +28,8 @@ class _HostHomeScreenState extends State<HostHomeScreen> {
 
  final List<Widget> screens = [
    
-   ExploreScreen(),
-   SavedListingScreen(),
+   BookingScreen(),
+   MyPostingScreen(),
    TripsScreen(),
    InboxScreen(),
    AccountScreen(),
