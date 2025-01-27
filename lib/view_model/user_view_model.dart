@@ -150,6 +150,9 @@ class UserViewModel {
          userModel.isHost = true;
 
          Map<String, dynamic> dataMap = 
+         {
+            "isHost" : 
+         }
       }
 
 }
