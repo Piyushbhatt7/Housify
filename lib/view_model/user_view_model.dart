@@ -141,4 +141,10 @@ class UserViewModel {
 
         return AppConstants.currentUser.displayImage;
       }
+
+      becomeHost() async
+      {
+        
+      }
+
 }
