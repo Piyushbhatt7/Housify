@@ -69,6 +69,8 @@ class _GuestHomeScreenState extends State<GuestHomeScreen> {
         items: <BottomNavigationBarItem>
         [
 
+          customNavigationBarItem(0, Icons.search, screenTitles[0]),
+
         ],
         
       ),
