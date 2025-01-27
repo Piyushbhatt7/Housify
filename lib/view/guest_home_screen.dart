@@ -10,6 +10,7 @@ class GuestHomeScreen extends StatefulWidget {
 class _GuestHomeScreenState extends State<GuestHomeScreen> {
 
  final List<String> screenTitles = [
+   
    'Explore',
    'Saved',
    'Trips',
