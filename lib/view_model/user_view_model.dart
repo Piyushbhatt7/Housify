@@ -151,8 +151,10 @@ class UserViewModel {
 
          Map<String, dynamic> dataMap = 
          {
-            "isHost" : 
-         }
+            "isHost" : true,
+         };
+
+         await 
       }
 
 }
