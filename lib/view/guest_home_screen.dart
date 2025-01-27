@@ -70,10 +70,10 @@ class _GuestHomeScreenState extends State<GuestHomeScreen> {
         [
 
           customNavigationBarItem(0, Icons.search, screenTitles[0]),
-          customNavigationBarItem(0, Icons.search, screenTitles[0]),
-          customNavigationBarItem(0, Icons.search, screenTitles[0]),
-          customNavigationBarItem(0, Icons.search, screenTitles[0]),
-          customNavigationBarItem(0, Icons.search, screenTitles[0]),
+          customNavigationBarItem(1, Icons.search, screenTitles[1]),
+          customNavigationBarItem(2, Icons.search, screenTitles[2]),
+          customNavigationBarItem(3, Icons.search, screenTitles[3]),
+          customNavigationBarItem(4, Icons.search, screenTitles[4]),
 
         ],
         
