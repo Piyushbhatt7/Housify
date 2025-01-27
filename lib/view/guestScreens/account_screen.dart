@@ -30,7 +30,7 @@ class _AccountScreenState extends State<AccountScreen> {
     }
 
     else {
-
+             AppConstants.currentUser.
     }
   }
   @override
