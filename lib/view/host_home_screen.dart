@@ -30,7 +30,6 @@ class _HostHomeScreenState extends State<HostHomeScreen> {
    
    BookingScreen(),
    MyPostingScreen(),
-   TripsScreen(),
    InboxScreen(),
    AccountScreen(),
  ];
@@ -95,11 +94,10 @@ class _HostHomeScreenState extends State<HostHomeScreen> {
         items: <BottomNavigationBarItem>
         [
 
-          customNavigationBarItem(0, Icons.search, screenTitles[0]),
-          customNavigationBarItem(1, Icons.favorite_border, screenTitles[1]),
-          customNavigationBarItem(2, Icons.hotel, screenTitles[2]),
-          customNavigationBarItem(3, Icons.message, screenTitles[3]),
-          customNavigationBarItem(4, Icons.percent_outlined, screenTitles[4]),
+          customNavigationBarItem(0, Icons.calendar_today, screenTitles[0]),
+          customNavigationBarItem(1, Icons.home, screenTitles[1]),
+          customNavigationBarItem(2, Icons.message, screenTitles[2]),
+          customNavigationBarItem(3, Icons.percent_outlined, screenTitles[3]),
 
         ],
         
