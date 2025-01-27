@@ -18,11 +18,10 @@ class _HostHomeScreenState extends State<HostHomeScreen> {
 
  final List<String> screenTitles = [
    
-   'Explore',
-   'Saved',
-   'Trips',
-   'Inbox',
-   'Profiles',
+    'Bookings',
+    'My Postings',
+    'Inbox',
+    'Profile',
  ];
 
  final List<Widget> screens = [
