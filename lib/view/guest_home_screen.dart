@@ -55,10 +55,23 @@ class _GuestHomeScreenState extends State<GuestHomeScreen> {
     return Scaffold(
       
       appBar: AppBar(
-        flexibleSpace: 
+        flexibleSpace: Container(
+           decoration: BoxDecoration(
+            gradient: LinearGradient(
+          colors: [
+            Colors.pinkAccent,
+            Colors.amberAccent,
+          ],
+          begin: FractionalOffset(0, 0),
+          end: FractionalOffset(1, 0),
+          stops: [0, 1],
+          tileMode: TileMode.clamp,
+        )),
+        ),
+        title: ,
       
       
-      ,),
+      ),
       body: screens[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
 
