@@ -147,6 +147,7 @@ class UserViewModel {
       becomeHost() async
       {
          UserModel userModel = UserModel();
+         userModel.isHost = true;
       }
 
 }
