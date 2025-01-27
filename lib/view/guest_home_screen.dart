@@ -38,7 +38,17 @@ class _GuestHomeScreenState extends State<GuestHomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
 
-      body: screens[],
+      body: screens[selectedIndex],
+      bottomNavigationBar: BottomNavigationBar(
+
+        onTap: (i) {
+          
+          setState(() {
+             selectedIndex = i;
+          });
+        },
+        
+      ),
     );
   }
 }
