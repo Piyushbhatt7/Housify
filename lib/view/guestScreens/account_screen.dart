@@ -98,7 +98,8 @@ class _AccountScreenState extends State<AccountScreen> {
           leading: Text(
             "Personal Information",
             style: const TextStyle(
-              fontSize: 18.5
+              fontSize: 18.5,
+              fontWeight: FontWeight.bold,
             ),
           ),
          ),
