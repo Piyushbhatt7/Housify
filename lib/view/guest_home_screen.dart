@@ -68,7 +68,13 @@ class _GuestHomeScreenState extends State<GuestHomeScreen> {
           tileMode: TileMode.clamp,
         )),
         ),
-        title: Text(screenTitles[selectedIndex]),
+        title: Text(screenTitles[selectedIndex],
+        style: TextStyle(
+          fontSize: 18,
+          color: Colors.white,
+        ),
+        ),
+        automaticallyImplyLeading: false,
       
       
       ),
