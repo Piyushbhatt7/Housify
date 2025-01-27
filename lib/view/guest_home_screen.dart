@@ -34,6 +34,21 @@ class _GuestHomeScreenState extends State<GuestHomeScreen> {
    AccountScreen(),
  ];
 
+ BottomNavigationBarItem customNavigationBarItem(int index, IconData, String title)
+ {
+   return BottomNavigationBarItem(icon: Icon(
+    IconData, 
+    color: Colors.black,
+    
+    ),
+
+    activeIcon: Icon(
+      IconData,
+      color: Colors.pinkd,
+    )
+    );
+ }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
