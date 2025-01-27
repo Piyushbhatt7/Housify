@@ -10,6 +10,6 @@ class MyPostingScreen extends StatefulWidget {
 class _MyPostingScreenState extends State<MyPostingScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold();
   }
 }
