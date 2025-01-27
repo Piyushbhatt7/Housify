@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:housify/models/app_constants.dart';
 import 'package:housify/view/guestScreens/account_screen.dart';
+import 'package:housify/view/guest_home_screen.dart';
 
 class UserViewModel {
 
@@ -94,7 +95,7 @@ class UserViewModel {
               await getImageFromStrorage(currentUserID);
 
               Get.snackbar("Logged-In", "you are logged-in successfully");
-              Get.to(AccountScreen());
+              Get.to(GuestHomeScreen());
 
            
             });
