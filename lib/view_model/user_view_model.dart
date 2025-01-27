@@ -37,7 +37,7 @@ class UserViewModel {
             Get.to(GuestHomeScreen());
             Get.snackbar("Congratulation", "your account has been created successfully");
 
-      });
+      }); 
      }
 
      catch(e)
