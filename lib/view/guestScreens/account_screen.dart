@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:housify/models/app_constants.dart';
 import 'package:housify/view/guest_home_screen.dart';
+import 'package:housify/view/host_home_screen.dart';
 
 class AccountScreen extends StatefulWidget {
   const AccountScreen({super.key});
@@ -24,7 +25,7 @@ class _AccountScreenState extends State<AccountScreen> {
       }
       else {
              AppConstants.currentUser.isCurrentlyHosting = true;
-             Get.to(page)
+             Get.to(HostHomeScreen());
       }
     }
 
