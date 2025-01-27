@@ -148,6 +148,8 @@ class UserViewModel {
       {
          UserModel userModel = UserModel();
          userModel.isHost = true;
+
+         Map<String>
       }
 
 }
