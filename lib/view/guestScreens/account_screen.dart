@@ -24,6 +24,7 @@ class _AccountScreenState extends State<AccountScreen> {
       }
       else {
              AppConstants.currentUser.isCurrentlyHosting = true;
+             Get.to(page)
       }
     }
 
