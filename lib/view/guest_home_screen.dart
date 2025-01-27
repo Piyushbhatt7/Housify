@@ -75,6 +75,7 @@ class _GuestHomeScreenState extends State<GuestHomeScreen> {
         ),
         ),
         automaticallyImplyLeading: false,
+        centerTitle: true,
       
       
       ),
