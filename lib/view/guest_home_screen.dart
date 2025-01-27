@@ -53,7 +53,12 @@ class _GuestHomeScreenState extends State<GuestHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+      
+      appBar: AppBar(
+        flexibleSpace: 
+      
+      
+      ,),
       body: screens[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
 
