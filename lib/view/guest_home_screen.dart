@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:housify/view/guestScreens/account_screen.dart';
+import 'package:housify/view/guestScreens/explore_screen.dart';
+import 'package:housify/view/guestScreens/inbox_screen.dart';
+import 'package:housify/view/guestScreens/saved_listing_screen.dart';
+import 'package:housify/view/guestScreens/trips_screen.dart';
 
 class GuestHomeScreen extends StatefulWidget {
   const GuestHomeScreen({super.key});
@@ -18,7 +23,14 @@ class _GuestHomeScreenState extends State<GuestHomeScreen> {
    'Profiles',
  ];
 
- final List<Widget> screens = [];
+ final List<Widget> screens = [
+   
+   ExploreScreen(),
+   SavedListingScreen(),
+   TripsScreen(),
+   InboxScreen(),
+   AccountScreen(),
+ ];
 
   @override
   Widget build(BuildContext context) {
