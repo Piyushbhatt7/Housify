@@ -99,8 +99,12 @@ class _AccountScreenState extends State<AccountScreen> {
             "Personal Information",
             style: const TextStyle(
               fontSize: 18.5,
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.normal,
             ),
+          ),
+          trailing: Icon(
+            size: 34,
+            Icons.person_2
           ),
          ),
         ),
