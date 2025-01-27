@@ -66,6 +66,46 @@ class _AccountScreenState extends State<AccountScreen> {
                       ],
                     ),
                   ),
+                 ),
+              
+              // buttons
+                 ListView(
+                  shrinkWrap: true,
+                  children: [
+                       
+             Container(
+            decoration: BoxDecoration(
+            gradient: LinearGradient(
+          colors: [
+            Colors.pinkAccent,
+            Colors.amberAccent,
+          ],
+          begin: FractionalOffset(0, 0),
+          end: FractionalOffset(1, 0),
+          stops: [0, 1],
+          tileMode: TileMode.clamp,
+        )),
+
+        child: MaterialButton(
+          height: MediaQuery.of(context).size.height/9.1,
+
+          onPressed: ()
+        {
+
+        },
+         child: ListTile(
+          contentPadding: const EdgeInsets.all(0.0),
+          leading: Text(
+            "Personal Information",
+            style: const TextStyle(
+              fontSize: 18.5
+            ),
+          ),
+         ),
+        ),
+                      ),
+                      
+                  ],
                  )
               ],
             ),
