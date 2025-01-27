@@ -34,7 +34,7 @@ class UserViewModel {
               await addImageToFirebaseStorage(imageFileOfUser, currentUserID);
             });
             
-            Get.to(AccountScreen());
+            Get.to(GuestHomeScreen());
             Get.snackbar("Congratulation", "your account has been created successfully");
 
       });
