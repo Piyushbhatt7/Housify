@@ -23,7 +23,7 @@ class _AccountScreenState extends State<AccountScreen> {
          Get.to(GuestHomeScreen());
       }
       else {
-
+             AppConstants.currentUser.isCurrentlyHosting = true;
       }
     }
 
