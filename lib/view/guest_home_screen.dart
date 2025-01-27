@@ -47,6 +47,13 @@ class _GuestHomeScreenState extends State<GuestHomeScreen> {
              selectedIndex = i;
           });
         },
+
+        currentIndex: selectedIndex,
+        type: BottomNavigationBarType.fixed,
+        items: <BottomNavigationBarItem>
+        [
+
+        ],
         
       ),
     );
