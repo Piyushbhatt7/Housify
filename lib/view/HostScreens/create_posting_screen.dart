@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class CreatePostingScreen extends StatefulWidget {
   const CreatePostingScreen({super.key});
@@ -83,6 +84,17 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                           style: TextStyle(
                             fontSize: 25.0
                           ),
+
+                          controller: _nameTextEditingController,
+                          validator: (textInput) {
+                              
+                              if(textInput!.isEmpty)
+                              {
+                                return "please enter valid name";
+                              }
+
+                              return null;
+                          },
                         ),
                       
                       )
