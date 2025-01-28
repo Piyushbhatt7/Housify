@@ -256,7 +256,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                   ),
                   
                  // 9:37 video
-                    
+                    // beds
                 const Padding(
                   padding: EdgeInsets.only(top: 30.0),
                   child: Text(
@@ -267,6 +267,11 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                     ),
                   ),
                   ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(left: 15.0, right: 15.0)
+                  
+                  )
   
 
                     ],
