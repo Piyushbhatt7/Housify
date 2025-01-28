@@ -144,7 +144,7 @@ class UserViewModel {
         return AppConstants.currentUser.displayImage;
       }
 
-      becomeHost() async
+      becomeHost(String userID) async
       {
          UserModel userModel = UserModel();
          userModel.isHost = true;
@@ -154,7 +154,7 @@ class UserViewModel {
             "isHost" : true,
          };
 
-         await FirebaseFirestore.instance
+         await FirebaseFirestore.instance.collection("users").doc(userID).update(dataMap)
       }
 
 }
