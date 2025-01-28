@@ -29,6 +29,8 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
     'Town House',
     'Studio',
   ];
+
+  String residenceTypesSelected = "";
   
 
   @override
@@ -115,8 +117,26 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                      Padding(
                       padding: EdgeInsets.only(top: 28.0),
                       child: DropdownButton(
-                        items: items, 
-                        onChanged: onChanged),
+                        items: residenceTypes.map((item)
+                        {
+                          return DropdownMenuItem(
+                            value: item,
+                            child: Text(
+                              item,
+                              style: TextStyle(
+                                fontSize: 20,
+                              ),
+                            )
+                            );
+                        }).toList(), 
+                        onChanged: (valueItem)
+                        {
+                           setState(() {
+                             residenceTypesSelected = valueItem.toString();
+                           });
+                        }
+                        
+                        ),
                      )
                    
                     ],
