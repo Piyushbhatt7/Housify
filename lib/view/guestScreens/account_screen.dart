@@ -41,6 +41,32 @@ class _AccountScreenState extends State<AccountScreen> {
            Get.to(HostHomeScreen());
     }
   }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+     if(AppConstants.currentUser.isHost!)
+    {
+      if(AppConstants.currentUser.isCurrentlyHosting!)
+      {
+         _hostingTitle = 'Show my Guest Dashboard';
+      }
+      else {
+             
+          _hostingTitle = 'Show my Host Dashboard';
+        
+      }
+    }
+
+    else {
+           
+           _hostingTitle = 'Become a host';
+
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -125,12 +151,12 @@ class _AccountScreenState extends State<AccountScreen> {
 
           onPressed: ()
         {
-
+           modifyHostingMode();
         },
-         child: const ListTile(
+         child:  ListTile(
           contentPadding: EdgeInsets.all(0.0),
           leading: Text(
-            "Personal Information",
+            _hostingTitle,
             style: TextStyle(
               fontSize: 18.5,
               fontWeight: FontWeight.normal,
@@ -165,11 +191,11 @@ class _AccountScreenState extends State<AccountScreen> {
         {
             modifyHostingMode();
         },
-         child: const ListTile(
+         child:  ListTile(
           contentPadding: EdgeInsets.all(0.0),
           leading: Text(
-            "Personal Information",
-            style: TextStyle(
+             _hostingTitle,
+            style: const TextStyle(
               fontSize: 18.5,
               fontWeight: FontWeight.normal,
             ),
