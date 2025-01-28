@@ -50,7 +50,14 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
       body: Center(
         child: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.fromLTRB(26, 26, 26, 0)
+            padding: EdgeInsets.fromLTRB(26, 26, 26, 0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                
+              ],
+            ),
             ),
         ),
       ),
