@@ -172,8 +172,23 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                                  {
                                   return "please enter a valid price";
                                  }
+                                 return null;
                               },
-                            )
+                            ),
+                          
+                          ),
+
+                          const Padding(
+                            padding: EdgeInsets.only(
+                              left: 10.0, bottom: 10.0,
+                            ),
+
+                            child: Text(
+                              "\$ / night",
+                              style: TextStyle(
+                                fontSize: 18,
+                              ),
+                            ),
                           
                           )
                       ],
