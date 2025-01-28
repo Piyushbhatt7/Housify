@@ -10,7 +10,14 @@ class PostingTileButton extends StatelessWidget {
       child: const Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-
+           Icon(Icons.add),
+           Text(
+            "Create a listing",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 20.0
+            ),
+           )
         ],
       ),
     );
