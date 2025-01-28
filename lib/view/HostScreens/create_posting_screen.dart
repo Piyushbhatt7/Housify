@@ -284,6 +284,11 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                             decreaseValue: ()
                             {
                               _beds!['small'] = _beds!['small']! - 1;
+
+                              if(_beds!['small']! < 0)
+                              {
+                                _beds!['small'] = 0;
+                              }
                             }, 
                             increaseValue: increaseValue
                             
