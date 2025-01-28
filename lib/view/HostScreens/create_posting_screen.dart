@@ -40,13 +40,22 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
         actions: [
           IconButton(onPressed: ()
           {
-            
-
 
           }, icon: const Icon(Icons.upload)
           )
         ],
       ),
+      
+
+      body: Center(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.fromLTRB(26, 26, 26, 0)
+            ),
+        ),
+      ),
+   
+   
     );
   }
 }
