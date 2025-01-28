@@ -20,7 +20,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
         actions: [
           IconButton(onPressed: ()
           {
-
+            
 
           }, icon: const Icon(Icons.upload)
           )
