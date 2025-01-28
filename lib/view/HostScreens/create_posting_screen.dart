@@ -134,7 +134,16 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                            setState(() {
                              residenceTypesSelected = valueItem.toString();
                            });
-                        }
+                        },
+
+                        isExpanded: true,
+                        value: residenceTypesSelected,
+                        hint: Text(
+                          "Selected property type",
+                          style: TextStyle(
+                            fontSize: 20,
+                          ),
+                        ),
                         
                         ),
                      )
