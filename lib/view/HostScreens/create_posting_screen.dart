@@ -316,7 +316,9 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                                  _beds!['medium'] = _beds!['medium']! + 1;
                               }
                               
-                              )
+                              ),
+
+                              //Queen King Bed
                       ],
                     ),
                   )
