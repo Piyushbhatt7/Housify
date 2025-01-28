@@ -319,6 +319,25 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                               ),
 
                               //Queen King Bed
+
+                            AmenitiesUi(
+                            type: 'Queen/King', 
+                            startValue: _beds!['large']!, 
+                            decreaseValue: ()
+                            {
+                              _beds!['large'] = _beds!['large']! - 1;
+
+                              if(_beds!['large']! < 0)
+                              {
+                                _beds!['large'] = 0;
+                              }
+                            }, 
+                            increaseValue: ()
+                            {
+                              _beds!['large'] = _beds!['large']! + 1;
+                            },
+                            
+                            )
                       ],
                     ),
                   )
