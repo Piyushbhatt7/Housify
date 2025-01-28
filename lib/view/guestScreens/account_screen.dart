@@ -170,6 +170,8 @@ class _AccountScreenState extends State<AccountScreen> {
         ),
                       ),
 
+              const SizedBox(height: 10,),
+              
               // guest mode and host mode
                Container(
             decoration: BoxDecoration(
