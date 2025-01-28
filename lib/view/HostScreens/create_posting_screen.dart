@@ -196,6 +196,35 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                    
                    ),
                    
+                    
+                    // Description
+
+                    Padding(
+                      padding: EdgeInsets.only(top: 20.0),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          labelText: "Description",
+                        ),
+                        style: TextStyle(
+                          fontSize: 25.0,
+
+                        ),
+
+                        controller: _descriptionTextEditingController,
+                        maxLines: 1,
+                        minLines: 1,
+                        validator: (text) {
+                           
+                           if(text!.isEmpty)
+                           {
+                            return "please enter a valid description";
+                           }
+
+                           return null;
+                        },
+                      ),
+                    
+                    )
                     ],
                   )
                   
