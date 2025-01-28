@@ -43,7 +43,13 @@ class _AmenitiesUiState extends State<AmenitiesUi> {
 
             IconButton(onPressed: ()
             {
+              widget.decreaseValue();
+              _valueDigit = _valueDigit! - 1;
 
+              if(_valueDigit! < 0)
+              {
+                _valueDigit = 0;
+              }
             }, icon: Icon(Icons.remove
             ))
           ],
