@@ -6,7 +6,13 @@ class PostingTileButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height/11.0
+      height: MediaQuery.of(context).size.height/11.0,
+      child: const Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+
+        ],
+      ),
     );
   }
 }
