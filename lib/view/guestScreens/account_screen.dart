@@ -15,6 +15,8 @@ class AccountScreen extends StatefulWidget {
 
 class _AccountScreenState extends State<AccountScreen> {
 
+  String _hostingTitle = 'Show my Host Dashboard';
+
   modifyHostingMode() async
   {
     if(AppConstants.currentUser.isHost!)
