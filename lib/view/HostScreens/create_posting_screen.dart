@@ -9,8 +9,20 @@ class CreatePostingScreen extends StatefulWidget {
 
 class _CreatePostingScreenState extends State<CreatePostingScreen> {
 
+  final formKey = GlobalKey<FormState>();
+
+  TextEditingController _nameTextEditingController = TextEditingController();
+  TextEditingController _priceTextEditingController = TextEditingController();
+  TextEditingController _descriptionTextEditingController = TextEditingController();
+  TextEditingController _addressTextEditingController = TextEditingController();
+  TextEditingController _cityTextEditingController = TextEditingController();
+  TextEditingController _countryTextEditingController = TextEditingController();
+  TextEditingController _amenitiesTextEditingController = TextEditingController();
+  
+
   @override
   Widget build(BuildContext context) {
+  
     return Scaffold(
       appBar: AppBar(
         
@@ -56,6 +68,11 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 
+                Form(
+                  key: formKey,
+                  child: 
+                  
+                )
               ],
             ),
             ),
