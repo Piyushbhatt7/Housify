@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:housify/view/widgets/amenities_ui.dart';
 
 class CreatePostingScreen extends StatefulWidget {
   const CreatePostingScreen({super.key});
@@ -31,6 +32,9 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
   ];
 
   String residenceTypesSelected = "";
+
+  Map<String,int>? _beds;
+  Map<String,int>? _bathrooms;
   
 
   @override
@@ -272,7 +276,18 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                     padding: const EdgeInsets.only(top: 21.0, left: 15.0, right: 15.0),
                     child: Column(
                       children: [
+                          
 
+                          AmenitiesUi(
+                            type: 'Twin/Single', 
+                            startValue: _beds!['small']!, 
+                            decreaseValue: ()
+                            {
+                              _beds!['small'] = _beds!['small']! - 1;
+                            }, 
+                            increaseValue: increaseValue
+                            
+                            )
                       ],
                     ),
                   )
