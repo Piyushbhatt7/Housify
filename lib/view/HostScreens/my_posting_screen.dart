@@ -10,6 +10,31 @@ class MyPostingScreen extends StatefulWidget {
 class _MyPostingScreenState extends State<MyPostingScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Padding(
+      padding: EdgeInsets.only(top: 25),
+      child: Padding(
+        padding: EdgeInsets.fromLTRB(26, 0, 26, 26),
+
+        child: InkResponse(
+
+          onTap: () {
+            
+          },
+
+          child: Container(
+            decoration: BoxDecoration(
+               border: Border.all(
+                color: Colors.grey,
+                width: 1.2,
+
+               ),        
+            ),
+            child: ,
+         
+          ),
+        ),
+         ),
+
+    );
   }
 }
