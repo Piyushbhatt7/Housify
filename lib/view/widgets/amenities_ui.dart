@@ -6,8 +6,8 @@ class AmenitiesUi extends StatefulWidget {
   int startValue;
   Function decreaseValue;
   Function increaseValue;
-
-  const AmenitiesUi({super.key, required this.type, required this.startValue, required this.decreaseValue, required this.increaseValue});
+  
+ AmenitiesUi({super.key, required this.type, required this.startValue, required this.decreaseValue, required this.increaseValue});
 
   @override
   State<AmenitiesUi> createState() => _AmenitiesUiState();
