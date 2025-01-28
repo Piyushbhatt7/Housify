@@ -346,7 +346,23 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                           child: Column(
                             children: [
 
-                              AmenitiesUi(type: type, startValue: startValue, decreaseValue: decreaseValue, increaseValue: increaseValue)
+                              AmenitiesUi(
+                                type: 'Full', 
+                                startValue: _bathrooms!['full']!, 
+                                decreaseValue: ()
+                                {
+                                   _bathrooms!['full'] = _bathrooms!['full']! - 1;
+
+                                   if(_bathrooms!['full']! < 0)
+                                   {
+                                     _bathrooms!['full'] = 0;
+                                   }
+                                }, 
+                                increaseValue: ()
+                                {
+                                    _bathrooms!['full'] = _bathrooms!['full']! + 1;
+                                }
+                                )
                             ],
                           ),
                          )
