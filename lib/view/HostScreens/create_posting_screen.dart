@@ -190,11 +190,11 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                               ),
                             ),
                           
-                          )
+                          ),
                       ],
                      ),
                    
-                   )
+                   ),
                    
                     ],
                   )
