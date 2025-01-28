@@ -31,7 +31,10 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
         ),
         
         title: Text(
-          "Create / Update a Posting"
+          "Create / Update a Posting",
+          style: TextStyle(
+            color: Colors.white
+          ),
         ),
 
         actions: [
