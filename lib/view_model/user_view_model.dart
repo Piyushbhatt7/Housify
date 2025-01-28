@@ -154,7 +154,7 @@ class UserViewModel {
             "isHost" : true,
          };
 
-         await 
+         await FirebaseFirestore.instance
       }
 
 }
