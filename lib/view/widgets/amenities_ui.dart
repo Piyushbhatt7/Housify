@@ -27,6 +27,17 @@ class _AmenitiesUiState extends State<AmenitiesUi> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+       children: [
+
+        Text(
+          widget.type,
+          style: TextStyle(
+            fontSize: 18.0
+          ),
+        )
+       ],
+    );
   }
 }
