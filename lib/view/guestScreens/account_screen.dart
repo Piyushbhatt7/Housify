@@ -151,12 +151,12 @@ class _AccountScreenState extends State<AccountScreen> {
 
           onPressed: ()
         {
-           modifyHostingMode();
+          
         },
          child:  ListTile(
           contentPadding: EdgeInsets.all(0.0),
           leading: Text(
-            _hostingTitle,
+            "Personal Information",
             style: TextStyle(
               fontSize: 18.5,
               fontWeight: FontWeight.normal,
@@ -171,7 +171,7 @@ class _AccountScreenState extends State<AccountScreen> {
                       ),
 
               const SizedBox(height: 10,),
-              
+
               // guest mode and host mode
                Container(
             decoration: BoxDecoration(
@@ -210,6 +210,48 @@ class _AccountScreenState extends State<AccountScreen> {
         ),
                       ),
                        
+                   // logout btn
+                  
+                Container(
+
+            decoration: BoxDecoration(
+            gradient: LinearGradient(
+          colors: [
+            Colors.pinkAccent,
+            Colors.amberAccent,
+          ],
+          begin: FractionalOffset(0, 0),
+          end: FractionalOffset(1, 0),
+          stops: [0, 1],
+          tileMode: TileMode.clamp,
+        )),
+
+        child: MaterialButton(
+          height: MediaQuery.of(context).size.height/9.1,
+
+          onPressed: ()
+        {
+            
+        },
+         child:  ListTile(
+          contentPadding: EdgeInsets.all(0.0),
+          leading: Text(
+            _hostingTitle,
+            style: TextStyle(
+              fontSize: 18.5,
+              fontWeight: FontWeight.normal,
+            ),
+          ),
+          trailing: Icon(
+            size: 34,
+            Icons.person_2
+          ),
+         ),
+        ),
+                      ),
+
+         
+
                   ],
                  )
               ],
