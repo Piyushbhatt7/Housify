@@ -19,6 +19,16 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
   TextEditingController _cityTextEditingController = TextEditingController();
   TextEditingController _countryTextEditingController = TextEditingController();
   TextEditingController _amenitiesTextEditingController = TextEditingController();
+
+  final List<String> residenceTypes = [
+    'Detatched House',
+    'Villa',
+    'Apartment',
+    'Condo',
+    'Flat',
+    'Town House',
+    'Studio',
+  ];
   
 
   @override
@@ -74,7 +84,8 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-
+                      
+                    // Listing name
                       Padding(
                         padding: EdgeInsets.only(top: 1.0),
                         child: TextFormField(
@@ -98,6 +109,16 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                         ),
                       
                       )
+                   
+                     // Select property type
+                   
+                     Padding(
+                      padding: EdgeInsets.only(top: 28.0),
+                      child: DropdownButton(
+                        items: items, 
+                        onChanged: onChanged),
+                     )
+                   
                     ],
                   )
                   
