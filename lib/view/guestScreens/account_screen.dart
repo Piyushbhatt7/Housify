@@ -192,6 +192,10 @@ class _AccountScreenState extends State<AccountScreen> {
           onPressed: ()
         {
             modifyHostingMode();
+
+            setState(() {
+              
+            });
         },
          child:  ListTile(
           contentPadding: EdgeInsets.all(0.0),
@@ -252,7 +256,7 @@ class _AccountScreenState extends State<AccountScreen> {
         ),
                       ),
 
-                  const SizedBox(height: 10,),
+                  const SizedBox(height: 20,),
 
                   ],
                  )
