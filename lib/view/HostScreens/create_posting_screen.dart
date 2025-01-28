@@ -224,7 +224,37 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                         },
                       ),
                     
-                    )
+                    ),
+                  
+                  
+                  // Address
+                  
+                  Padding(
+                    padding: const EdgeInsets.all(21),
+
+                    child: TextFormField(
+                      enabled: false,
+                      decoration: InputDecoration(
+                        labelText: "Address"
+                      ),
+                      style: TextStyle(
+                        fontSize: 25.0,
+                      ),
+
+                      controller: _addressTextEditingController,
+                      validator: (text) {
+                        
+                        if(text!.isEmpty)
+                        {
+                          return "please enter a valid address";
+                        }
+
+                        return null;
+                      },
+                    ),
+                  
+                  )
+                  
                     ],
                   )
                   
