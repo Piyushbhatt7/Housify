@@ -32,7 +32,11 @@ class _AccountScreenState extends State<AccountScreen> {
     }
 
     else {
-             userViewModel.becomeHost(FirebaseAuth.instance.currentUser!.uid);
+           await userViewModel.becomeHost(FirebaseAuth.instance.currentUser!.uid);
+
+           AppConstants.currentUser.isCurrentlyHosting = true;
+
+           Get.to(HostHomeScreen());
     }
   }
   @override
