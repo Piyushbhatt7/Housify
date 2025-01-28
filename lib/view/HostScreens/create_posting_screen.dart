@@ -255,6 +255,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                   
                   )
                   
+                  9:37 video
                     ],
                   )
                   
