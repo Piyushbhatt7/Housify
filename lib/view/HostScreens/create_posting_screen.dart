@@ -340,8 +340,9 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                             ),
                       
                          // Bathrooms
-
-                         Padding(
+                         // Full Bathrooms // 16:43
+                         
+                         Padding( 
                           padding: EdgeInsets.fromLTRB(15, 25, 15, 0),
                           child: Column(
                             children: [
