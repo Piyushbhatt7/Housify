@@ -1,5 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:housify/global.dart';
 import 'package:housify/models/app_constants.dart';
 import 'package:housify/view/guest_home_screen.dart';
 import 'package:housify/view/host_home_screen.dart';
@@ -13,7 +15,7 @@ class AccountScreen extends StatefulWidget {
 
 class _AccountScreenState extends State<AccountScreen> {
 
-  modifyHostingMode()
+  modifyHostingMode() async
   {
     if(AppConstants.currentUser.isHost!)
     {
@@ -30,7 +32,7 @@ class _AccountScreenState extends State<AccountScreen> {
     }
 
     else {
-             AppConstants.currentUser.
+             userViewModel.becomeHost(FirebaseAuth.instance.currentUser!.uid);
     }
   }
   @override

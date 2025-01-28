@@ -12,6 +12,8 @@ import 'package:housify/view/guest_home_screen.dart';
 
 class UserViewModel {
 
+  UserModel userModel = UserModel();
+
   signUp(email, password, firstName, lastName, city, country, bio, imageFileOfUser) async
   {
 
@@ -146,7 +148,7 @@ class UserViewModel {
 
       becomeHost(String userID) async
       {
-         UserModel userModel = UserModel();
+         
          userModel.isHost = true;
 
          Map<String, dynamic> dataMap = 
@@ -160,7 +162,7 @@ class UserViewModel {
 
       modifyCurrentlyHosting(bool isHosting)
       {
-        
+           userModel.isCurrentlyHosting = isHosting;
       }
 
 }
