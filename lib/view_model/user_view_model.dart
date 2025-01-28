@@ -154,7 +154,13 @@ class UserViewModel {
             "isHost" : true,
          };
 
-         await FirebaseFirestore.instance.collection("users").doc(userID).update(dataMap)
+         await FirebaseFirestore.instance.collection("users").doc(userID).update(dataMap);
+
+      }
+
+      modifyCurrentlyHosting(bool isHosting)
+      {
+        
       }
 
 }
