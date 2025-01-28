@@ -26,9 +26,10 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                  end: FractionalOffset(1.0, 0.0),
                  stops: [0.0, 1.0],
                  tileMode: TileMode.clamp,
-            )
+            ),
           ),
         ),
+        
         title: Text(
           "Create / Update a Posting"
         ),
