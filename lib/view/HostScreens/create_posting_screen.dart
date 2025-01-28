@@ -253,9 +253,22 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                       },
                     ),
                   
-                  )
+                  ),
                   
-                  9:37 video
+                 // 9:37 video
+                    
+                const Padding(
+                  padding: EdgeInsets.only(top: 30.0),
+                  child: Text(
+                    'Beds',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  ),
+  
+
                     ],
                   )
                   
