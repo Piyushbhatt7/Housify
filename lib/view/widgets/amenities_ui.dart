@@ -54,7 +54,14 @@ class _AmenitiesUiState extends State<AmenitiesUi> {
                 
               });
             }, icon: Icon(Icons.remove
-            ))
+            )),
+
+            Text(
+              _valueDigit.toString(),
+              style: const TextStyle(
+                fontSize: 20.0,
+              ),
+            )
           ],
         )
        ],
