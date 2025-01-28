@@ -13,6 +13,18 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Colors.pinkAccent,
+                Colors.amber,
+              ]
+            
+            )
+          ),
+        ),
         title: Text(
           "Create / Update a Posting"
         ),
@@ -21,6 +33,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
           IconButton(onPressed: ()
           {
             
+
 
           }, icon: const Icon(Icons.upload)
           )
