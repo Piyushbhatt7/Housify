@@ -50,6 +50,9 @@ class _AmenitiesUiState extends State<AmenitiesUi> {
               {
                 _valueDigit = 0;
               }
+              setState(() {
+                
+              });
             }, icon: Icon(Icons.remove
             ))
           ],
