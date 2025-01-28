@@ -337,9 +337,19 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                               _beds!['large'] = _beds!['large']! + 1;
                             },
                             
-                            )
+                            ),
                       
                          // Bathrooms
+
+                         Padding(
+                          padding: EdgeInsets.fromLTRB(15, 25, 15, 0),
+                          child: Column(
+                            children: [
+
+                              AmenitiesUi(type: type, startValue: startValue, decreaseValue: decreaseValue, increaseValue: increaseValue)
+                            ],
+                          ),
+                         )
                       
                       ],
                     ),
