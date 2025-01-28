@@ -110,7 +110,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                           },
                         ),
                       
-                      )
+                      ),
                    
                      // Select property type
                    
@@ -146,12 +146,45 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                         ),
                         
                         ),
-                     )
+                     ),
+                   
+                    // Price
+                   
+                   Padding(
+                     padding: EdgeInsets.only(top: 21.0),
+
+                     child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: <Widget>[
+                          
+                          Expanded(
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                labelText: "Price",
+                              ),
+                              style: TextStyle(
+                                fontSize: 25.0,
+                              ),
+                              keyboardType: TextInputType.number,
+                              controller: _priceTextEditingController,
+                              validator: (text) {
+                                 if(text!.isEmpty)
+                                 {
+                                  return "please enter a valid price";
+                                 }
+                              },
+                            )
+                          
+                          )
+                      ],
+                     ),
+                   
+                   )
                    
                     ],
                   )
                   
-                )
+                ),
               ],
             ),
             ),
