@@ -70,7 +70,24 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                 
                 Form(
                   key: formKey,
-                  child: 
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+
+                      Padding(
+                        padding: EdgeInsets.only(top: 1.0),
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                            labelText: "Listing name"
+                          ),
+                          style: TextStyle(
+                            fontSize: 25.0
+                          ),
+                        ),
+                      
+                      )
+                    ],
+                  )
                   
                 )
               ],
