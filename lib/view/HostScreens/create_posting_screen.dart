@@ -277,7 +277,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                     child: Column(
                       children: [
                           
-
+                          // Twin // Single bed
                           AmenitiesUi(
                             type: 'Twin/Single', 
                             startValue: _beds!['small']!, 
@@ -290,9 +290,33 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                                 _beds!['small'] = 0;
                               }
                             }, 
-                            increaseValue: increaseValue
+                            increaseValue: ()
+                            {
+                              _beds!['small'] = _beds!['small']! + 1;
+                            },
                             
-                            )
+                            ),
+
+                            // Double Bed
+
+                            AmenitiesUi(
+                              type: 'Double', 
+                              startValue: _beds!['medium']!, 
+                              decreaseValue: ()
+                              {
+                                 _beds!['medium'] = _beds!['medium']! - 1;
+
+                                 if(_beds!['medium']! < 0)
+                                 {
+                                  _beds!['medium'] = 0;
+                                 }
+                              }, 
+                              increaseValue: ()
+                              {
+                                 _beds!['medium'] = _beds!['medium']! + 1;
+                              }
+                              
+                              )
                       ],
                     ),
                   )
