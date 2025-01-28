@@ -36,6 +36,17 @@ class _AmenitiesUiState extends State<AmenitiesUi> {
           style: TextStyle(
             fontSize: 18.0
           ),
+        ),
+
+        Row(
+          children: [
+
+            IconButton(onPressed: ()
+            {
+
+            }, icon: Icon(Icons.remove
+            ))
+          ],
         )
        ],
     );
