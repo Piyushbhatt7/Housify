@@ -47,16 +47,16 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
      
      if(imageFilePickedFromGaleery != null)
      {
-       MemoryImage imageFileInBytesForm = MemoryImage((File(imageFilePickedFromGaleery.path)).readAsBytesSync());
+       MemoryImage imageFileInBytesForm = MemoryImage((File(imageFilePickedFromGaleery!.path)).readAsBytesSync());
        
 
        if(index < 0)
        {
-        _imagesList!.add(imageFileInBytesForm);
+        _imagesList.add(imageFileInBytesForm);
        }
 
        else {
-        _imagesList![index] = imageFileInBytesForm;
+        _imagesList[index] = imageFileInBytesForm;
        }
 
        setState(() {
