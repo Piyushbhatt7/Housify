@@ -368,16 +368,21 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                              // Half bathroom
 
                              AmenitiesUi(
-                              
-                              type: type, 
-                              startValue: startValue, 
+
+                              type: 'Half', 
+                              startValue: _bathrooms!['half']!, 
                               decreaseValue: ()
                               {
+                                  _bathrooms!['half'] = _bathrooms!['half']! - 1;
 
+                                  if(_bathrooms!['half']! < 0)
+                                  {
+                                    _bathrooms!['half'] = 0;
+                                  }
                               }, 
                               increaseValue: ()
                               {
-
+                                    _bathrooms!['half'] = _bathrooms!['half']! + 1;
                               }
                               
                               )
