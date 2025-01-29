@@ -87,6 +87,18 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
       'fill': 0,
       'half': 0,
     };
+
+    _imagesList = [
+
+    ];
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    initializedValues();
   }
   
 
