@@ -52,7 +52,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
 
        if(index < 0)
        {
-        _imagesList!.add(imageFileInBytesForm)''
+        _imagesList!.add(imageFileInBytesForm);
        }
 
        else {
