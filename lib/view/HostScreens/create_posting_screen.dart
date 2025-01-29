@@ -35,6 +35,8 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
 
   Map<String,int>? _beds;
   Map<String,int>? _bathrooms;
+
+  List<MemoryImage>? _image;
   
 
   @override
