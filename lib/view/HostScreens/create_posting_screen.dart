@@ -423,7 +423,20 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                         maxLines: 3,
                         minLines: 1,
                       ),
-                      )
+                      ),
+
+                    // Photos of residence
+
+                    const Padding(
+                      padding: EdgeInsets.only(top: 20.0),
+                      child: Text(
+                        "Photos",
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    )
 
                     ],
                   )
