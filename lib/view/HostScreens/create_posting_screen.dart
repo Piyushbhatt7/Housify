@@ -394,7 +394,16 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                       ],
                     ),
                   )
-  
+                    
+                    // extra amenities
+
+                    Padding(
+                      padding: EdgeInsets.only(top: 21.0),
+
+                      child: TextFormField(
+                        
+                      ),
+                      )
 
                     ],
                   )
