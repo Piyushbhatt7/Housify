@@ -65,6 +65,16 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
      }
 
   }
+
+  initializedValues() 
+  {
+    _nameTextEditingController = TextEditingController(text: "");
+    _priceTextEditingController = TextEditingController(text: "");
+    _descriptionTextEditingController = TextEditingController(text: "");
+    _addressTextEditingController = TextEditingController(text: "");
+    _cityTextEditingController = TextEditingController(text: "");
+    _countryTextEditingController = TextEditingController(text: "");
+  }
   
 
   @override
