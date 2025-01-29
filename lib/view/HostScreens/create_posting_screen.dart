@@ -364,6 +364,11 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                                     _bathrooms!['full'] = _bathrooms!['full']! + 1;
                                 }
                                 )
+                           
+                             // Half bathroom
+
+                             
+                           
                             ],
                           ),
                          )
