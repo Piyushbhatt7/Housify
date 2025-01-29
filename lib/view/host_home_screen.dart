@@ -97,7 +97,7 @@ class _HostHomeScreenState extends State<HostHomeScreen> {
           customNavigationBarItem(0, Icons.calendar_today, screenTitles[0]),
           customNavigationBarItem(1, Icons.home, screenTitles[1]),
           customNavigationBarItem(2, Icons.message, screenTitles[2]),
-          customNavigationBarItem(3, Icons.percent_outlined, screenTitles[3]),
+          customNavigationBarItem(3, Icons.person_3_rounded, screenTitles[3]),
 
         ],
         
