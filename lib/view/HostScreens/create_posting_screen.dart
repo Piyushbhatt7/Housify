@@ -393,7 +393,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                       
                       ],
                     ),
-                  )
+                  ),
                     
                     // extra amenities
 
@@ -419,6 +419,9 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                            }
                            return null;
                         },
+
+                        maxLines: 3,
+                        minLines: 1,
                       ),
                       )
 
