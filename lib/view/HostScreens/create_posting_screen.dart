@@ -500,6 +500,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
 
                           child: Image(
                             image: _imagesList![index],
+                            fit: BoxFit.fill,
                             
                             ),
                           
