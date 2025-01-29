@@ -367,7 +367,20 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                            
                              // Half bathroom
 
-                             
+                             AmenitiesUi(
+                              
+                              type: type, 
+                              startValue: startValue, 
+                              decreaseValue: ()
+                              {
+
+                              }, 
+                              increaseValue: ()
+                              {
+
+                              }
+                              
+                              )
                            
                             ],
                           ),
