@@ -492,6 +492,18 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                             
                             );
                           }
+
+                          return MaterialButton(onPressed: ()
+                          {
+                            
+                          },
+
+                          child: Image(
+                            image: _imagesList![index],
+                            
+                            ),
+                          
+                          );
                     
                         },
                       ),
