@@ -98,7 +98,7 @@ class _GuestHomeScreenState extends State<GuestHomeScreen> {
           customNavigationBarItem(1, Icons.favorite_border, screenTitles[1]),
           customNavigationBarItem(2, Icons.hotel, screenTitles[2]),
           customNavigationBarItem(3, Icons.message, screenTitles[3]),
-          customNavigationBarItem(4, Icons.percent_outlined, screenTitles[4]),
+          customNavigationBarItem(4, Icons.person_2_outlined, screenTitles[4]),
 
         ],
         
