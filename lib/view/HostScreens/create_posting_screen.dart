@@ -76,7 +76,17 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
     _countryTextEditingController = TextEditingController(text: "");
     _addressTextEditingController = TextEditingController(text: "");
 
-    
+
+    _beds = {
+      'small': 0,
+      'medium': 0,
+      'large': 0,
+    };
+
+    _bathrooms = {
+      'fill': 0,
+      'half': 0,
+    };
   }
   
 
