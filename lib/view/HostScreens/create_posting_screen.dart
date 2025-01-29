@@ -1,6 +1,9 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:housify/view/widgets/amenities_ui.dart';
+import 'package:image_picker/image_picker.dart';
 
 class CreatePostingScreen extends StatefulWidget {
   const CreatePostingScreen({super.key});
@@ -37,6 +40,17 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
   Map<String,int>? _bathrooms;
 
   List<MemoryImage>? _imagesList;
+
+  _selectImageFromGallery(int index) async
+  {
+     var imageFilePickedFromGaleery = await ImagePicker().pickImage(source: ImageSource.gallery);
+     
+     if(imageFilePickedFromGaleery != null)
+     {
+       MemoryImage newImage = MemoryImage((File(imageFilePickedFromGaleery.path)).readAsBytesSync());
+     }
+
+  }
   
 
   @override
