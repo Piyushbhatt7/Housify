@@ -36,7 +36,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
   Map<String,int>? _beds;
   Map<String,int>? _bathrooms;
 
-  List<MemoryImage>? _image;
+  List<MemoryImage>? _imagesList;
   
 
   @override
@@ -438,7 +438,37 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                    )
+                    ),
+
+                    Padding(
+                      padding: EdgeInsets.only(top: 20.0, bottom: 25.0),
+                      child: GridView.builder(
+                        shrinkWrap: true,
+                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2,
+                          mainAxisSpacing: 25,
+                          crossAxisSpacing: 25,
+                          childAspectRatio: 3 / 2,
+                        ),
+                        itemCount: _imagesList!.length + 1,
+                        itemBuilder: ( context,  index) {
+                          
+                          if(index == _imagesList!.length)
+                          {
+                             return IconButton(
+                              icon: const Icon(Icons.add),
+                              onPressed: ()
+                              {
+                                _selectImageFromGallery(-1);
+                              },
+                            
+                            );
+                          }
+                    
+                        },
+                      ),
+                    
+                    ),
 
                     ],
                   )
