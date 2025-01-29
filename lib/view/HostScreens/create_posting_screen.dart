@@ -401,7 +401,24 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                       padding: EdgeInsets.only(top: 21.0),
 
                       child: TextFormField(
-                        
+                        decoration: InputDecoration(
+                          labelText: "Amenities, "
+                        ),
+
+                        style: TextStyle(
+                          fontSize: 25.0,
+
+                        ),
+                        controller: _amenitiesTextEditingController,
+
+                        validator: (text) {
+                           
+                           if(text!.isEmpty)
+                           {
+                            return "please enter valid amenities";
+                           }
+                           return null;
+                        },
                       ),
                       )
 
