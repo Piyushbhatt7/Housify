@@ -136,7 +136,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
           {
             if(!formKey.currentState!.validate())
             {
-
+              return;
             }
              postingViewModel.saveOrUpdateListing();
           }, icon: const Icon(Icons.upload)
