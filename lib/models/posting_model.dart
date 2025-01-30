@@ -19,5 +19,7 @@ class PostingModel {
   List<MemoryImage>? displayImage;
   List<String>? amenities;
 
-  
+  Map<String, int>? beds;
+
+
 }
