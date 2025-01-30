@@ -1,4 +1,7 @@
 class PostingViewModel {
 
   saveOrUpdateListing() async
+  {
+    
+  }
 }
