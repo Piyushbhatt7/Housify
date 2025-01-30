@@ -1,1 +1,1 @@
-class Po
+class Post
