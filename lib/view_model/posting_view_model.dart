@@ -1,1 +1,4 @@
-class PostingViewModel {}
+class PostingViewModel {
+
+  saveOrUpdate
+}
