@@ -143,6 +143,12 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
             {
               return;
             }
+
+            if(_imagesList.isEmpty)
+            {
+              
+            }
+
              postingViewModel.saveOrUpdateListing();
           }, icon: const Icon(Icons.upload)
           )
