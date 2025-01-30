@@ -8,4 +8,5 @@ class PostingModel {
   String? address;
   String? city;
   String? country;
+  double? rating;
 }
