@@ -1,4 +1,4 @@
 class PostingModel {
 
-  String?
+  String? id;
 }
