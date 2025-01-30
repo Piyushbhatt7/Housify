@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:housify/global.dart';
 import 'package:housify/view/widgets/amenities_ui.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -133,7 +134,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
         actions: [
           IconButton(onPressed: ()
           {
-
+             postingViewModel.saveOrUpdateListing();
           }, icon: const Icon(Icons.upload)
           )
         ],
