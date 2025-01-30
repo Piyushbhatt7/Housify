@@ -47,7 +47,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
      
      if(imageFilePickedFromGaleery != null)
      {
-       MemoryImage imageFileInBytesForm = MemoryImage((File(imageFilePickedFromGaleery!.path)).readAsBytesSync());
+       MemoryImage imageFileInBytesForm = MemoryImage((File(imageFilePickedFromGaleery.path)).readAsBytesSync());
        
 
        if(index < 0)
@@ -89,9 +89,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
       'half': 0,
     };
 
-    _imagesList = [
-
-    ];
+    _imagesList = [];
   }
 
   @override
