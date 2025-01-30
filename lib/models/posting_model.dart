@@ -13,4 +13,8 @@ class PostingModel {
   double? rating;
 
   ContactModel? host;
+
+  List<String>? imageName;
+  List<String>? displayImage;
+  
 }
