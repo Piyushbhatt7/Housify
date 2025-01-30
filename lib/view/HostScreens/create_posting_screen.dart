@@ -144,9 +144,9 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
               return;
             }
 
-            if(_imagesList.isEmpty)
+            if(_imagesList!.isEmpty)
             {
-              
+              return;
             }
 
              postingViewModel.saveOrUpdateListing();
