@@ -20,6 +20,6 @@ class PostingModel {
   List<String>? amenities;
 
   Map<String, int>? beds;
- Map<String, int>? Bathrooms;
+ Map<String, int>? bathrooms;
 
 }
