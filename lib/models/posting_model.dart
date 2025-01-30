@@ -22,4 +22,6 @@ class PostingModel {
   Map<String, int>? beds;
  Map<String, int>? bathrooms;
 
+ PostingModel
+
 }
