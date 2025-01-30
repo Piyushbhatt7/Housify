@@ -139,7 +139,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
               return;
             }
 
-            if(residenceTypesSelected == null)
+            if(residenceTypesSelected == "")
             {
               return;
             }
