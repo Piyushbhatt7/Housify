@@ -158,6 +158,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
             posting.city = _cityTextEditingController.text;
             posting.country = _countryTextEditingController.text;
             posting.amenities = _amenitiesTextEditingController.text.split(",");
+            posting.type = residenceTypesSelected;
             posting.beds = _beds;
             posting.bathrooms = _bathrooms;
             posting.displayImage = _imagesList;
