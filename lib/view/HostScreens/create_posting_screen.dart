@@ -159,7 +159,8 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
             posting.country = _countryTextEditingController.text;
             posting.amenities = _amenitiesTextEditingController.text.split(",");
             posting.beds = _beds;
-            
+            posting.bathrooms = _bathrooms;
+            posting.displayImage = _imagesList;
 
              postingViewModel.saveOrUpdateListing();
           }, icon: const Icon(Icons.upload)
