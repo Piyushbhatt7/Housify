@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:housify/models/contact_model.dart';
 
 class PostingModel {
@@ -15,6 +16,6 @@ class PostingModel {
   ContactModel? host;
 
   List<String>? imageName;
-  List<String>? displayImage;
-  
+  List<MemoryImage>? displayImage;
+  List<String>? amenities;
 }
