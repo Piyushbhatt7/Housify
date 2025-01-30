@@ -134,9 +134,9 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
         actions: [
           IconButton(onPressed: ()
           {
-            if(!formKey.currentState.validate())
+            if(!formKey.currentState!.validate())
             {
-              
+
             }
              postingViewModel.saveOrUpdateListing();
           }, icon: const Icon(Icons.upload)
