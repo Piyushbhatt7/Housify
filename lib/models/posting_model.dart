@@ -26,6 +26,11 @@ class PostingModel {
  {
      displayImage = [];
      amenities = [];
+
+
+     beds = {};
+     bathrooms = {};
+     rating = 0;
  }
 
 }
