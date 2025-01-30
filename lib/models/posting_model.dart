@@ -7,4 +7,5 @@ class PostingModel {
   String? description;
   String? address;
   String? city;
+  String? country;
 }
