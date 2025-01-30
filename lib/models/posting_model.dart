@@ -1,3 +1,5 @@
+import 'package:housify/models/contact_model.dart';
+
 class PostingModel {
 
   String? id;
@@ -9,4 +11,6 @@ class PostingModel {
   String? city;
   String? country;
   double? rating;
+
+  ContactModel? host;
 }
