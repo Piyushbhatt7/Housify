@@ -1,1 +1,1 @@
-class Post
+class PostingViewModel {}
