@@ -4,5 +4,6 @@ class PostingModel {
   String? name;
   String? type;
   String? price;
+  String? description;
   
 }
