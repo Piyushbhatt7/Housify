@@ -141,7 +141,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
 
             if(residenceTypesSelected == null)
             {
-              
+              return;
             }
              postingViewModel.saveOrUpdateListing();
           }, icon: const Icon(Icons.upload)
