@@ -151,7 +151,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
             }
 
             PostingModel posting = PostingModel();
-            _nameTextEditingController.text.toString();
+            posting.name =  _nameTextEditingController.text.toString();
 
              postingViewModel.saveOrUpdateListing();
           }, icon: const Icon(Icons.upload)
