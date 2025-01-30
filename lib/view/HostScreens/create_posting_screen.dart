@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:housify/global.dart';
+import 'package:housify/models/app_constants.dart';
 import 'package:housify/models/posting_model.dart';
 import 'package:housify/view/widgets/amenities_ui.dart';
 import 'package:image_picker/image_picker.dart';
@@ -162,6 +163,8 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
             posting.beds = _beds;
             posting.bathrooms = _bathrooms;
             posting.displayImage = _imagesList;
+
+            posting.host = AppConstants.currentUser.
 
              postingViewModel.saveOrUpdateListing();
           }, icon: const Icon(Icons.upload)
