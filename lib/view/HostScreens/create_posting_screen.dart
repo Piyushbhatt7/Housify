@@ -39,7 +39,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
   Map<String,int>? _beds;
   Map<String,int>? _bathrooms;
 
-  List<MemoryImage> _imagesList = [];
+  List<MemoryImage>? _imagesList = [];
 
   _selectImageFromGallery(int index) async
   {
@@ -52,11 +52,11 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
 
        if(index < 0)
        {
-        _imagesList.add(imageFileInBytesForm);
+        _imagesList!.add(imageFileInBytesForm);
        }
 
        else {
-        _imagesList[index] = imageFileInBytesForm;
+        _imagesList![index] = imageFileInBytesForm;
        }
 
        setState(() {
@@ -74,7 +74,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
     _addressTextEditingController = TextEditingController(text: "");
     _cityTextEditingController = TextEditingController(text: "");
     _countryTextEditingController = TextEditingController(text: "");
-    _addressTextEditingController = TextEditingController(text: "");
+    //_addressTextEditingController = TextEditingController(text: "");
     residenceTypesSelected = residenceTypes.first;
 
 
