@@ -22,7 +22,7 @@ class PostingModel {
   Map<String, int>? beds;
  Map<String, int>? bathrooms;
 
- PostingModel({this.id = ""})
+ PostingModel({this.id = "", this.name = ""})
  {
    
  }
