@@ -18,4 +18,6 @@ class PostingModel {
   List<String>? imageName;
   List<MemoryImage>? displayImage;
   List<String>? amenities;
+
+  
 }
