@@ -33,4 +33,10 @@ class PostingModel {
      rating = 0;
  }
 
+ setImagesNames()
+ {
+  imageName = [];
+
+ }
+
 }
