@@ -1,3 +1,4 @@
+import 'package:housify/models/app_constants.dart';
 import 'package:housify/models/posting_model.dart';
 
 class PostingViewModel {
@@ -10,7 +11,15 @@ class PostingViewModel {
 
      Map<String, dynamic> dataMap = 
      {
-       
+       "address": posting.address,
+       "amenities": posting.amenities,
+       "bathrooms": posting.bathrooms,
+       "description": posting.description,
+       "beds": posting.beds,
+       "city": posting.city,
+       "country": posting.country,
+       "hostID": AppConstants.currentUser.id,
+       "imagesNames": 
      };
   }
 }
