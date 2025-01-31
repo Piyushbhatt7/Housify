@@ -173,9 +173,10 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
             posting.rating = 3.5;
             posting.bookings = [];
             posting.reviews = [];
-            postingViewModel.saveOrUpdateListing();
 
-             postingViewModel.saveOrUpdateListing();
+            postingViewModel.addListingInfoToFirestore();
+
+             postingViewModel.addListingInfoToFirestore();
           }, icon: const Icon(Icons.upload)
           )
         ],
