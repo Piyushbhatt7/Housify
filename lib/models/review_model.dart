@@ -5,5 +5,8 @@ class ReviewModel {
    ContactModel? contact;
    String? text;
    double? rating;
-   DateTime dateTime;
+   DateTime? dateTime;
+
+
+   ReviewModel();
 }
