@@ -20,7 +20,9 @@ class PostingModel {
   List<String>? amenities;
 
   Map<String, int>? beds;
- Map<String, int>? bathrooms;
+  Map<String, int>? bathrooms;
+
+  List<Booking>? bookings;
 
  PostingModel({this.id = "", this.name = "", this.type, this.price = 0, this.description = "", this.address = "", this.city = "", this.country = "", this.host})
  {
