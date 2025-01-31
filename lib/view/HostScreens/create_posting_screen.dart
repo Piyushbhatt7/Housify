@@ -164,7 +164,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
             posting.bathrooms = _bathrooms;
             posting.displayImage = _imagesList;
 
-            posting.host = AppConstants.currentUser.
+            posting.host = AppConstants.currentUser. //  6:23
 
              postingViewModel.saveOrUpdateListing();
           }, icon: const Icon(Icons.upload)
