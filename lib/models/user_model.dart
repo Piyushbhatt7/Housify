@@ -13,6 +13,8 @@ class UserModel extends ContactModel{
     bool?  isHost;
     bool? isCurrentlyHosting;
     DocumentSnapshot? snapshot;
+
+    List<Posting>? myPostings;
     
    UserModel({
    
@@ -53,6 +55,6 @@ class UserModel extends ContactModel{
 
       addPostingToMyPostings(PostingModel posting) async
       {
-        
+
       }
 }
