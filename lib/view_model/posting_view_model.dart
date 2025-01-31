@@ -21,6 +21,7 @@ class PostingViewModel {
        "hostID": AppConstants.currentUser.id,
        "imagesNames": posting.imageName,
        "names": posting.name,
+       "price": posting.price,
        
      };
   }
