@@ -39,7 +39,7 @@ class PostingModel {
   
   for(int i = 0; i < displayImage!.length; i++)
   {
-    
+     imageName!.add("image${i}.png");
   }
  }
 
