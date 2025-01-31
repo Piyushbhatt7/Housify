@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:housify/models/booking_model.dart';
 import 'package:housify/models/contact_model.dart';
 import 'package:housify/models/posting_model.dart';
 
@@ -15,6 +16,8 @@ class UserModel extends ContactModel{
     DocumentSnapshot? snapshot;
 
     List<PostingModel>? myPostings;
+    List<BookingModel>? bookings;
+    
     
    UserModel({
    
