@@ -10,7 +10,7 @@ class AppConstants {
     return ContactModel(
       id: currentUser.id,
       firstName: currentUser.firstName,
-      
+      lastName: currentUser.lastName
 
     );
   }
