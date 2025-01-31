@@ -168,6 +168,8 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
             
             posting. setImagesNames();
 
+            // if this is new or old post
+
              postingViewModel.saveOrUpdateListing();
           }, icon: const Icon(Icons.upload)
           )
