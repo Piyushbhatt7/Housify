@@ -36,7 +36,11 @@ class PostingModel {
  setImagesNames()
  {
   imageName = [];
-
+  
+  for(int i = 0; i < displayImage!.length; i++)
+  {
+    
+  }
  }
 
 }
