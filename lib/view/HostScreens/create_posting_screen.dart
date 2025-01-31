@@ -173,7 +173,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
             posting.rating = 3.5;
             posting.bookings = [];
             posting.reviews = [];
-            
+            postingViewModel.saveOrUpdateListing();
 
              postingViewModel.saveOrUpdateListing();
           }, icon: const Icon(Icons.upload)
