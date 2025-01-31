@@ -7,5 +7,10 @@ class PostingViewModel {
      PostingModel posting = PostingModel();
 
      posting.setImagesNames();
+
+     Map<String, dynamic> dataMap = 
+     {
+       
+     };
   }
 }
