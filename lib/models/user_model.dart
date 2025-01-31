@@ -70,7 +70,7 @@ class UserModel extends ContactModel{
 
          await FirebaseFirestore.instance.collection("users").doc(id).update({
             
-            'myPostingIDs': myPostingIDs
+            'myPostingIDs': myPostingIDsList
          })
       }
 }
