@@ -176,6 +176,8 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
 
           await  postingViewModel.addListingInfoToFirestore();
 
+          await posting.addImagesToFirebaseStorage();
+
 
           }, icon: const Icon(Icons.upload)
           )
