@@ -51,5 +51,8 @@ class UserModel extends ContactModel{
       //    await FirebaseFirestore.instance.collection("users").doc(id).set(dataMap);
       // }
 
-      addPostingToMyPostings(PostingModel posting)
+      addPostingToMyPostings(PostingModel posting) async
+      {
+        
+      }
 }
