@@ -63,7 +63,7 @@ class UserModel extends ContactModel{
 
          List<String> myPostingIDsList = [];
 
-         myPostings!.forEach((action)
+         myPostings!.forEach((element)
          {
 
          });
