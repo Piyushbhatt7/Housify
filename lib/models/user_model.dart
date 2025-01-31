@@ -65,7 +65,7 @@ class UserModel extends ContactModel{
 
          myPostings!.forEach((element)
          {
-
+            myPostingIDsList.add(element.id!);
          });
       }
 }
