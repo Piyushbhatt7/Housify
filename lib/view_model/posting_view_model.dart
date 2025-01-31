@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:housify/models/app_constants.dart';
 import 'package:housify/models/posting_model.dart';
 
@@ -25,5 +26,10 @@ class PostingViewModel {
        "rating": 3.5,
        "type": posting.type,
      };
+
+     DocumentReference ref = await FirebaseFirestore.instance.collection("postings").add(dataMap);
+     posting.id = ref.id;
+
+     await AppConstants.currentUser
   }
 }
