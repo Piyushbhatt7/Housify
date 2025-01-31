@@ -1,0 +1,5 @@
+class BookingModel {
+   
+   String id = "";
+   
+}
