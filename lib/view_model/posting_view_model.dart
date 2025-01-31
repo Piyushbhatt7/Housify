@@ -37,8 +37,6 @@ class PostingViewModel {
   addImagesToFirebaseStorage () async
   {
     
-
-
     for(int i = 0; i< postingModel.displayImage!.length; i++)
     {
       Reference ref = FirebaseStorage.instance.ref().child("postingImages").child(postingModel.id!).child(postingModel.imageName![i]);
