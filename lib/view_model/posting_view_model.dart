@@ -22,7 +22,8 @@ class PostingViewModel {
        "imagesNames": posting.imageName,
        "names": posting.name,
        "price": posting.price,
-       
+       "rating": 3.5,
+       "type": posting.type,
      };
   }
 }
