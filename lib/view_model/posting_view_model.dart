@@ -1,47 +1,51 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:housify/global.dart';
 import 'package:housify/models/app_constants.dart';
-import 'package:housify/models/posting_model.dart';
 
 class PostingViewModel {
 
   addListingInfoToFirestore() async
   {
-     PostingModel posting = PostingModel();
+     
 
-     posting.setImagesNames();
+     postingModel.setImagesNames();
 
      Map<String, dynamic> dataMap = 
      {
-       "address": posting.address,
-       "amenities": posting.amenities,
-       "bathrooms": posting.bathrooms,
-       "description": posting.description,
-       "beds": posting.beds,
-       "city": posting.city,
-       "country": posting.country,
+       "address": postingModel.address,
+       "amenities": postingModel.amenities,
+       "bathrooms": postingModel.bathrooms,
+       "description": postingModel.description,
+       "beds": postingModel.beds,
+       "city": postingModel.city,
+       "country": postingModel.country,
        "hostID": AppConstants.currentUser.id,
-       "imagesNames": posting.imageName,
-       "names": posting.name,
-       "price": posting.price,
+       "imagesNames": postingModel.imageName,
+       "names": postingModel.name,
+       "price": postingModel.price,
        "rating": 3.5,
-       "type": posting.type,
+       "type": postingModel.type,
      };
 
      DocumentReference ref = await FirebaseFirestore.instance.collection("postings").add(dataMap);
-     posting.id = ref.id;
+     postingModel.id = ref.id;
 
-     await AppConstants.currentUser.addPostingToMyPostings(posting); // 13:13
+     await AppConstants.currentUser.addPostingToMyPostings(postingModel); // 13:13
   }
 
   addImagesToFirebaseStorage () async
   {
-    PostingModel posting = PostingModel();
+    
 
 
-    for(int i = 0; i< posting.displayImage!.length; i++)
+    for(int i = 0; i< postingModel.displayImage!.length; i++)
     {
-      Reference ref = FirebaseStorage.instance.ref().child("postingImages").child(posting.id!).child(posting.imageName[i]);
+      Reference ref = FirebaseStorage.instance.ref().child("postingImages").child(postingModel.id!).child(postingModel.imageName![i]);
+
+      await ref.putData(postingModel.displayImage![i].bytes).whenComplete((){
+
+      });
     }
   }
 }

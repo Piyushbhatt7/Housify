@@ -36,6 +36,11 @@ class UserModel extends ContactModel{
         isHost = false;
         isCurrentlyHosting = false;
 
+        bookings = [];
+        reviews = [];
+
+        myPostings = [];
+
     }
       
       // Future<void> saveUserToFirestore () async 

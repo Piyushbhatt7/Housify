@@ -2,9 +2,11 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:housify/global.dart';
 import 'package:housify/models/app_constants.dart';
 import 'package:housify/models/posting_model.dart';
+import 'package:housify/view/host_home_screen.dart';
 import 'package:housify/view/widgets/amenities_ui.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -88,7 +90,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
     };
 
     _bathrooms = {
-      'fill': 0,
+      'full': 0,
       'half': 0,
     };
 
@@ -151,32 +153,34 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
               return;
             }
 
-            PostingModel posting = PostingModel();
-            posting.name =  _nameTextEditingController.text;
-            posting.price = double.parse(_priceTextEditingController.text);
-            posting.description = _descriptionTextEditingController.text;
-            posting.address = _addressTextEditingController.text;
-            posting.city = _cityTextEditingController.text;
-            posting.country = _countryTextEditingController.text;
-            posting.amenities = _amenitiesTextEditingController.text.split(",");
-            posting.type = residenceTypesSelected;
-            posting.beds = _beds;
-            posting.bathrooms = _bathrooms;
-            posting.displayImage = _imagesList;
+         
+            postingModel.name =  _nameTextEditingController.text;
+            postingModel.price = double.parse(_priceTextEditingController.text);
+            postingModel.description = _descriptionTextEditingController.text;
+            postingModel.address = _addressTextEditingController.text;
+            postingModel.city = _cityTextEditingController.text;
+            postingModel.country = _countryTextEditingController.text;
+            postingModel.amenities = _amenitiesTextEditingController.text.split(",");
+            postingModel.type = residenceTypesSelected;
+            postingModel.beds = _beds;
+            postingModel.bathrooms = _bathrooms;
+            postingModel.displayImage = _imagesList;
 
-            posting.host = AppConstants.currentUser.createUserFromContact();
+            postingModel.host = AppConstants.currentUser.createUserFromContact();
             
-            posting. setImagesNames();
+            postingModel. setImagesNames();
 
             // if this is new or old post
 
-            posting.rating = 3.5;
-            posting.bookings = [];
-            posting.reviews = [];
+            postingModel.rating = 3.5;
+            postingModel.bookings = [];
+            postingModel.reviews = [];
 
           await  postingViewModel.addListingInfoToFirestore();
 
-          await posting.addImagesToFirebaseStorage();
+          await postingViewModel.addImagesToFirebaseStorage();
+
+          Get.to(HostHomeScreen());
 
 
           }, icon: const Icon(Icons.upload)
