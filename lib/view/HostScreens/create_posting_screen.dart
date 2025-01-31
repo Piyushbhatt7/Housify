@@ -166,7 +166,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
 
             posting.host = AppConstants.currentUser.createUserFromContact();
             
-            posting. 
+            posting. setImagesNames();
 
              postingViewModel.saveOrUpdateListing();
           }, icon: const Icon(Icons.upload)
