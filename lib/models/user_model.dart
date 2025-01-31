@@ -14,7 +14,7 @@ class UserModel extends ContactModel{
     bool? isCurrentlyHosting;
     DocumentSnapshot? snapshot;
 
-    List<Posting>? myPostings;
+    List<PostingModel>? myPostings;
     
    UserModel({
    
