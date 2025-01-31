@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:housify/models/app_constants.dart';
 import 'package:housify/models/posting_model.dart';
 
@@ -36,6 +37,11 @@ class PostingViewModel {
   addImagesToFirebaseStorage () async
   {
     PostingModel posting = PostingModel();
-    
+
+
+    for(int i = 0; i< posting.displayImage!.length; i++)
+    {
+      Reference ref = FirebaseStorage.instance.ref().child("postingImages")
+    }
   }
 }
