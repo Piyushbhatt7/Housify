@@ -32,4 +32,10 @@ class PostingViewModel {
 
      await AppConstants.currentUser.addPostingToMyPostings(posting); // 13:13
   }
+
+  addImagesToFirebaseStorage () async
+  {
+    PostingModel posting = PostingModel();
+    
+  }
 }
