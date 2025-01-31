@@ -19,7 +19,9 @@ class PostingViewModel {
        "city": posting.city,
        "country": posting.country,
        "hostID": AppConstants.currentUser.id,
-       "imagesNames": 
+       "imagesNames": posting.imageName,
+       "names": posting.name,
+       
      };
   }
 }
