@@ -134,7 +134,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
         ),
 
         actions: [
-          IconButton(onPressed: ()
+          IconButton(onPressed: () async
           {
             if(!formKey.currentState!.validate())
             {
@@ -174,9 +174,9 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
             posting.bookings = [];
             posting.reviews = [];
 
-            postingViewModel.addListingInfoToFirestore();
+          await  postingViewModel.addListingInfoToFirestore();
 
-             postingViewModel.addListingInfoToFirestore();
+
           }, icon: const Icon(Icons.upload)
           )
         ],
