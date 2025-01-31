@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:housify/models/booking_model.dart';
 import 'package:housify/models/contact_model.dart';
 import 'package:housify/models/posting_model.dart';
+import 'package:housify/models/review_model.dart';
 
 class UserModel extends ContactModel{
     
@@ -17,7 +18,7 @@ class UserModel extends ContactModel{
 
     List<PostingModel>? myPostings;
     List<BookingModel>? bookings;
-    
+    List<ReviewModel>? reviews;
     
    UserModel({
    
