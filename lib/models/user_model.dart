@@ -67,5 +67,10 @@ class UserModel extends ContactModel{
          {
             myPostingIDsList.add(element.id!);
          });
+
+         await FirebaseFirestore.instance.collection("users").doc(id).update({
+            
+            'myPostingIDs': myPostingIDs
+         })
       }
 }
