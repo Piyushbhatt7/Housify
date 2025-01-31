@@ -7,6 +7,9 @@ class AppConstants {
 
   ContactModel = createContactFromUserModel()
   {
-    return ContactModel();
+    return ContactModel(
+      id: id,
+      
+    );
   }
 } 
