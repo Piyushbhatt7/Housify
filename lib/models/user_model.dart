@@ -31,22 +31,24 @@ class UserModel extends ContactModel{
 
     }
       
-      Future<void> saveUserToFirestore () async 
-      {
-        Map<String, dynamic> dataMap = 
-         {
-            "bio": bio,
-            "city": city,
-            "country": country,
-            "email": email,
-            "firstName": firstName,
-            "lastName": lastName,
-            "isHost": false,
-            "myPostingIds": [],
-            "savedPostingIDs": [],
-            "earnings": 0,
-         };
+      // Future<void> saveUserToFirestore () async 
+      // {
+      //   Map<String, dynamic> dataMap = 
+      //    {
+      //       "bio": bio,
+      //       "city": city,
+      //       "country": country,
+      //       "email": email,
+      //       "firstName": firstName,
+      //       "lastName": lastName,
+      //       "isHost": false,
+      //       "myPostingIds": [],
+      //       "savedPostingIDs": [],
+      //       "earnings": 0,
+      //    };
 
-         await FirebaseFirestore.instance.collection("users").doc(id).set(dataMap);
-      }
+      //    await FirebaseFirestore.instance.collection("users").doc(id).set(dataMap);
+      // }
+
+      addPostingToMyPosting
 }
