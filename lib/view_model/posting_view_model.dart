@@ -41,7 +41,7 @@ class PostingViewModel {
 
     for(int i = 0; i< posting.displayImage!.length; i++)
     {
-      Reference ref = FirebaseStorage.instance.ref().child("postingImages")
+      Reference ref = FirebaseStorage.instance.ref().child("postingImages").child(posting.id!);
     }
   }
 }
