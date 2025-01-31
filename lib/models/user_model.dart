@@ -62,5 +62,10 @@ class UserModel extends ContactModel{
          myPostings!.add(posting);
 
          List<String> myPostingIDsList = [];
+
+         myPostings!.forEach((action)
+         {
+
+         });
       }
 }
