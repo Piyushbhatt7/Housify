@@ -114,6 +114,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
          _amenitiesTextEditingController =  TextEditingController(text: widget.posting!.getAmenitiesString());
          _beds = widget.posting!.beds;
          _bathrooms = widget.posting!.bathrooms;
+         _imagesList = widget.posting!.displayImage;
     }
   }
 
