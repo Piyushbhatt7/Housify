@@ -220,8 +220,11 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                       if(AppConstants.currentUser.myPostings![i].id == postingModel.id)
                       {
                         AppConstants.currentUser.myPostings![i] = postingModel;
+                        break;
                       }
                     }
+
+                    
             }
            
 
