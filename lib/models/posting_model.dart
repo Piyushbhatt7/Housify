@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:housify/models/booking_model.dart';
 import 'package:housify/models/contact_model.dart';
@@ -49,6 +50,11 @@ class PostingModel {
   {
      imageName!.add("image${i}.png");
   }
+ }
+
+ getMyPostingFromFirestore() async
+ {
+   DocumentSnapshot snapshot = await FirebaseFirestore.instance.collection('postings').doc(id).get();
  }
 
 }
