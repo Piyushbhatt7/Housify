@@ -78,4 +78,6 @@ class UserModel extends ContactModel{
             'myPostingIDs': myPostingIDsList
          });
       }
+
+      getMyPostingFromFirestore() async 
 }
