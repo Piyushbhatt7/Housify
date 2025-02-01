@@ -79,4 +79,9 @@ class PostingModel {
    type = snapshot['type'] ?? "";
  }
 
+ getAllImagesFromStorage() async
+ {
+   
+ }
+
 }
