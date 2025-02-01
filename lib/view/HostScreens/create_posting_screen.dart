@@ -101,8 +101,6 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
 
     _imagesList = [];
     }
-
-   
   }
 
   @override
