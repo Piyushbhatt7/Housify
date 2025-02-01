@@ -82,5 +82,10 @@ class UserModel extends ContactModel{
       getMyPostingFromFirestore() async 
       {
         List<String> myPostingIDs = List<String>.from(snapshot!["myPostingIDs"]) ?? [];
+
+        for(String postingID in myPostingIDs)
+        {
+          
+        }
       }
 }
