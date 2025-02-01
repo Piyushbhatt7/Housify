@@ -115,6 +115,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
          _beds = widget.posting!.beds;
          _bathrooms = widget.posting!.bathrooms;
          _imagesList = widget.posting!.displayImage;
+         residenceTypesSelected = widget.posting!.type!;
     }
   }
 
