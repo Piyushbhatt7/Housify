@@ -196,8 +196,8 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
             
             postingModel. setImagesNames();
 
+           
             // if this is new or old post
-
             postingModel.rating = 3.5;
             postingModel.bookings = [];
             postingModel.reviews = [];
