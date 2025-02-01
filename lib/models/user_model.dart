@@ -90,6 +90,7 @@ class UserModel extends ContactModel{
           await posting.getMyPostingFromFirestore();
 
          myPostings!.add(posting);
+       
         }
       }
 }

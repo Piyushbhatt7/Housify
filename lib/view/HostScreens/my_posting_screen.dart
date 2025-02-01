@@ -13,9 +13,15 @@ class MyPostingScreen extends StatefulWidget {
 class _MyPostingScreenState extends State<MyPostingScreen> {
   @override
   Widget build(BuildContext context) {
+   
     return Padding(
       padding: EdgeInsets.only(top: 25),
-      child: Padding(
+      child: ListView.builder(
+        itemBuilder: (context, index)
+        {
+
+
+          return  Padding(
         padding: EdgeInsets.fromLTRB(26, 0, 26, 26),
 
         child: InkResponse(
@@ -36,8 +42,16 @@ class _MyPostingScreenState extends State<MyPostingScreen> {
          
           ),
         ),
-         ),
+         );
 
-    );
+   
+        }
+      
+      ),
+      
+      
+       );
+ 
+ 
   }
 }
