@@ -87,6 +87,7 @@ class UserModel extends ContactModel{
         for(String postingID in myPostingIDs)
         {
           PostingModel posting = PostingModel(id: postingID);
+          await posting.getMyPostingFromFirestore();
         }
       }
 }
