@@ -104,6 +104,8 @@ class PostingModel {
    {
     return "";
    }
+
+   String amenitiesString = amenities.toString();
  }
  
 }
