@@ -94,6 +94,8 @@ class PostingModel {
 
       displayImage!.add(MemoryImage(imageData!));
     }
- }
 
+    return displayImage;
+ }
+ 
 }
