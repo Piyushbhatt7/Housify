@@ -210,6 +210,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
           }
 
             else {
+                    postingModel.rating = widget.posting!.rating;
                     
             }
            
