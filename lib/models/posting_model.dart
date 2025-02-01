@@ -86,7 +86,7 @@ class PostingModel {
     displayImage = [];
     for(int i = 0; i < imageName!.length; i++)
     {
-      final imageData = await FirebaseStorage.instance.ref();
+      final imageData = await FirebaseStorage.instance.ref().child("postingImages").child(id!).child(imageName![i]);
     }
  }
 
