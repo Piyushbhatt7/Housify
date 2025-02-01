@@ -75,6 +75,12 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
 
   initializedValues() 
   {
+
+    if(widget.posting == null)
+    {
+      
+    }
+
     _nameTextEditingController = TextEditingController(text: "");
     _priceTextEditingController = TextEditingController(text: "");
     _descriptionTextEditingController = TextEditingController(text: "");
