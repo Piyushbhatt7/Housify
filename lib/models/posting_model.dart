@@ -55,6 +55,13 @@ class PostingModel {
  getMyPostingFromFirestore() async
  {
    DocumentSnapshot snapshot = await FirebaseFirestore.instance.collection('postings').doc(id).get();
+
+   getMyPostingFromSnapshot(snapshot);
+ }
+ 
+ getMyPostingFromSnapshot(DocumentSnapshot snapshot)
+ {
+  
  }
 
 }
