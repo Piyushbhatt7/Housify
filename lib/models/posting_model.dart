@@ -97,5 +97,13 @@ class PostingModel {
 
     return displayImage;
  }
+
+ getAmenitiesString()
+ {
+   if(amenities!.isEmpty)
+   {
+    return "";
+   }
+ }
  
 }
