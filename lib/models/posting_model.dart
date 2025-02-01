@@ -1,4 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:housify/models/booking_model.dart';
 import 'package:housify/models/contact_model.dart';
@@ -81,7 +83,11 @@ class PostingModel {
 
  getAllImagesFromStorage() async
  {
-   
+    displayImage = [];
+    for(int i = 0; i < imageName!.length; i++)
+    {
+      final imageData = await FirebaseStorage.instance.ref();
+    }
  }
 
 }
