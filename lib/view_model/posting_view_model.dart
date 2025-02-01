@@ -6,7 +6,7 @@ import 'package:housify/models/app_constants.dart';
 class PostingViewModel {
 
   addListingInfoToFirestore() async
-  {
+  {  // 4:44
      
 
      postingModel.setImagesNames();
