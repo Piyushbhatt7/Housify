@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:housify/global.dart';
 import 'package:housify/models/booking_model.dart';
 import 'package:housify/models/contact_model.dart';
 import 'package:housify/models/posting_model.dart';
@@ -85,7 +86,7 @@ class UserModel extends ContactModel{
 
         for(String postingID in myPostingIDs)
         {
-          
+          PostingModel postingModel = postingModel(id)
         }
       }
 }
