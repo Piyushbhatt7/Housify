@@ -91,6 +91,8 @@ class PostingModel {
       .child(id!)
       .child(imageName![i])
       .getData(1024 * 1024);
+
+      displayImage!.add(MemoryImage(imageData!));
     }
  }
 
