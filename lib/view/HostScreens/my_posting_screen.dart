@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:housify/models/app_constants.dart';
 import 'package:housify/view/HostScreens/create_posting_screen.dart';
 import 'package:housify/view/widgets/posting_tile_button.dart';
 
@@ -17,10 +18,9 @@ class _MyPostingScreenState extends State<MyPostingScreen> {
     return Padding(
       padding: EdgeInsets.only(top: 25),
       child: ListView.builder(
+        itemCount: AppConstants.currentUser.myPostings!.length + 1,
         itemBuilder: (context, index)
         {
-
-
           return  Padding(
         padding: EdgeInsets.fromLTRB(26, 0, 26, 26),
 
@@ -42,9 +42,7 @@ class _MyPostingScreenState extends State<MyPostingScreen> {
          
           ),
         ),
-         );
-
-   
+         );   
         }
       
       ),
