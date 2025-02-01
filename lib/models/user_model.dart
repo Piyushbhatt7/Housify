@@ -86,7 +86,7 @@ class UserModel extends ContactModel{
 
         for(String postingID in myPostingIDs)
         {
-          PostingModel postingModel = postingModel(id)
+          PostingModel posting = PostingModel(id: postingID);
         }
       }
 }
