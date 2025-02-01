@@ -214,6 +214,14 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                     postingModel.bookings = widget.posting!.bookings;
                     postingModel.reviews = widget.posting!.reviews;
                     postingModel.id = widget.posting!.id;
+
+                    for(int i = 0; i<AppConstants.currentUser.myPostings!.length; i++)
+                    {
+                      if(AppConstants.currentUser.myPostings![i].id == postingModel.id)
+                      {
+                        AppConstants.currentUser.myPostings![i] = postingModel;
+                      }
+                    }
             }
            
 
