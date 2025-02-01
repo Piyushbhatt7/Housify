@@ -110,6 +110,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
          _descriptionTextEditingController =  TextEditingController(text: widget.posting!.description);
          _addressTextEditingController =  TextEditingController(text: widget.posting!.address);
          _cityTextEditingController =  TextEditingController(text: widget.posting!.city);
+         _countryTextEditingController =  TextEditingController(text: widget.posting!.country);
     }
   }
 
