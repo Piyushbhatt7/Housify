@@ -61,7 +61,11 @@ class PostingModel {
  
  getMyPostingFromSnapshot(DocumentSnapshot snapshot)
  {
-   address = snapshot['address'];
+   address = snapshot['address'] ?? "";
+   amenities = List<String>.from(snapshot['amenities']) ?? [];
+   bathrooms = Map<String, int>.from(snapshot['bathrooms']) ?? {};
+   beds = Map<String, int>.from(snapshot['beds']) ?? {};
+   
  }
 
 }
