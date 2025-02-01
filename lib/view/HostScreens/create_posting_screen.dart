@@ -11,7 +11,9 @@ import 'package:housify/view/widgets/amenities_ui.dart';
 import 'package:image_picker/image_picker.dart';
 
 class CreatePostingScreen extends StatefulWidget {
-  const CreatePostingScreen({super.key});
+
+  PostingModel? posting;
+   CreatePostingScreen({super.key, this.posting});
 
   @override
   State<CreatePostingScreen> createState() => _CreatePostingScreenState();

@@ -21,13 +21,16 @@ class _MyPostingScreenState extends State<MyPostingScreen> {
         itemCount: AppConstants.currentUser.myPostings!.length + 1,
         itemBuilder: (context, index)
         {
+          
           return  Padding(
         padding: EdgeInsets.fromLTRB(26, 0, 26, 26),
 
         child: InkResponse(
 
           onTap: () {
-            Get.to(CreatePostingScreen());
+            Get.to(CreatePostingScreen(
+              posting: (index == AppConstants.currentUser.myPostings!.length) ? null,
+            ));
           },
 
           child: Container(
