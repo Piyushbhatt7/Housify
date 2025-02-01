@@ -78,10 +78,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
 
     if(widget.posting == null)
     {
-      
-    }
-
-    _nameTextEditingController = TextEditingController(text: "");
+       _nameTextEditingController = TextEditingController(text: "");
     _priceTextEditingController = TextEditingController(text: "");
     _descriptionTextEditingController = TextEditingController(text: "");
     _addressTextEditingController = TextEditingController(text: "");
@@ -103,6 +100,9 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
     };
 
     _imagesList = [];
+    }
+
+   
   }
 
   @override
