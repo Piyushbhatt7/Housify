@@ -42,7 +42,7 @@ class _MyPostingScreenState extends State<MyPostingScreen> {
 
                ),        
             ),
-            child: PostingTileButton(),
+            child: (index == AppConstants.currentUser.myPostings!.length) ?  PostingTileButton() : ,
          
           ),
         ),
