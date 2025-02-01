@@ -12,6 +12,8 @@ class PostingListingTileUi extends StatefulWidget {
 }
 
 class _PostingListingTileUiState extends State<PostingListingTileUi> {
+
+  PostingModel? posting;
   @override
   Widget build(BuildContext context) {
     return Container();
