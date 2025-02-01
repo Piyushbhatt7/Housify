@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:housify/models/app_constants.dart';
 import 'package:housify/view/HostScreens/create_posting_screen.dart';
+import 'package:housify/view/widgets/posting_listing_tile_ui.dart';
 import 'package:housify/view/widgets/posting_tile_button.dart';
 
 class MyPostingScreen extends StatefulWidget {
@@ -42,7 +43,7 @@ class _MyPostingScreenState extends State<MyPostingScreen> {
 
                ),        
             ),
-            child: (index == AppConstants.currentUser.myPostings!.length) ?  PostingTileButton() : ,
+            child: (index == AppConstants.currentUser.myPostings!.length) ?  PostingTileButton() : PostingListingTileUi(),
          
           ),
         ),
