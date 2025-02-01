@@ -88,6 +88,8 @@ class UserModel extends ContactModel{
         {
           PostingModel posting = PostingModel(id: postingID);
           await posting.getMyPostingFromFirestore();
+
+         myPostings!.add(posting);
         }
       }
 }
