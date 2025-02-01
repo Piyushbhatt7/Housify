@@ -14,8 +14,39 @@ class PostingListingTileUi extends StatefulWidget {
 class _PostingListingTileUiState extends State<PostingListingTileUi> {
 
   PostingModel? posting;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    posting = widget.posting;
+  }
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: ListTile(
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 8.0),
+          child: Text(
+            posting!.name!,
+            maxLines: 2,
+            style: const TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          
+        ),
+        trailing: AspectRatio(
+          aspectRatio: 3/2,
+          child: Image(
+            image: posting!.displayImage!.first,
+            fit: BoxFit.fitWidth,
+          ),
+        ),
+      ),
+    );
   }
 }
