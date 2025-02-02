@@ -76,6 +76,18 @@ class _ExploreScreenState extends State<ExploreScreen> {
 
                 children: [
 
+                  MaterialButton(onPressed: ()
+                  {
+                     
+                     pressSelectedByButton("name", true, false, false);
+                  },
+
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                  color: isNameButtonSelected ? Colors.pink : Colors.white,
+                  child: const Text("Name"),
+                  
+                  )
+
                 ],
               ),
              )
