@@ -12,6 +12,9 @@ class _ExploreScreenState extends State<ExploreScreen> {
 
   TextEditingController controllerSearch = TextEditingController();
   Stream stream = FirebaseFirestore.instance.collection('postings').snapshots();
+  String searchType = "";
+
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
