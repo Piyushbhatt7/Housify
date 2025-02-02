@@ -67,7 +67,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
 
              // name - city - type - clear button
 
-             Container(
+             SizedBox(
               height: 48,
               width: MediaQuery.of(context).size.width/ .5,
               child: ListView(
@@ -106,11 +106,24 @@ class _ExploreScreenState extends State<ExploreScreen> {
                     MaterialButton(onPressed: ()
                     {
 
-                      pressSelectedByButton("type", false, true, true);
+                      pressSelectedByButton("type", false, false, true);
                     },
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                       color: isNameButtonSelected ? Colors.pink : Colors.white,
                       child: const Text("Type"),
+                    ),
+
+
+                     const SizedBox(width: 6.0,),
+
+                    MaterialButton(onPressed: ()
+                    {
+
+                      pressSelectedByButton("", false, false, false);
+                    },
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                      color: isNameButtonSelected ? Colors.pink : Colors.white,
+                      child: const Text("Clear"),
                     ),
                 ],
               ),
