@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:housify/models/posting_model.dart';
 
 class ExploreScreen extends StatefulWidget {
   const ExploreScreen({super.key});
@@ -150,6 +151,15 @@ class _ExploreScreenState extends State<ExploreScreen> {
                     itemBuilder: (context, index)
                     {
                       DocumentSnapshot snapshot = dataSnapshots.data.docs[index];
+
+                      PostingModel cPosting = PostingModel(id: snapshot.id);
+
+                      cPosting.getMyPostingFromSnapshot(snapshot);
+
+                      return InkResponse(
+                        enableFeedback: true,
+                        child: ,
+                      )
                     }
                     );
 
