@@ -17,7 +17,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
 
   bool isNameButtonSelected = false;
   bool isCityButtonSelected = false;
-  
+  bool isTypeButtonSelected = false;
 
   @override
   Widget build(BuildContext context) {
