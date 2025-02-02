@@ -127,5 +127,22 @@ class PostingModel {
 
    return amenitiesString.substring(1, amenitiesString.length-1);
  }
+
+ getCurrentRating () 
+ {
+   if(reviews!.length == 0)
+   {
+    return 4;
+   }
+
+   double rating = 0;
+
+   reviews!.forEach((reviews)
+   {
+      rating += reviews.rating!;
+   });
+
+   
+ }
  
 }

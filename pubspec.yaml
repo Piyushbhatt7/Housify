@@ -41,6 +41,7 @@ dependencies:
   firebase_storage:
   firebase_core:
   image_picker:
+  custom_rating_bar: 
 
 
 dev_dependencies:

@@ -1,3 +1,4 @@
+import 'package:custom_rating_bar/custom_rating_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:housify/models/posting_model.dart';
 
@@ -61,6 +62,40 @@ class _PostingGridTileUiState extends State<PostingGridTileUi> {
               fontWeight: FontWeight.bold,
              ),
            ),
+
+            Text(
+            posting!.name!,
+             maxLines: 1,
+             style: TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w200,
+             ),
+           ),
+
+
+           Text(
+            '\$${posting!.price!} / night',
+            // maxLines: 2,
+             style: TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w500,
+             ),
+           ),
+
+
+           Row(
+            children: [
+
+              RatingBar.readOnly(
+                size: 28.0,
+                maxRating: 5,
+                initialRating: posting.g,
+                filledIcon: filledIcon,
+                 emptyIcon: emptyIcon
+                 
+                 )
+            ],
+           )
 
            
       ],
