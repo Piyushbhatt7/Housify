@@ -49,8 +49,10 @@ class _ExploreScreenState extends State<ExploreScreen> {
                 ),
                 style: const TextStyle(
                   fontSize: 20.0,
-                  
+                  color: Colors.black,
                 ),
+
+                controller: controllerSearch,
               ),
              
              )
