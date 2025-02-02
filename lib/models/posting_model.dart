@@ -142,7 +142,10 @@ class PostingModel {
       rating += reviews.rating!;
    });
 
-   
+   rating = rating / reviews!.length;
+
+   return rating;
+
  }
  
 }

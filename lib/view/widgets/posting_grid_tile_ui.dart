@@ -89,7 +89,7 @@ class _PostingGridTileUiState extends State<PostingGridTileUi> {
               RatingBar.readOnly(
                 size: 28.0,
                 maxRating: 5,
-                initialRating: posting.g,
+                initialRating: posting!.getCurrentRating(),
                 filledIcon: filledIcon,
                  emptyIcon: emptyIcon
                  
