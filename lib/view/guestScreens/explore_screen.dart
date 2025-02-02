@@ -24,6 +24,11 @@ class _ExploreScreenState extends State<ExploreScreen> {
 
   }
 
+  pressSelectedByButton(String searchType, bool isNameButtonSelected, bool isCityButtonSelected, bool isTypeButtonSelected)
+  {
+    
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -65,6 +70,10 @@ class _ExploreScreenState extends State<ExploreScreen> {
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+
+                children: [
+
+                ],
               ),
              )
         ],
