@@ -232,7 +232,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                   Get.snackbar("Update Listing", "your listing is updated successfully");
             }
            
-           PostingModel
+           postingModel
 
           Get.to(GuestHomeScreen()); //7 44
 
