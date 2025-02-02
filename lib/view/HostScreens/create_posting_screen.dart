@@ -234,7 +234,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
            PostingModel newPosting = PostingModel();
 
 
-          Get.to(guest(index: 1,)); //7 44
+          Get.to(); //7 44
 
 
           }, icon: const Icon(Icons.upload)
