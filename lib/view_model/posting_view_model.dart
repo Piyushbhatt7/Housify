@@ -58,10 +58,8 @@ class PostingViewModel {
        "type": postingModel.type,
      };
 
-     DocumentReference ref = await FirebaseFirestore.instance.collection("postings").doc(postingModel.id).update(dataMap);
-     postingModel.id = ref.id;
-
-     await AppConstants.currentUser.addPostingToMyPostings(postingModel); // 13:13
+     FirebaseFirestore.instance.collection("postings").doc(postingModel.id).update(dataMap);
+  
   }
 
 
