@@ -64,7 +64,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
               width: MediaQuery.of(context).size.width/ .5,
               child: ListView(
                 scrollDirection: Axis.horizontal,
-                padding: const,
+                padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
               ),
              )
         ],
