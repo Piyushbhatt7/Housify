@@ -22,7 +22,13 @@ class _ExploreScreenState extends State<ExploreScreen> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.fromLTRB(25, 15, 20, 0)
-    )
+      padding: EdgeInsets.fromLTRB(25, 15, 20, 0),
+      child: Column(
+        children: [
+
+
+        ],
+      ),
+    );
   }
 }
