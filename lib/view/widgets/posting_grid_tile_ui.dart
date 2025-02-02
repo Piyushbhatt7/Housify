@@ -1,5 +1,6 @@
 import 'package:custom_rating_bar/custom_rating_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:housify/models/app_constants.dart';
 import 'package:housify/models/posting_model.dart';
 
 class PostingGridTileUi extends StatefulWidget {
@@ -90,8 +91,9 @@ class _PostingGridTileUiState extends State<PostingGridTileUi> {
                 size: 28.0,
                 maxRating: 5,
                 initialRating: posting!.getCurrentRating(),
-                filledIcon: filledIcon,
-                 emptyIcon: emptyIcon
+                filledIcon: Icons.star,
+                 emptyIcon: Icons.star_border,
+                 filledColor: Colors.green,
                  
                  )
             ],
