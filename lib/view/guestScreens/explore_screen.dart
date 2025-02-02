@@ -8,10 +8,12 @@ class ExploreScreen extends StatefulWidget {
 }
 
 class _ExploreScreenState extends State<ExploreScreen> {
+
+  TextEditingController controllerSearch = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-  
+            
     );
   }
 }
