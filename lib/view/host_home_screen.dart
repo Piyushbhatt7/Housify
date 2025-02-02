@@ -8,7 +8,10 @@ import 'package:housify/view/guestScreens/saved_listing_screen.dart';
 import 'package:housify/view/guestScreens/trips_screen.dart';
 
 class HostHomeScreen extends StatefulWidget {
-  const HostHomeScreen({super.key});
+
+  int? index;
+  
+   HostHomeScreen({super.key});
 
   @override
   State<HostHomeScreen> createState() => _HostHomeScreenState();
