@@ -98,6 +98,14 @@ class PostingModel {
     return displayImage;
  }
 
+ getFirstImageFromStorage () async
+ {
+    if(displayImage!.isEmpty)
+    {
+      return displayImage!.first;
+    }
+ }
+
  getAmenitiesString()
  {
    if(amenities!.isEmpty)
