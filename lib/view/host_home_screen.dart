@@ -11,7 +11,7 @@ class HostHomeScreen extends StatefulWidget {
 
   int? index;
   
-   HostHomeScreen({super.key});
+   HostHomeScreen({super.key, this.index});
 
   @override
   State<HostHomeScreen> createState() => _HostHomeScreenState();
