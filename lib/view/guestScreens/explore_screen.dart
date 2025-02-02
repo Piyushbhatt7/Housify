@@ -53,6 +53,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                 ),
 
                 controller: controllerSearch,
+                onEditingComplete: searchByField,
               ),
              
              )
