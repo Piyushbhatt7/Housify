@@ -34,6 +34,37 @@ class PostingViewModel {
      await AppConstants.currentUser.addPostingToMyPostings(postingModel); // 13:13
   }
 
+ 
+  addListingInfoToFirestore() async
+  {  // 4:44
+     
+
+     postingModel.setImagesNames();
+
+     Map<String, dynamic> dataMap = 
+     {
+       "address": postingModel.address,
+       "amenities": postingModel.amenities,
+       "bathrooms": postingModel.bathrooms,
+       "description": postingModel.description,
+       "beds": postingModel.beds,
+       "city": postingModel.city,
+       "country": postingModel.country,
+       "hostID": AppConstants.currentUser.id,
+       "imagesNames": postingModel.imageName,
+       "names": postingModel.name,
+       "price": postingModel.price,
+       "rating": 3.5,
+       "type": postingModel.type,
+     };
+
+     DocumentReference ref = await FirebaseFirestore.instance.collection("postings").add(dataMap);
+     postingModel.id = ref.id;
+
+     await AppConstants.currentUser.addPostingToMyPostings(postingModel); // 13:13
+  }
+
+
   addImagesToFirebaseStorage () async
   {
     
