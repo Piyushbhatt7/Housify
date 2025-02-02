@@ -100,7 +100,7 @@ class PostingModel {
 
  getFirstImageFromStorage () async
  {
-    if(displayImage!.isEmpty)
+    if(displayImage!.isNotEmpty)
     {
       return displayImage!.first;
     }
@@ -128,7 +128,7 @@ class PostingModel {
    return amenitiesString.substring(1, amenitiesString.length-1);
  }
 
- getCurrentRating () 
+  double getCurrentRating () 
  {
    if(reviews!.length == 0)
    {

@@ -232,9 +232,9 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                   Get.snackbar("Update Listing", "your listing is updated successfully");
             }
            
-           postingModel = PostingModel();
+          //R postingModel = PostingModel();
 
-          Get.to(HostHomeScreen()); //7 44
+          Get.to(HostHomeScreen(index: 1,)); //7 44
 
 
           }, icon: const Icon(Icons.upload)
