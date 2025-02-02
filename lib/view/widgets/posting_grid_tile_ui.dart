@@ -18,6 +18,10 @@ class _PostingGridTileUiState extends State<PostingGridTileUi> {
   updateUi () async
   {
      await posting!.getFirstImageFromStorage();
+
+     setState(() {
+       
+     });
   }
   @override
   void initState() {
@@ -26,9 +30,40 @@ class _PostingGridTileUiState extends State<PostingGridTileUi> {
 
    posting = widget.posting;
 
+   updateUi();
+
   }
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      crossAxisAlignment: CrossAxisAlignment.start,
+
+      children: [
+
+        AspectRatio(
+          aspectRatio: 3 / 2,
+          child: (posting!.displayImage!.isEmpty) ? Container() : Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: posting!.displayImage!.first,
+                fit: BoxFit.fill,
+                )
+            ),
+          ),
+           ),
+
+           Text(
+            "${posting!.type} - ${posting!.city}, ${posting!.country}",
+             maxLines: 2,
+             style: TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.bold,
+             ),
+           ),
+
+           
+      ],
+    );
   }
 }
