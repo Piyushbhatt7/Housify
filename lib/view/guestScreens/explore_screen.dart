@@ -26,7 +26,9 @@ class _ExploreScreenState extends State<ExploreScreen> {
 
   pressSelectedByButton(String searchTypeStr, bool isNameButtonSelectedB, bool isCityButtonSelectedB, bool isTypeButtonSelectedB)
   {
-     
+      isNameButtonSelected = isNameButtonSelectedB;
+      isCityButtonSelected = isCityButtonSelectedB;
+      isTypeButtonSelected = isTypeButtonSelectedB;
   }
 
   @override
