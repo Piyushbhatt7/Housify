@@ -19,6 +19,11 @@ class _ExploreScreenState extends State<ExploreScreen> {
   bool isCityButtonSelected = false;
   bool isTypeButtonSelected = false;
 
+  searchByField()
+  {
+    
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -26,7 +31,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
       child: Column(
         children: [
 
-
+             // searchbar
         ],
       ),
     );
