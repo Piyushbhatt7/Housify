@@ -42,6 +42,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                   border: OutlineInputBorder(
                     borderSide: BorderSide(
                       color: Colors.grey,
+                      width: 2.0,
                     )
                   )
                 ),
