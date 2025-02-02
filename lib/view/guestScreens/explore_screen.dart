@@ -21,7 +21,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
 
   searchByField()
   {
-    
+
   }
 
   @override
@@ -32,6 +32,17 @@ class _ExploreScreenState extends State<ExploreScreen> {
         children: [
 
              // searchbar
+
+             Padding(
+              padding: const EdgeInsets.only(top: 0, bottom: 0),
+              child: TextField(
+                decoration: const InputDecoration(
+                  hintText: 'Search',
+                  
+                ),
+              ),
+             
+             )
         ],
       ),
     );
