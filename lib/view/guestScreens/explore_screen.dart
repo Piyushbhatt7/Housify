@@ -38,7 +38,12 @@ class _ExploreScreenState extends State<ExploreScreen> {
               child: TextField(
                 decoration: const InputDecoration(
                   hintText: 'Search',
-                  
+                  prefixIcon: Icon(Icons.search),
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.grey,
+                    )
+                  )
                 ),
               ),
              
