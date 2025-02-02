@@ -127,7 +127,40 @@ class _ExploreScreenState extends State<ExploreScreen> {
                     ),
                 ],
               ),
-             )
+             ),
+             
+
+             // display listings
+
+             StreamBuilder(
+              stream: stream, 
+              builder: (context, snapshots)
+              {
+                if(snapshots.hasData)
+                {
+                  return GridView.builder(
+                    physics: const ScrollPhysics(),
+                    shrinkWrap: true,
+                    itemCount: snapshots.data.docs.length,
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      crossAxisSpacing: 15,
+                      childAspectRatio: 3/4,
+                       ), 
+                    itemBuilder: itemBuilder
+                    );
+
+                }
+
+                else {
+                  return Center(
+                    child: CircularProgressIndicator(),
+                  );
+                }
+              }
+             
+              )
+        
         ],
       ),
     );
