@@ -21,8 +21,8 @@ class _ExploreScreenState extends State<ExploreScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-            
-    );
+    return Padding(
+      padding: EdgeInsets.fromLTRB(25, 15, 20, 0)
+    )
   }
 }
