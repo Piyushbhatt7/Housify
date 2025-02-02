@@ -14,7 +14,10 @@ class _ExploreScreenState extends State<ExploreScreen> {
   Stream stream = FirebaseFirestore.instance.collection('postings').snapshots();
   String searchType = "";
 
-  
+
+  bool isNameButtonSelected = false;
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
