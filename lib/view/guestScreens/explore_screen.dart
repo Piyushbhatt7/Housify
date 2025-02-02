@@ -44,7 +44,12 @@ class _ExploreScreenState extends State<ExploreScreen> {
                       color: Colors.grey,
                       width: 2.0,
                     )
-                  )
+                  ),
+                  contentPadding: EdgeInsets.all(5.0),
+                ),
+                style: const TextStyle(
+                  fontSize: 20.0,
+                  
                 ),
               ),
              
