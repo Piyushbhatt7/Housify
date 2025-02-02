@@ -232,7 +232,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
             }
            
 
-          Get.to(HostHomeScreen(index: 1,));
+          Get.to(HostHomeScreen(index: 1,)); //7 44
 
 
           }, icon: const Icon(Icons.upload)
