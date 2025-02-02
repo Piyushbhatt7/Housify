@@ -85,9 +85,20 @@ class _ExploreScreenState extends State<ExploreScreen> {
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                   color: isNameButtonSelected ? Colors.pink : Colors.white,
                   child: const Text("Name"),
-                  
-                  )
+      
+                  ),
+                    
+                    const SizedBox(width: 6.0,),
 
+                    MaterialButton(onPressed: ()
+                    {
+
+                      pressSelectedByButton("city", false, true, false);
+                    },
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                      color: isNameButtonSelected ? Colors.pink : Colors.white,
+                      child: const Text("City"),
+                    ),
                 ],
               ),
              )
