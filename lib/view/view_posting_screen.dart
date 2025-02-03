@@ -207,7 +207,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                                 child: Text(
                                   posting!.host!.getFullNameOfUser(),
                                   style: const TextStyle(
-                                    fontWeight: FontWeight.bold,
+                                    fontWeight: FontWeight.bold, // 10:39
                                   ),
                                 ),
                               )
