@@ -113,6 +113,26 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                         ),
                         maxLines: 3,
                       ),
+                    ),
+
+                    Column(
+                      children: [
+
+                        Container(
+                          decoration: BoxDecoration(),
+                          child: MaterialButton(onPressed: ()
+                          {
+
+                          },
+                          child: Text(
+                            'Book Now',
+                            style: TextStyle(
+                              color: Colors.white
+                            ),
+                          ),
+                          ),
+                        )
+                      ],
                     )
                   ],
                  )
