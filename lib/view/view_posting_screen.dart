@@ -57,13 +57,26 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
 
           IconButton(onPressed: ()
           {
-
+                 
           },
            icon: Icon(Icons.save, color: Colors.white,)
            )
         ],
        
       ),
+    
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+
+            AspectRatio(
+              aspectRatio: 
+              )
+          ],
+        ),
+      ),
+    
+    
     );
   }
 }
