@@ -179,7 +179,28 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                               style: TextStyle(
                                 fontSize: 14,
                               ),
+                              maxLines: 5,
                             ),
+                           ),
+
+                           Column(
+                            children: [
+
+                              GestureDetector(
+                                onTap: () {
+                                  
+                                },
+                                child: CircleAvatar(
+
+                                  radius: MediaQuery.of(context).size.width / 12.5,
+                                  backgroundColor: Colors.black,
+                                  child: CircleAvatar(
+                                    backgroundImage: posting!.host!.displayImage,
+                                    radius: MediaQuery.of(context).size.width / 13,
+                                  ),
+                                ),
+                              )
+                            ],
                            )
                     ],
                   ),
