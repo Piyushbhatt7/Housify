@@ -84,7 +84,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                 ),
               ),
          
-           // posting name btn // book now btn
+           // posting name btn // book now btn // price btn
            // description - profile pic
            // apartment - beds - bathrooms
            // amenities 
@@ -96,7 +96,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
 
-                 // posting name btn // book now btn
+                 // posting name btn // book now btn // price btn
 
                  Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -151,12 +151,31 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                           style: TextStyle(
                             fontSize: 14.0
                           ),
-                        )
+                        ),
                       ],
                     )
-                  ],
-                 )
+                    
 
+
+                
+                  ],
+                 ),
+
+                 // description - profile pic
+
+                 Padding(
+                  padding: EdgeInsets.only(top: 25.0, bottom: 25.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    
+                    children: [
+
+
+                    ],
+                  ),
+                 )
+             
               ],
             ),
           )
