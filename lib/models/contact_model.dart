@@ -37,7 +37,10 @@ class ContactModel {
      getContactInfoFromFirestore() async
      {
        DocumentSnapshot snapshot = await FirebaseFirestore.instance.collection('users').doc(id).get();
-       
+
+       firstName = snapshot['firstName'] ?? "";
+       lastName = snapshot['lastName'] ?? "";
+
      }
 
      
