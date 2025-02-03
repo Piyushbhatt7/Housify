@@ -68,7 +68,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-
+           // listing images
             AspectRatio(
               aspectRatio: 3 / 2,
               child: PageView.builder(
@@ -82,7 +82,18 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                     );
                 }
                 ),
-              )
+              ),
+         
+           // posting name btn // book now btn
+           // description - profile pic
+           // apartment - beds - bathrooms
+           // amenities 
+           // the location
+         
+          Padding(
+            padding: const EdgeInsets.fromLTRB(14, 14, 14, 0)
+          )
+         
           ],
         ),
       ),
