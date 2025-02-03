@@ -29,7 +29,10 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    widget.posting;
+    posting = widget.posting;
+    
+    getRequiredInfo();
+
   }
   @override
   Widget build(BuildContext context) {
