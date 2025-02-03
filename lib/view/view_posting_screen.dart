@@ -70,7 +70,14 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
           children: [
 
             AspectRatio(
-              aspectRatio: 
+              aspectRatio: 3 / 2,
+              child: PageView.builder(
+                itemCount: posting!.displayImage!.length,
+                itemBuilder: (context, index)
+                {
+                  MemoryImage currentImage = posting!.displayImage![index];
+                }
+                ),
               )
           ],
         ),
