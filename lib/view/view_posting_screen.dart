@@ -91,7 +91,13 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
            // the location
          
           Padding(
-            padding: const EdgeInsets.fromLTRB(14, 14, 14, 0)
+            padding: const EdgeInsets.fromLTRB(14, 14, 14, 0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+
+              ],
+            ),
           )
          
           ],
