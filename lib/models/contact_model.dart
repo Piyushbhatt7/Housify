@@ -43,5 +43,14 @@ class ContactModel {
 
      }
 
+
+     getImageFromStorage() async
+     {
+       if(displayImage != null)
+       {
+         return displayImage;
+       }
+     }
+
      
 }
