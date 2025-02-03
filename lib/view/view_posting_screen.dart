@@ -51,6 +51,17 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
             tileMode: TileMode.clamp,
           )),
         ),
+
+        title: const Text("Posting Information"),
+        actions: [
+
+          IconButton(onPressed: ()
+          {
+
+          },
+           icon: Icon(Icons.save, color: Colors.white,)
+           )
+        ],
        
       ),
     );
