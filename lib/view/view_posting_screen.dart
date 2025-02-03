@@ -103,7 +103,10 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
 
-                    
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width / 1.55,
+                      
+                    )
                   ],
                  )
 
