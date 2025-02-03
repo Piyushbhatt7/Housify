@@ -96,6 +96,17 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
 
+                 // posting name btn // book now btn
+
+                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+
+                    
+                  ],
+                 )
+
               ],
             ),
           )
