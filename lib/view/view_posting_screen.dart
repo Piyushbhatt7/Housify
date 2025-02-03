@@ -161,7 +161,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                   ],
                  ),
 
-                 // description - profile pic
+                 // description - profile pic // name
 
                  Padding(
                   padding: EdgeInsets.only(top: 25.0, bottom: 25.0),
@@ -197,6 +197,17 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                                   child: CircleAvatar(
                                     backgroundImage: posting!.host!.displayImage,
                                     radius: MediaQuery.of(context).size.width / 13,
+                                  ),
+                                ),
+                              ),
+
+
+                              Padding(
+                                padding: EdgeInsets.only(top: 10.0),
+                                child: Text(
+                                  posting!.host!.getFullNameOfUser(),
+                                  style: const TextStyle(
+                                    fontWeight: FontWeight.bold,
                                   ),
                                 ),
                               )
