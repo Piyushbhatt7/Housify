@@ -119,7 +119,20 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                       children: [
 
                         Container(
-                          decoration: BoxDecoration(),
+                           
+                       decoration: BoxDecoration(
+                       gradient: LinearGradient(
+                       colors: [
+                       Colors.pinkAccent,
+                       Colors.amberAccent,
+                        ],
+                         begin: FractionalOffset(0.0, 0.0),
+                         end: FractionalOffset(1.0, 0.0),
+                         stops: [0.0, 1.0],
+                         tileMode: TileMode.clamp,
+                        )),
+        
+       
                           child: MaterialButton(onPressed: ()
                           {
 
@@ -127,7 +140,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                           child: Text(
                             'Book Now',
                             style: TextStyle(
-                              color: Colors.white
+                              color: Colors.white,
                             ),
                           ),
                           ),
