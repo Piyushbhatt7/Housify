@@ -144,6 +144,13 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                             ),
                           ),
                           ),
+                        ),
+
+                        Text(
+                          '\$${posting!.price} / night',
+                          style: TextStyle(
+                            fontSize: 14.0
+                          ),
                         )
                       ],
                     )
