@@ -150,8 +150,8 @@ class PostingModel {
 
  getHostFromFirestore() async
  {
-   await host.getContactInfoFromFirestore();
-   await host.getImageFromStorage();
+   await host!.getContactInfoFromFirestore();
+   await host!.getImageFromStorage();
  }
  
 } 
