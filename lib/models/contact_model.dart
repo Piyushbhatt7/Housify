@@ -33,5 +33,10 @@ class ContactModel {
        );
      }
 
+     getContactInfoFromFirestore() async
+     {
+      
+     }
+
      
 }
