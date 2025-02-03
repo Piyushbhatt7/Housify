@@ -17,6 +17,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
 
   getRequiredInfo()
   {
+    posting.getAllImagesFromStorage();
     
   }
 
