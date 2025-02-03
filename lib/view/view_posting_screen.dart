@@ -168,10 +168,19 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    
+
                     children: [
 
-
+                           SizedBox(
+                            width: MediaQuery.of(context).size.width / 1.75,
+                            child: Text(
+                              posting!.description!,
+                              textAlign: TextAlign.justify,
+                              style: TextStyle(
+                                fontSize: 14,
+                              ),
+                            ),
+                           )
                     ],
                   ),
                  )
