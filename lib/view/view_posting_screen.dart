@@ -105,7 +105,14 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
 
                     SizedBox(
                       width: MediaQuery.of(context).size.width / 1.55,
-                      
+                      child: Text(
+                        posting!.name!.toUpperCase(),
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                        ),
+                        maxLines: 3,
+                      ),
                     )
                   ],
                  )
