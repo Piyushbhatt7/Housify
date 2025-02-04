@@ -204,6 +204,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
             postingModel.reviews = [];
 
           await  postingViewModel.addListingInfoToFirestore();
+
           await postingViewModel.addImagesToFirebaseStorage();
           // postingViewModel.updateListingInfoToFirestore();
 
@@ -233,7 +234,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
            
           //R postingModel = PostingModel();
 
-          Get.to(HostHomeScreen(index: 1,)); 
+          Get.to(HostHomeScreen()); 
 
 
           }, icon: const Icon(Icons.upload)
