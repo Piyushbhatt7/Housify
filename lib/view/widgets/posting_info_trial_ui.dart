@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
-class PostingInfoTrialUi extends StatefulWidget {
-  const PostingInfoTrialUi({super.key});
+class PostingInfoTrialUi extends StatefulWidget {\
+ 
+ IconData? iconData;
+ String? category;
+ String? categoryInfo;
+
+ PostingInfoTrialUi({super.key, this.iconData, this.category, this.categoryInfo});
 
   @override
   State<PostingInfoTrialUi> createState() => _PostingInfoTrialUiState();
