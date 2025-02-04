@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:housify/global.dart';
 import 'package:housify/models/app_constants.dart';
+import 'package:housify/models/posting_model.dart';
 
 class PostingViewModel {
 
@@ -65,6 +66,8 @@ class PostingViewModel {
 
   addImagesToFirebaseStorage () async
   {
+
+    PostingModel posting = PostingModel(); // check
     
     for(int i = 0; i< postingModel.displayImage!.length; i++)
     {
