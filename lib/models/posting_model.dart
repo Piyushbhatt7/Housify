@@ -163,5 +163,27 @@ class PostingModel {
 
    return numGuests;
  }
+
+
+ String getBedroomsText()
+ {
+  String text = "";
+
+  if(this.beds!["small"] != 0)
+  {
+    text = text + beds!["small"].toString() + " single/twin";
+  }
+
+   
+   if(this.beds!["medium"] != 0)
+  {
+    text = text + beds!["medium"].toString() + " double";
+  }
+
+  if(this.beds!["large"] != 0)
+  {
+    text = text + beds!["large"].toString() + " queen/king";
+  }
+ }
  
 } 
