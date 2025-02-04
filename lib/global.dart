@@ -5,4 +5,5 @@ import 'package:housify/view_model/user_view_model.dart';
 PostingModel postingModel = PostingModel();
 
 UserViewModel userViewModel = UserViewModel();
+
 PostingViewModel postingViewModel = PostingViewModel();
