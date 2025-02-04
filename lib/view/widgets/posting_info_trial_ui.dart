@@ -29,6 +29,13 @@ class _PostingInfoTrialUiState extends State<PostingInfoTrialUi> {
           fontSize: 25
         ),
       ),
+
+      subtitle: Text(
+        widget.categoryInfo!,
+        style: const TextStyle(
+          fontSize: 20,
+        ),
+      ),
     );
   }
 }
