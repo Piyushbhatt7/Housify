@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:housify/models/app_constants.dart';
 import 'package:housify/models/user_model.dart';
-import 'package:housify/view/guestScreens/account_screen.dart';
 import 'package:housify/view/guest_home_screen.dart';
 
 class UserViewModel {
