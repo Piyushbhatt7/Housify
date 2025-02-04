@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:housify/models/posting_model.dart';
+import 'package:housify/view/view_posting_screen.dart';
 import 'package:housify/view/widgets/posting_grid_tile_ui.dart';
 
 class ExploreScreen extends StatefulWidget {
@@ -160,7 +162,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                       return InkResponse(
                         onTap: () {
 
-                          Get.to()
+                          Get.to(ViewPostingScreen());
                           
                         },
                         enableFeedback: true,
