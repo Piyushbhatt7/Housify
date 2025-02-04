@@ -162,7 +162,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                       return InkResponse(
                         onTap: () {
 
-                          Get.to(ViewPostingScreen());
+                          Get.to(ViewPostingScreen(posting: cPosting,));
                           
                         },
                         enableFeedback: true,
