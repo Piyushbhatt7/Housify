@@ -61,7 +61,7 @@ class PostingModel {
    getMyPostingFromSnapshot(snapshot);
  }
  
- getMyPostingFromSnapshot(DocumentSnapshot snapshot)
+ getMyPostingFromSnapshot(DocumentSnapshot snapshot) // 9:38
  {
    address = snapshot['address'] ?? "";
    amenities = List<String>.from(snapshot['amenities']) ?? [];

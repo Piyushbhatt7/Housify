@@ -5,7 +5,7 @@ class AppConstants {
   static UserModel currentUser = UserModel();
 
 
-  static ContactModel createContactFromUserModel() {
+   ContactModel createContactFromUserModel() {
     return ContactModel(
       id: currentUser.id,
       firstName: currentUser.firstName,
