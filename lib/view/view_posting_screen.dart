@@ -249,7 +249,31 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                      ],
                   ),
                  
+                 ),
+             
+                 
+                 // amenities
+
+                 const Text(
+                  'Amenities: ',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25
+                  ),
+                 ),
+                 
+
+                 Padding(
+                  padding: const EdgeInsets.only(top: 5.0, bottom: 25),
+                  child: GridView.count(
+                    shrinkWrap: true,
+                    crossAxisCount: 2,
+                    childAspectRatio: 3.6,
+                    
+                    ),
                  )
+             
+             
               ],
             ),
           )
