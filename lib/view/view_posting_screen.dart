@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:housify/models/posting_model.dart';
+import 'package:housify/view/widgets/posting_info_trial_ui.dart';
 
 class ViewPostingScreen extends StatefulWidget {
 
@@ -226,8 +227,10 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                      shrinkWrap: true,
                      children: [
 
+                        PostingInfoTrialUi(
+                          
+                        )
 
-                      
                      ],
                   ),
                  
