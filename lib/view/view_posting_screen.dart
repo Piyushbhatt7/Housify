@@ -310,8 +310,10 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                 Padding(
                   padding: EdgeInsets.only(top: 2.0, bottom: 8),
                   child: Text(
-                    
-                    
+                    posting!.getFullAddress(),
+                    style: const TextStyle(
+                      fontSize: 15,
+                    ),
                   ),
                 )
               ],
