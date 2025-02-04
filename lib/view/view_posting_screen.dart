@@ -201,7 +201,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                                 ),
                               ),
 
-
+  
                               Padding(
                                 padding: EdgeInsets.only(top: 10.0),
                                 child: Text(
