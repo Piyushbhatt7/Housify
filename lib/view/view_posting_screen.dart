@@ -215,8 +215,23 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                            )
                     ],
                   ),
+                 ),
+                 
+
+                 // apartment - beds - bathrooms
+
+                 Padding(
+                  padding: EdgeInsets.only(bottom: 25.0),
+                  child: ListView(
+                     shrinkWrap: true,
+                     children: [
+
+
+                      
+                     ],
+                  ),
+                 
                  )
-             
               ],
             ),
           )
