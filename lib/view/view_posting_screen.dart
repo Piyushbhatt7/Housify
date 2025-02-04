@@ -234,16 +234,16 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                         ),
 
                         PostingInfoTrialUi(
-                          iconData: Icons.home,
-                          category: posting!.type,
-                          categoryInfo: '${posting!.getGuestNumber()} guests',
+                          iconData: Icons.hotel,
+                          category: 'Beds',
+                          categoryInfo: posting!.getBedroomsText(),
                         ),
-                        
+
 
                         PostingInfoTrialUi(
-                          iconData: Icons.home,
-                          category: posting!.type,
-                          categoryInfo: '${posting!.getGuestNumber()} guests',
+                          iconData: Icons.wc,
+                          category: 'Bathrooms',
+                          categoryInfo: posting!.getBathroomsText(),
                         ),
 
                      ],
