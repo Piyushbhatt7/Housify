@@ -286,16 +286,34 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                                 fontSize: 16,
                               ),
                             ),
-                          )
+                          ),
+
+                          backgroundColor: Colors.white10,
                         
-                        )
+                        );
                       }
                       
                       ),
                     ),
-                 )
+                 ),
              
-             
+                // location 
+
+                const Text(
+                  'The Location:',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25,
+                  ),
+                ),
+
+                Padding(
+                  padding: EdgeInsets.only(top: 2.0, bottom: 8),
+                  child: Text(
+                    
+                    
+                  ),
+                )
               ],
             ),
           )
