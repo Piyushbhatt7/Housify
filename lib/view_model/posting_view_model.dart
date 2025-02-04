@@ -36,7 +36,7 @@ class PostingViewModel {
   }
 
  
-  updateListingInfoToFirestore() async
+  updateListingInfoToFirestore() async 
   {  // 4:44
      
 
