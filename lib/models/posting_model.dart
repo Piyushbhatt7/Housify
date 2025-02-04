@@ -153,5 +153,15 @@ class PostingModel {
    await host!.getContactInfoFromFirestore();
    await host!.getImageFromStorage();
  }
+
+ int getGuestNumber()
+ {
+   int? numGuests = 0;
+   numGuests = numGuests + beds!['small']!;
+   numGuests += numGuests + beds!['medium']!*2;
+   numGuests += numGuests + beds!['large']!*2;
+
+   return numGuests;
+ }
  
 } 
