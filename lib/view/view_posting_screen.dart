@@ -53,7 +53,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
           )),
         ),
 
-        title: const Text("Posting Information"),
+        title: const Text("Posting Information", style: TextStyle(color: Colors.white),),
         actions: [
 
           IconButton(onPressed: ()
