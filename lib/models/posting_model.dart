@@ -184,6 +184,8 @@ class PostingModel {
   {
     text = text + beds!["large"].toString() + " queen/king";
   }
+
+  return text;
  }
  
 } 
