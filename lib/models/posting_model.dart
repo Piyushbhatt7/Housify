@@ -205,5 +205,10 @@ class PostingModel {
 
    return text;
  }
+
+ String getFullAddress()
+ {
+   return address! + ", " + city! + ", " + country!;
+ }
  
 } 
