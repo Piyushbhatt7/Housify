@@ -67,11 +67,14 @@ class PostingViewModel {
   addImagesToFirebaseStorage () async
   {
 
-    PostingModel posting = PostingModel(); // check
+    //PostingModel posting = PostingModel(); // check
     
-    for(int i = 0; i< postingModel.displayImage!.length; i++)
+    for(int i = 0; i < postingModel.displayImage!.length; i++)
     {
-      Reference ref = FirebaseStorage.instance.ref().child("postingImages").child(postingModel.id!).child(postingModel.imageName![i]);
+      Reference ref = FirebaseStorage.instance.ref()
+      .child("postingImages")
+      .child(postingModel.id!)
+      .child(postingModel.imageName![i]);
 
       await ref.putData(postingModel.displayImage![i].bytes).whenComplete((){
 
