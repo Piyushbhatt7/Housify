@@ -269,7 +269,29 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                     shrinkWrap: true,
                     crossAxisCount: 2,
                     childAspectRatio: 3.6,
-                    
+                     
+                     children: List.generate(
+                      posting!.amenities!.length, 
+                      (index)
+                      {
+                        String curreAmenity = posting!.amenities![index];
+                        return Chip(
+                          label: Padding(
+
+                            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                            child: Text(
+                              curreAmenity,
+                              style: const TextStyle(
+                                color: Colors.black45,
+                                fontSize: 16,
+                              ),
+                            ),
+                          )
+                        
+                        )
+                      }
+                      
+                      ),
                     ),
                  )
              
