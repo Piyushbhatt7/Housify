@@ -12,7 +12,7 @@ import 'package:image_picker/image_picker.dart';
 class CreatePostingScreen extends StatefulWidget {
 
   PostingModel? posting;
-   CreatePostingScreen({super.key, this.posting});
+  CreatePostingScreen({super.key, this.posting});
 
   @override
   State<CreatePostingScreen> createState() => _CreatePostingScreenState();
