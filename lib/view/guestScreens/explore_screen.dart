@@ -139,7 +139,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
         
                StreamBuilder(
                 stream: stream, 
-                builder: (context, dataSnapshots)
+                builder: (context, snapshots)
                 {
                   if(dataSnapshots.hasData)
                   {
