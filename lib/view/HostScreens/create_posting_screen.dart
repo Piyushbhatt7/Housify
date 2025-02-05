@@ -233,7 +233,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
             }
            
           //R postingModel = PostingModel();
-          PostingModel postingModel = PostingModel();
+          PostingModel newPosting = PostingModel();
 
           Get.to(HostHomeScreen(index: 1,)); 
 
