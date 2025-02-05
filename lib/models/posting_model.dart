@@ -54,14 +54,14 @@ class PostingModel {
   }
  }
 
- getMyPostingFromFirestore() async
+ getPostingInfoFromFirestore() async
  {
    DocumentSnapshot snapshot = await FirebaseFirestore.instance.collection('postings').doc(id).get();
 
-   getMyPostingFromSnapshot(snapshot);
+   getPostingInfoFromSnapshot(snapshot);
  }
  
- getMyPostingFromSnapshot(DocumentSnapshot snapshot) // 9:38
+ getPostingInfoFromSnapshot(DocumentSnapshot snapshot) // 9:38
  {
    address = snapshot['address'] ?? "";
    amenities = List<String>.from(snapshot['amenities']) ?? [];
@@ -74,7 +74,7 @@ class PostingModel {
    String hostID = snapshot['hostID'] ?? "";
    host = ContactModel(id: hostID);
 
-   imageName = List<String>.from(snapshot['imagesNames']) ?? [];
+   imageName = List<String>.from(snapshot['imageNames']) ?? [];
    name = snapshot['names'] ?? "";
    price = snapshot['price'].toDouble() ?? 0.0;
    rating = snapshot['rating'].toDouble() ?? 2.5;
