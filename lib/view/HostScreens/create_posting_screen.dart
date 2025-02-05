@@ -84,7 +84,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
     _addressTextEditingController = TextEditingController(text: "");
     _cityTextEditingController = TextEditingController(text: "");
     _countryTextEditingController = TextEditingController(text: "");
-    //_addressTextEditingController = TextEditingController(text: "");
+    _addressTextEditingController = TextEditingController(text: "");
     residenceTypesSelected = residenceTypes.first;
 
 
