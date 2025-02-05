@@ -28,7 +28,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
 
   }
 
-  pressSelectedByButton(String searchTypeStr, bool isNameButtonSelectedB, bool isCityButtonSelectedB, bool isTypeButtonSelectedB)
+  pressSearchByButton(String searchTypeStr, bool isNameButtonSelectedB, bool isCityButtonSelectedB, bool isTypeButtonSelectedB)
   {
       searchType = searchTypeStr;
       isNameButtonSelected = isNameButtonSelectedB;
@@ -84,7 +84,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                     MaterialButton(onPressed: ()
                     {
                        
-                       pressSelectedByButton("name", true, false, false);
+                       pressSearchByButton("name", true, false, false);
                     },
         
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
@@ -98,7 +98,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                       MaterialButton(onPressed: ()
                       {
         
-                        pressSelectedByButton("city", false, true, false);
+                        pressSearchByButton("city", false, true, false);
                       },
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                         color: isNameButtonSelected ? Colors.pink : Colors.white,
@@ -111,7 +111,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                       MaterialButton(onPressed: ()
                       {
         
-                        pressSelectedByButton("type", false, false, true);
+                        pressSearchByButton("type", false, false, true);
                       },
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                         color: isNameButtonSelected ? Colors.pink : Colors.white,
@@ -124,7 +124,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                       MaterialButton(onPressed: ()
                       {
         
-                        pressSelectedByButton("", false, false, false);
+                        pressSearchByButton("", false, false, false);
                       },
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                         color: isNameButtonSelected ? Colors.pink : Colors.white,
