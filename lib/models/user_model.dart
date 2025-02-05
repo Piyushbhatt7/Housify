@@ -88,6 +88,7 @@ class UserModel extends ContactModel{
         {
           PostingModel posting = PostingModel(id: postingID);
           await posting.getPostingInfoFromFirestore();
+          
           await posting.getAllImagesFromStorage();
 
          myPostings!.add(posting);
