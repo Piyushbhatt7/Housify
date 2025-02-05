@@ -7,7 +7,7 @@ class PostingGridTileUi extends StatefulWidget {
  
   PostingModel? posting;
 
-   PostingGridTileUi({super.key, this.posting});
+   PostingGridTileUi({super.key, this.posting}); // 10:52
 
   @override
   State<PostingGridTileUi> createState() => _PostingGridTileUiState();
