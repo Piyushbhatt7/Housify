@@ -40,152 +40,154 @@ class _ExploreScreenState extends State<ExploreScreen> {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.fromLTRB(25, 15, 20, 0),
-      child: Column(
-        children: [
-
-             // searchbar
-
-             Padding(
-              padding: const EdgeInsets.only(top: 0, bottom: 0),
-              child: TextField(
-                decoration: const InputDecoration(
-                  hintText: 'Search',
-                  prefixIcon: Icon(Icons.search),
-                  border: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Colors.grey,
-                      width: 2.0,
-                    )
-                  ),
-                  contentPadding: EdgeInsets.all(5.0),
-                ),
-                style: const TextStyle(
-                  fontSize: 20.0,
-                  color: Colors.black,
-                ),
-
-                controller: controllerSearch,
-                onEditingComplete: searchByField,
-              ),
-             ),
-
-             // name - city - type - clear button
-
-             SizedBox(
-              height: 48,
-              width: MediaQuery.of(context).size.width/ .5,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
-
-                children: [
-
-                  MaterialButton(onPressed: ()
-                  {
-                     
-                     pressSelectedByButton("name", true, false, false);
-                  },
-
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                  color: isNameButtonSelected ? Colors.pink : Colors.white,
-                  child: const Text("Name"),
-      
-                  ),
-                    
-                    const SizedBox(width: 6.0,),
-
-                    MaterialButton(onPressed: ()
-                    {
-
-                      pressSelectedByButton("city", false, true, false);
-                    },
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                      color: isNameButtonSelected ? Colors.pink : Colors.white,
-                      child: const Text("City"),
-                    ),
-
-                     
-                     const SizedBox(width: 6.0,),
-
-                    MaterialButton(onPressed: ()
-                    {
-
-                      pressSelectedByButton("type", false, false, true);
-                    },
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                      color: isNameButtonSelected ? Colors.pink : Colors.white,
-                      child: const Text("Type"),
-                    ),
-
-
-                     const SizedBox(width: 6.0,),
-
-                    MaterialButton(onPressed: ()
-                    {
-
-                      pressSelectedByButton("", false, false, false);
-                    },
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                      color: isNameButtonSelected ? Colors.pink : Colors.white,
-                      child: const Text("Clear"),
-                    ),
-                ],
-              ),
-             ),
-             
-
-             // display listings
-
-             StreamBuilder(
-              stream: stream, 
-              builder: (context, dataSnapshots)
-              {
-                if(dataSnapshots.hasData)
-                {
-                  return GridView.builder(
-                    physics: const ScrollPhysics(),
-                    shrinkWrap: true,
-                    itemCount: dataSnapshots.data.docs.length,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      crossAxisSpacing: 15,
-                      childAspectRatio: 3/4,
-                       ), 
-
-                    itemBuilder: (context, index)
-                    {
-                      DocumentSnapshot snapshot = dataSnapshots.data.docs[index];
-
-                      PostingModel cPosting = PostingModel(id: snapshot.id);
-
-                      cPosting.getPostingInfoFromSnapshot(snapshot);
-
-                      return InkResponse(
-                        onTap: () {
-
-                          Get.to(ViewPostingScreen(posting: cPosting,));
-                          
-                        },
-                        enableFeedback: true,
-                        child: PostingGridTileUi(
-                          posting: cPosting,
-
-                        ),
-                      );
-                    }
-                    );
-                 }
-   
-                else {
-                  return Center(
-                    child: CircularProgressIndicator(),
-                  );
-                }
-              }
-               
-              )
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
         
-        ],
+               // searchbar
+        
+               Padding(
+                padding: const EdgeInsets.only(top: 0, bottom: 0),
+                child: TextField(
+                  decoration: const InputDecoration(
+                    hintText: 'Search',
+                    prefixIcon: Icon(Icons.search),
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.grey,
+                        width: 2.0,
+                      )
+                    ),
+                    contentPadding: EdgeInsets.all(5.0),
+                  ),
+                  style: const TextStyle(
+                    fontSize: 20.0,
+                    color: Colors.black,
+                  ),
+        
+                  controller: controllerSearch,
+                  onEditingComplete: searchByField,
+                ),
+               ),
+        
+               // name - city - type - clear button
+        
+               SizedBox(
+                height: 48,
+                width: MediaQuery.of(context).size.width/ .5,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+        
+                  children: [
+        
+                    MaterialButton(onPressed: ()
+                    {
+                       
+                       pressSelectedByButton("name", true, false, false);
+                    },
+        
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                    color: isNameButtonSelected ? Colors.pink : Colors.white,
+                    child: const Text("Name"),
+        
+                    ),
+                      
+                      const SizedBox(width: 6.0,),
+        
+                      MaterialButton(onPressed: ()
+                      {
+        
+                        pressSelectedByButton("city", false, true, false);
+                      },
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                        color: isNameButtonSelected ? Colors.pink : Colors.white,
+                        child: const Text("City"),
+                      ),
+        
+                       
+                       const SizedBox(width: 6.0,),
+        
+                      MaterialButton(onPressed: ()
+                      {
+        
+                        pressSelectedByButton("type", false, false, true);
+                      },
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                        color: isNameButtonSelected ? Colors.pink : Colors.white,
+                        child: const Text("Type"),
+                      ),
+        
+        
+                       const SizedBox(width: 6.0,),
+        
+                      MaterialButton(onPressed: ()
+                      {
+        
+                        pressSelectedByButton("", false, false, false);
+                      },
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                        color: isNameButtonSelected ? Colors.pink : Colors.white,
+                        child: const Text("Clear"),
+                      ),
+                  ],
+                ),
+               ),
+               
+        
+               // display listings
+        
+               StreamBuilder(
+                stream: stream, 
+                builder: (context, dataSnapshots)
+                {
+                  if(dataSnapshots.hasData)
+                  {
+                    return GridView.builder(
+                      physics: const ScrollPhysics(),
+                      shrinkWrap: true,
+                      itemCount: dataSnapshots.data.docs.length,
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        crossAxisSpacing: 15,
+                        childAspectRatio: 3/4,
+                         ), 
+        
+                      itemBuilder: (context, index)
+                      {
+                        DocumentSnapshot snapshot = dataSnapshots.data.docs[index];
+        
+                        PostingModel cPosting = PostingModel(id: snapshot.id);
+        
+                        cPosting.getPostingInfoFromSnapshot(snapshot);
+        
+                        return InkResponse(
+                          onTap: () {
+        
+                            Get.to(ViewPostingScreen(posting: cPosting,));
+                            
+                          },
+                          enableFeedback: true,
+                          child: PostingGridTileUi(
+                            posting: cPosting,
+        
+                          ),
+                        );
+                      }
+                      );
+                   }
+           
+                  else {
+                    return Center(
+                      child: CircularProgressIndicator(),
+                    );
+                  }
+                }
+                 
+                )
+          
+          ],
+        ),
       ),
     );
   }
