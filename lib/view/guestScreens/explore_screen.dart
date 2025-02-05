@@ -141,12 +141,12 @@ class _ExploreScreenState extends State<ExploreScreen> {
                 stream: stream, 
                 builder: (context, snapshots)
                 {
-                  if(dataSnapshots.hasData)
+                  if(snapshots.hasData)
                   {
                     return GridView.builder(
                       physics: const ScrollPhysics(),
                       shrinkWrap: true,
-                      itemCount: dataSnapshots.data.docs.length,
+                      itemCount: snapshots.data.docs.length,
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
                         crossAxisSpacing: 15,
@@ -155,7 +155,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
         
                       itemBuilder: (context, index)
                       {
-                        DocumentSnapshot snapshot = dataSnapshots.data.docs[index];
+                        DocumentSnapshot snapshot = snapshots.data.docs[index];
         
                         PostingModel cPosting = PostingModel(id: snapshot.id);
         
