@@ -110,7 +110,9 @@ class _LoginScreenState extends State<LoginScreen> {
                             {
                                  if(_formkey.currentState!.validate()){
                                    
-                                   await userViewModel.login(_emailTextEditingController.text.trim(), _passwordTextEditingController.text.trim());
+                                   await userViewModel.login(
+                                    _emailTextEditingController.text.trim(),
+                                    _passwordTextEditingController.text.trim());
                                  }
                             }, 
                             style: ElevatedButton.styleFrom(
