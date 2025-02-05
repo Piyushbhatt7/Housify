@@ -227,7 +227,7 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
                       }
                     }
 
-                  await  postingViewModel.addListingInfoToFirestore();
+                  await  postingViewModel.updateListingInfoToFirestore();
 
                   Get.snackbar("Update Listing", "your listing is updated successfully");
             }
