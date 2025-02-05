@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:housify/global.dart';
 import 'package:housify/models/app_constants.dart';
 import 'package:housify/models/posting_model.dart';
+import 'package:housify/view/guest_home_screen.dart';
 import 'package:housify/view/host_home_screen.dart';
 import 'package:housify/view/widgets/amenities_ui.dart';
 import 'package:image_picker/image_picker.dart';
@@ -233,9 +234,9 @@ class _CreatePostingScreenState extends State<CreatePostingScreen> {
             }
            
           //R postingModel = PostingModel();
-          PostingModel newPosting = PostingModel();
+          // PostingModel newPosting = PostingModel();
 
-          Get.to(HostHomeScreen(index: 1,)); 
+          Get.to(GuestHomeScreen()); 
 
 
           }, icon: const Icon(Icons.upload)
