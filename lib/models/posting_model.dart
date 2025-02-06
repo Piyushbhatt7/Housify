@@ -44,7 +44,7 @@ class PostingModel {
      bookings = [];
      reviews = [];
  }
-
+ 
  setImagesNames()
  {
   imageName = [];
