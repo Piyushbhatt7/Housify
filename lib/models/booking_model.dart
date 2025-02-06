@@ -1,7 +1,7 @@
 import 'package:housify/models/contact_model.dart';
 import 'package:housify/models/posting_model.dart';
 
-class BookingModel { 
+class BookingModel {  
    
    String id = ""; 
    PostingModel? posting;
