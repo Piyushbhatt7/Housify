@@ -8,5 +8,5 @@ class BookingModel {
    ContactModel? contact;
    List<DateTime>? dates;
 
-   BookingModel(); 
+   BookingModel();  
 }
