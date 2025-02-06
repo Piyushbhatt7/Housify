@@ -3,7 +3,7 @@ import 'package:housify/models/posting_model.dart';
 
 class BookingModel {
    
-   String id = "";
+   String id = ""; 
    PostingModel? posting;
    ContactModel? contact;
    List<DateTime>? dates;
