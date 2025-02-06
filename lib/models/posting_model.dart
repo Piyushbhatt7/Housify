@@ -34,6 +34,7 @@ class PostingModel {
  {
      displayImage = [];
      amenities = [];
+     imageName = [];
 
 
      beds = {};
@@ -74,7 +75,7 @@ class PostingModel {
    String hostID = snapshot['hostID'] ?? "";
    host = ContactModel(id: hostID);
 
-   imageName = List<String>.from(snapshot['imageNames']) ?? [];
+   //imageName = List<String>.from(snapshot['imageNames']) ?? [];
    name = snapshot['names'] ?? "";
    price = snapshot['price'].toDouble() ?? 0.0;
    rating = snapshot['rating'].toDouble() ?? 2.5;
