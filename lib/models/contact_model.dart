@@ -26,7 +26,7 @@ class ContactModel {
    }
      UserModel createUserFromContact() {
        
-       return UserModel( gggu
+       return UserModel( ggguj
          
          id: id!,
          firstName: firstName!,
