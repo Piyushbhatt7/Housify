@@ -162,12 +162,13 @@ class _ExploreScreenState extends State<ExploreScreen> {
                         cPosting.getPostingInfoFromSnapshot(snapshot);
         
                         return InkResponse(
+                           enableFeedback: true,
                           onTap: () {
         
                             Get.to(ViewPostingScreen(posting: cPosting,));
                             
                           },
-                          enableFeedback: true,
+                         
                           child: PostingGridTileUi(
                             posting: cPosting,
         
