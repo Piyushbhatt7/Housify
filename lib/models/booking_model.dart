@@ -5,7 +5,7 @@ class BookingModel {
    
    String id = ""; 
    PostingModel? posting; 
-   ContactModel? contact;
+   ContactModel? contact; 
    List<DateTime>? dates; 
  
    BookingModel();   
