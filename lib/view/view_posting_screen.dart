@@ -261,7 +261,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                     fontSize: 25
                   ),
                  ),
-                 
+                  
 
                  Padding(
                   padding: const EdgeInsets.only(top: 5.0, bottom: 25),
