@@ -7,6 +7,6 @@ class BookingModel {
    PostingModel? posting;
    ContactModel? contact;
    List<DateTime>? dates;
-
+ 
    BookingModel();   
 } 
