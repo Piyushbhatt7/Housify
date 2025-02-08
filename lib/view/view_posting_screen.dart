@@ -122,8 +122,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                     Column(
                       children: [
 
-                        Container(
-                           
+                        Container(             
                        decoration: BoxDecoration(
                        gradient: LinearGradient(
                        colors: [
