@@ -110,7 +110,7 @@ class PostingModel {
       .child("postingImages")
       .child(id!)
       .child(imageName!.first)
-      .getData(1024 * 1024);
+      .getData(1024*1024);
 
       displayImage!.add(MemoryImage(imageData!));
 
