@@ -226,7 +226,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
 
                         PostingInfoTrialUi(
                           iconData: Icons.home,
-                          category: posting!.type,
+                          category: posting!.type!,
                           categoryInfo: '${posting!.getGuestNumber()} guests',
                         ),
 
