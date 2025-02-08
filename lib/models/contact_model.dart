@@ -48,7 +48,7 @@ class ContactModel {
      {
        if(displayImage != null)
        {
-         return displayImage;
+         return displayImage!;
        }
 
        final imageData = await FirebaseStorage.instance.ref()
