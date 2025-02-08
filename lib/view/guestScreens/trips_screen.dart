@@ -10,8 +10,6 @@ class TripsScreen extends StatefulWidget {
 class _TripsScreenState extends State<TripsScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-     
-    );
+    return Scaffold();
   }
 }
