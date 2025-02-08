@@ -157,10 +157,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                         ),
                       ],
                     )
-                    
-
-
-                
+                       
                   ],
                  ),
 
