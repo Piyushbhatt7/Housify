@@ -15,7 +15,7 @@ class PostingModel {
   String? description;
   String? address;
   String? city;
-  String? country;
+  String? country; 
   double? rating;
 
   ContactModel? host;
