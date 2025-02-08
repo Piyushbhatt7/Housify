@@ -18,7 +18,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
 
   getRequiredInfo() async
   {
-    await posting!.fetchAllImageUrls();
+    await posting!.getAllImagesFromStorage();
     await posting!.getHostFromFirestore();
 
     setState(() {

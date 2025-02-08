@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:housify/models/booking_model.dart';
@@ -6,6 +7,7 @@ import 'package:housify/models/contact_model.dart';
 import 'package:housify/models/review_model.dart';
 
 class PostingModel {
+
   String? id;
   String? name;
   String? type;
@@ -17,8 +19,9 @@ class PostingModel {
   double? rating;
 
   ContactModel? host;
-  List<String>? imageNames;
-  List<String>? imageUrls;
+
+  List<String>? imageName;
+  List<MemoryImage>? displayImage;
   List<String>? amenities;
 
   Map<String, int>? beds;
@@ -27,155 +30,195 @@ class PostingModel {
   List<BookingModel>? bookings;
   List<ReviewModel>? reviews;
 
-  PostingModel({
-    this.id = "",
-    this.name = "",
-    this.type,
-    this.price = 0,
-    this.description = "",
-    this.address = "",
-    this.city = "",
-    this.country = "",
-    this.host,
-  }) {
-    imageUrls = [];
-    amenities = [];
-    imageNames = [];
+ PostingModel({this.id = "", this.name = "", this.type, this.price = 0, this.description = "", this.address = "", this.city = "", this.country = "", this.host})
+ {
+     displayImage = [];
+     amenities = [];
+     imageName = [];
 
-    beds = {};
-    bathrooms = {};
-    rating = 0;
 
-    bookings = [];
-    reviews = [];
+     beds = {};
+     bathrooms = {};
+     rating = 0; 
+
+     bookings = [];
+     reviews = [];
+ }
+ 
+ setImagesNames()
+ {
+  imageName = [];
+  
+  for(int i = 0; i < displayImage!.length; i++)
+  {
+     imageName!.add("image${i}.png");
   }
+ }
 
-  /// Fetch Posting Info from Firestore
-  Future<void> getPostingInfoFromFirestore() async {
-    DocumentSnapshot snapshot =
-        await FirebaseFirestore.instance.collection('postings').doc(id).get();
-    getPostingInfoFromSnapshot(snapshot);
-  }
+ getPostingInfoFromFirestore() async
+ {
+   DocumentSnapshot snapshot = await FirebaseFirestore.instance.collection('postings').doc(id).get();
 
-  /// Extract Posting Info from Firestore Snapshot
-  void getPostingInfoFromSnapshot(DocumentSnapshot snapshot) {
-    address = snapshot['address'] ?? "";
-    amenities = List<String>.from(snapshot['amenities'] ?? []);
-    bathrooms = Map<String, int>.from(snapshot['bathrooms'] ?? {});
-    beds = Map<String, int>.from(snapshot['beds'] ?? {});
-    city = snapshot['city'] ?? "";
-    country = snapshot['country'] ?? "";
-    description = snapshot['description'] ?? "";
+   getPostingInfoFromSnapshot(snapshot);
+ }
+ 
+ getPostingInfoFromSnapshot(DocumentSnapshot snapshot) // 9:38
+ {
+   address = snapshot['address'] ?? "";
+   amenities = List<String>.from(snapshot['amenities']) ?? [];
+   bathrooms = Map<String, int>.from(snapshot['bathrooms']) ?? {};
+   beds = Map<String, int>.from(snapshot['beds']) ?? {};
+   city = snapshot['city'] ?? "";
+   country = snapshot['country'] ?? "";
+   description = snapshot['description'] ?? "";
 
-    String hostID = snapshot['hostID'] ?? "";
-    host = ContactModel(id: hostID);
+   String hostID = snapshot['hostID'] ?? "";
+   host = ContactModel(id: hostID);
 
-    imageNames = List<String>.from(snapshot['imageNames'] ?? []);
-    name = snapshot['name'] ?? "";
-    price = snapshot['price']?.toDouble() ?? 0.0;
-    rating = snapshot['rating']?.toDouble() ?? 2.5;
-    type = snapshot['type'] ?? "";
-  }
+   // imageName = List<String>.from(snapshot['imageNames']) ?? [];
+   name = snapshot['names'] ?? "";
+   price = snapshot['price'].toDouble() ?? 0.0;
+   rating = snapshot['rating'].toDouble() ?? 2.5;
+   type = snapshot['type'] ?? "";
 
-  /// Fetch all image URLs from Firebase Storage
-  Future<void> fetchAllImageUrls() async {
-    print("Fetching Image URLs...");
-    imageUrls = [];
+ }
 
-    try {
-      for (String imageName in imageNames!) {
-        String imageUrl = await FirebaseStorage.instance
-            .ref()
-            .child("postingImages/$id/$imageName")
-            .getDownloadURL();
+ Future<List<String>> getAllImagesFromStorage() async {
+  print("Fetching Images...");
+  List<String> imageUrls = [];
 
-        imageUrls!.add(imageUrl);
-      }
-    } catch (e) {
-      print("Error fetching images: $e");
-    }
-  }
-
-  /// Fetch the first image URL from Firebase Storage
-  Future<String?> fetchFirstImageUrl() async {
-    if (imageUrls!.isNotEmpty) {
-      return imageUrls!.first;
-    }
-
-    if (imageNames == null || imageNames!.isEmpty) {
-      return null;
-    }
-
-    try {
-      return await FirebaseStorage.instance
+  try {
+    for (int i = 0; i < imageName!.length; i++) {
+      String imageUrl = await FirebaseStorage.instance
           .ref()
-          .child("postingImages/$id/${imageNames!.first}")
+          .child("postingImages")
+          .child(id!)
+          .child(imageName![i])
           .getDownloadURL();
-    } catch (e) {
-      print("Error fetching first image: $e");
-      return null;
+
+      imageUrls.add(imageUrl);
     }
+  } catch (e) {
+    print("Error fetching images: $e");
   }
 
-  /// Convert amenities list to a readable string
-  String getAmenitiesString() {
-    return amenities!.isEmpty ? "" : amenities!.join(", ");
-  }
+  return imageUrls;
+}
 
-  /// Calculate and return current rating
-  double getCurrentRating() {
-    if (reviews!.isEmpty) return 4.0;
 
-    double totalRating = reviews!.fold(0, (sum, review) => sum + review.rating!);
-    return totalRating / reviews!.length;
-  }
-
-  /// Fetch host info from Firestore
-  Future<void> getHostFromFirestore() async {
-    await host!.getContactInfoFromFirestore();
-    await host!.getImageFromStorage();
-  }
-
-  /// Get total number of guests that can be accommodated
-  int getGuestNumber() {
-    return (beds?['small'] ?? 0) +
-        (beds?['medium'] ?? 0) * 2 +
-        (beds?['large'] ?? 0) * 2;
-  }
-
-  /// Get formatted bedrooms info
-  String getBedroomsText() {
-    List<String> bedroomTexts = [];
-
-    if ((beds?['small'] ?? 0) > 0) {
-      bedroomTexts.add("${beds!['small']} single/twin");
-    }
-    if ((beds?['medium'] ?? 0) > 0) {
-      bedroomTexts.add("${beds!['medium']} double");
-    }
-    if ((beds?['large'] ?? 0) > 0) {
-      bedroomTexts.add("${beds!['large']} queen/king");
+ getFirstImageFromStorage () async
+ {
+    if(displayImage!.isNotEmpty)
+    {
+      return displayImage!.first;
     }
 
-    return bedroomTexts.join(", ");
-  }
+    final imageData = await FirebaseStorage.instance.ref()
+      .child("postingImages")
+      .child(id!)
+      .child(imageName != null && imageName!.isNotEmpty ? imageName!.first : "")
+      .getData(1024*1024);
 
-  /// Get formatted bathrooms info
-  String getBathroomsText() {
-    List<String> bathroomTexts = [];
-
-    if ((bathrooms?['full'] ?? 0) > 0) {
-      bathroomTexts.add("${bathrooms!['full']} full");
-    }
-    if ((bathrooms?['half'] ?? 0) > 0) {
-      bathroomTexts.add("${bathrooms!['half']} half");
+    if (imageData != null) {
+      displayImage!.add(MemoryImage(imageData));
     }
 
-    return bathroomTexts.join(", ");
+    return displayImage!.isNotEmpty ? displayImage!.first : null;
+ }
+
+ getAmenitiesString()
+ {
+   if(amenities!.isEmpty)
+   {
+    return "";
+   }
+
+   String amenitiesString = amenities.toString();
+
+   return amenitiesString.substring(1, amenitiesString.length-1);
+ }
+
+  double getCurrentRating () 
+ {
+   if(reviews!.length == 0)
+   {
+    return 4;
+   }
+
+   double rating = 0;
+
+   reviews!.forEach((reviews)
+   {
+      rating += reviews.rating!;
+   });
+
+   rating = rating / reviews!.length;
+
+   return rating;
+
+ }
+
+ getHostFromFirestore() async
+ {
+   await host!.getContactInfoFromFirestore();
+   await host!.getImageFromStorage();
+ }
+
+ int getGuestNumber()
+ {
+   int? numGuests = 0;
+   numGuests = numGuests + beds!['small']!;
+   numGuests = numGuests + beds!['medium']!*2;
+   numGuests = numGuests + beds!['large']!*2;
+
+   return numGuests;
+ }
+
+
+ String getBedroomsText()
+ {
+  String text = "";
+
+  if(beds!["small"] != 0)
+  {
+    text = text + beds!["small"].toString() + " single/twin";
   }
 
-  /// Get full address in a readable format
-  String getFullAddress() {
-    return "$address, $city, $country";
+   
+   if(beds!["medium"] != 0)
+  {
+    text = text + beds!["medium"].toString() + " double";
   }
+
+  if(beds!["large"] != 0)
+  {
+    text = text + this.beds!["large"].toString() + " queen/king";
+  }
+
+  return text;
+ }
+
+
+ String getBathroomsText()
+ {
+   String text = "";
+
+   if(bathrooms!["full"] != 0)
+   {
+    text = text + bathrooms!["full"].toString() + " full";
+   }
+
+   if(bathrooms!["half"] != 0)
+   {
+     text = text + bathrooms!["half"].toString() + " half";
+   }
+
+   return text;
+ }
+
+ String getFullAddress()
+ {
+   return address! + ", " + city! + ", " + country!;
+ }
+ 
 }
