@@ -74,7 +74,7 @@ class UserViewModel {
           .child(currentUserId)
           .child(currentUserId + ".png");
 
-          await referenceStorage.putFile(imageFileOfUser).whenComplete(() {});
+          await referenceStorage.putFile(imageFileOfUser).whenComplete((){});
 
           AppConstants.currentUser.displayImage = MemoryImage(imageFileOfUser.readAsBytesSync());
       }
