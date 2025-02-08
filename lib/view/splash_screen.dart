@@ -9,18 +9,18 @@ class SplashScreen extends StatefulWidget {
   @override
   State<SplashScreen> createState() => _SplashScreenState();
 }
-class _SplashScreenState extends State<SplashScreen> {
 
+class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
 
-    Timer(const Duration(seconds: 3), (){
-    Get.to(LoginScreen());
-
+    Timer(const Duration(seconds: 3), () {
+      Get.to(LoginScreen());
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,15 +42,14 @@ class _SplashScreenState extends State<SplashScreen> {
             children: [
               Image.asset("images/splash.png"),
               const Padding(
-                padding:  EdgeInsets.only(top: 18.0),
+                padding: EdgeInsets.only(top: 18.0),
                 child: Text(
                   "Welcome to Housify",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 28,
-                      color: Colors.white
-                      ),
+                      color: Colors.white),
                 ),
               )
             ],
