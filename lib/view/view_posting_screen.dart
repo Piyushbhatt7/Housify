@@ -99,7 +99,9 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
 
-                 // posting name btn // book now btn // price btn
+                 // posting name btn 
+                 // book now btn
+                  // price btn
 
                  Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
