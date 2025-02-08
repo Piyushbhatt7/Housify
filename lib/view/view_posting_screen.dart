@@ -101,6 +101,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
 
                  // posting name btn // book now btn
                  // desription - profile pic
+                 // apartment - beds - bathrooms
                   // price btn
 
                  Row(
