@@ -183,7 +183,7 @@ class PostingModel {
 
   if(beds!["large"] != 0)
   {
-    text = text + beds!["large"].toString() + " queen/king";
+    text = text + this.beds!["large"].toString() + " queen/king";
   }
 
   return text;
