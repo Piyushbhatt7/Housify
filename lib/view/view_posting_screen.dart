@@ -175,7 +175,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                             child: Text(
                               posting!.description!,
                               textAlign: TextAlign.justify,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 14,
                               ),
                               maxLines: 5,
