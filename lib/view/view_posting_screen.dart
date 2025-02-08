@@ -44,7 +44,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
           decoration: BoxDecoration(
               gradient: LinearGradient(
             colors: [
-              
+
               Colors.pinkAccent,
               Colors.amberAccent,
             ],
@@ -194,7 +194,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                                   radius: MediaQuery.of(context).size.width / 12.5,
                                   backgroundColor: Colors.black,
                                   child: CircleAvatar(
-                                    backgroundImage: posting!.host!.displayImage,
+                                    backgroundImage: posting!.host!.displayImage!,
                                     radius: MediaQuery.of(context).size.width / 13,
                                   ),
                                 ),
