@@ -103,6 +103,8 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                  // desription - profile pic
                  // apartment - beds - bathrooms
                   // price btn
+                  // amenities
+                  // locations
 
                  Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
