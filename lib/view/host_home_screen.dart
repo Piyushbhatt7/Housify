@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:housify/view/HostScreens/booking_screen.dart';
 import 'package:housify/view/HostScreens/my_posting_screen.dart';
 import 'package:housify/view/guestScreens/account_screen.dart';
-import 'package:housify/view/guestScreens/explore_screen.dart';
 import 'package:housify/view/guestScreens/inbox_screen.dart';
 import 'package:housify/view/guestScreens/saved_listing_screen.dart';
 import 'package:housify/view/guestScreens/trips_screen.dart';
