@@ -100,7 +100,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
               children: [
 
                  // posting name btn // book now btn
-
+                 // desription - profile pic
                   // price btn
 
                  Row(
