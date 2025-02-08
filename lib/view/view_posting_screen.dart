@@ -168,7 +168,6 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
                     children: [
 
                            SizedBox(
