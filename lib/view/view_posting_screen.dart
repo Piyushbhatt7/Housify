@@ -184,7 +184,6 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
 
                            Column(
                             children: [
-
                               GestureDetector(
                                 onTap: () {
                                   
