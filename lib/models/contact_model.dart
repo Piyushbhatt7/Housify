@@ -23,8 +23,7 @@ class ContactModel {
 
      return fullName = firstName! + " " + lastName!;
 
-   }
-     UserModel createUserFromContact() {
+   }     UserModel createUserFromContact() {
        
        return UserModel(
          
