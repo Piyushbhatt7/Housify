@@ -281,7 +281,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
                               style: const TextStyle(
                                 color: Colors.black45,
                                 fontSize: 16,
-                                fontWeight: FontWeight.bold
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
                           ),
