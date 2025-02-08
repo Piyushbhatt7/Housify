@@ -155,6 +155,10 @@ class _ExploreScreenState extends State<ExploreScreen> {
         
                       itemBuilder: (context, index)
                       {
+                        if (dataSnapshots.data == null || dataSnapshots.data.docs == null) {
+                          return Center(child: CircularProgressIndicator());
+                        }
+                        
                         DocumentSnapshot snapshot = dataSnapshots.data.docs[index];
         
                         PostingModel cPosting = PostingModel(id: snapshot.id);

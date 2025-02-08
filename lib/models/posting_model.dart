@@ -88,12 +88,14 @@ class PostingModel {
     for(int i = 0; i < imageName!.length; i++)
     {
       final imageData = await FirebaseStorage.instance.ref()
-      .child("postingImages")
-      .child(id!)
-      .child(imageName![i])
-      .getData(1024*1024);
-
-      displayImage!.add(MemoryImage(imageData!));
+        .child("postingImages")
+        .child(id!)
+        .child(imageName![i])
+        .getData(1024*1024);
+  
+      if (imageData != null) {
+        displayImage!.add(MemoryImage(imageData));
+      }
     }
 
     return displayImage;
@@ -109,12 +111,14 @@ class PostingModel {
     final imageData = await FirebaseStorage.instance.ref()
       .child("postingImages")
       .child(id!)
-      .child(imageName!.first)
+      .child(imageName != null && imageName!.isNotEmpty ? imageName!.first : "")
       .getData(1024*1024);
 
-      displayImage!.add(MemoryImage(imageData!));
+    if (imageData != null) {
+      displayImage!.add(MemoryImage(imageData));
+    }
 
-      return displayImage!.first;
+    return displayImage!.isNotEmpty ? displayImage!.first : null;
  }
 
  getAmenitiesString()
@@ -212,4 +216,4 @@ class PostingModel {
    return address! + ", " + city! + ", " + country!;
  }
  
-} 
+}
