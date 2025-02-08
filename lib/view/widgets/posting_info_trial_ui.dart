@@ -21,7 +21,7 @@ class _PostingInfoTrialUiState extends State<PostingInfoTrialUi> {
         widget.iconData,
         size: 30,
       ),
-
+  // 11:32
       title: Text(
         widget.category!,
         style: const TextStyle(
