@@ -10,8 +10,6 @@ class SavedListingScreen extends StatefulWidget {
 class _SavedListingScreenState extends State<SavedListingScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      
-    );
+    return Scaffold();
   }
 }
