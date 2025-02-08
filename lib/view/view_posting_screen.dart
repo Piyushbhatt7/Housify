@@ -100,11 +100,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
               children: [
 
                  // posting name btn // book now btn
-                 // desription - profile pic
-                 // apartment - beds - bathrooms
-                  // price btn
-                  // amenities
-                  // locations
+                 
 
                  Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
