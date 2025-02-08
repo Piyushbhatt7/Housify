@@ -44,6 +44,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
           decoration: BoxDecoration(
               gradient: LinearGradient(
             colors: [
+              
               Colors.pinkAccent,
               Colors.amberAccent,
             ],
