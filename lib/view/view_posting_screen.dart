@@ -30,7 +30,7 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    
+
     posting = widget.posting;
     
     getRequiredInfo();
@@ -57,7 +57,8 @@ class _ViewPostingScreenState extends State<ViewPostingScreen> {
         title: const Text("Posting Information", style: TextStyle(color: Colors.white),),
         actions: [
 
-          IconButton(onPressed: ()
+          IconButton(
+            onPressed: ()
           {
                  
           },
