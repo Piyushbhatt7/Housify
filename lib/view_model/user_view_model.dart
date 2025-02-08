@@ -9,160 +9,141 @@ import 'package:housify/models/user_model.dart';
 import 'package:housify/view/guest_home_screen.dart';
 
 class UserViewModel {
-
   UserModel userModel = UserModel();
 
-  signUp(email, password, firstName, lastName, city, country, bio, imageFileOfUser) async
-  {
-
+  signUp(email, password, firstName, lastName, city, country, bio,
+      imageFileOfUser) async {
     Get.snackbar("Please wait", "we are creating your account");
 
-     try 
-     {
-         await FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: password).then((result) async
-      {
-          String currentUserID = result.user!.uid; 
+    try {
+      await FirebaseAuth.instance
+          .createUserWithEmailAndPassword(email: email, password: password)
+          .then((result) async {
+        String currentUserID = result.user!.uid;
 
-              AppConstants.currentUser.id = currentUserID;
-              AppConstants.currentUser.firstName = firstName;
-              AppConstants.currentUser.city = city;
-              AppConstants.currentUser.country = country;
-              AppConstants.currentUser.bio = bio;
-              AppConstants.currentUser.email = email;
-              AppConstants.currentUser.password = password;
+        AppConstants.currentUser.id = currentUserID;
+        AppConstants.currentUser.firstName = firstName;
+        AppConstants.currentUser.city = city;
+        AppConstants.currentUser.country = country;
+        AppConstants.currentUser.bio = bio;
+        AppConstants.currentUser.email = email;
+        AppConstants.currentUser.password = password;
 
-            await  saveUserToFirestore(bio, city, country, email, firstName, lastName, currentUserID).whenComplete(() async
-            {
-              await addImageToFirebaseStorage(imageFileOfUser, currentUserID);
-            });
-            
-            Get.to(GuestHomeScreen());
-            Get.snackbar("Congratulation", "your account has been created successfully");
+        await saveUserToFirestore(
+                bio, city, country, email, firstName, lastName, currentUserID)
+            .whenComplete(() async {
+          await addImageToFirebaseStorage(imageFileOfUser, currentUserID);
+        });
 
-      }); 
-     }
-
-     catch(e)
-     {
-       Get.snackbar("Error", e.toString());
-     }
+        Get.to(GuestHomeScreen());
+        Get.snackbar(
+            "Congratulation", "your account has been created successfully");
+      });
+    } catch (e) {
+      Get.snackbar("Error", e.toString());
+    }
   }
-   
-    Future<void> saveUserToFirestore (bio, city, country, email, firstName, lastName, id) async 
-      {
-        Map<String, dynamic> dataMap = 
-         {
-            "bio": bio,
-            "city": city,
-            "country": country,
-            "email": email,
-            "firstName": firstName,
-            "lastName": lastName,
-            "isHost": false,
-            "myPostingIds": [],
-            "savedPostingIDs": [],
-            "earnings": 0,
-         };
 
-         await FirebaseFirestore.instance.collection("users").doc(id).set(dataMap);
-      }
+  Future<void> saveUserToFirestore(
+      bio, city, country, email, firstName, lastName, id) async {
+    Map<String, dynamic> dataMap = {
+      "bio": bio,
+      "city": city,
+      "country": country,
+      "email": email,
+      "firstName": firstName,
+      "lastName": lastName,
+      "isHost": false,
+      "myPostingIds": [],
+      "savedPostingIDs": [],
+      "earnings": 0,
+    };
 
-      addImageToFirebaseStorage(File imageFileOfUser, currentUserId) async
-      {
-          Reference referenceStorage = FirebaseStorage.instance.ref()
-          .child("userImages")
-          .child(currentUserId)
-          .child(currentUserId + ".png");
+    await FirebaseFirestore.instance.collection("users").doc(id).set(dataMap);
+  }
 
-          await referenceStorage.putFile(imageFileOfUser).whenComplete((){});
+  addImageToFirebaseStorage(File imageFileOfUser, currentUserId) async {
+    Reference referenceStorage = FirebaseStorage.instance
+        .ref()
+        .child("userImages")
+        .child(currentUserId)
+        .child(currentUserId + ".png");
 
-          AppConstants.currentUser.displayImage = MemoryImage(imageFileOfUser.readAsBytesSync());
-      }
+    await referenceStorage.putFile(imageFileOfUser).whenComplete(() {});
 
-      login(email, password) async
-      {
-        
-        Get.snackbar("Please wait ", "checking your crendentials");
-        try
-        {
-           FirebaseAuth.instance.signInWithEmailAndPassword(
-            email: email, 
-            password: password,
-            ).then((result) async
-            {
-              String currentUserID =  result.user!.uid;
-              AppConstants.currentUser.id = currentUserID;
+    AppConstants.currentUser.displayImage =
+        MemoryImage(imageFileOfUser.readAsBytesSync());
+  }
 
-              await getUserInfoFromFirestore(currentUserID);
-              await getImageFromStrorage(currentUserID);
-              await AppConstants.currentUser.getMyPostingFromFirestore();
+  login(email, password) async {
+    Get.snackbar("Please wait ", "checking your crendentials");
+    try {
+      FirebaseAuth.instance
+          .signInWithEmailAndPassword(
+        email: email,
+        password: password,
+      )
+          .then((result) async {
+        String currentUserID = result.user!.uid;
+        AppConstants.currentUser.id = currentUserID;
 
+        await getUserInfoFromFirestore(currentUserID);
+        await getImageFromStrorage(currentUserID);
+        await AppConstants.currentUser.getMyPostingFromFirestore();
 
-              Get.snackbar("Logged-In", "you are logged-in successfully");
-              Get.to(GuestHomeScreen());
+        Get.snackbar("Logged-In", "you are logged-in successfully");
+        Get.to(GuestHomeScreen());
+      });
+    } catch (e) {
+      Get.snackbar("Error", e.toString());
+    }
+  }
 
-              
-            });
-        }
+  getUserInfoFromFirestore(userID) async {
+    DocumentSnapshot snapshot =
+        await FirebaseFirestore.instance.collection('users').doc(userID).get();
 
-        catch(e)
-        {
-          Get.snackbar("Error", e.toString());
-        }
-      }
+    AppConstants.currentUser.snapshot = snapshot;
+    AppConstants.currentUser.firstName = snapshot["firstName"] ?? "";
+    AppConstants.currentUser.lastName = snapshot["lastName"] ?? "";
+    AppConstants.currentUser.email = snapshot["email"] ?? "";
+    AppConstants.currentUser.bio = snapshot["bio"] ?? "";
+    AppConstants.currentUser.city = snapshot["city"] ?? "";
+    AppConstants.currentUser.country = snapshot["country"] ?? "";
+    AppConstants.currentUser.isHost = snapshot["isHost"] ?? false;
+  }
 
-      getUserInfoFromFirestore(userID) async
-      {
-        DocumentSnapshot snapshot = await FirebaseFirestore.instance.collection('users').doc(userID).get();
+  getImageFromStrorage(userID) async {
+    if (AppConstants.currentUser.displayImage == null) {
+      return AppConstants.currentUser.displayImage;
+    }
 
-        AppConstants.currentUser.snapshot = snapshot;
-        AppConstants.currentUser.firstName = snapshot["firstName"] ?? "";
-        AppConstants.currentUser.lastName = snapshot["lastName"] ?? "";
-        AppConstants.currentUser.email = snapshot["email"] ?? "";
-        AppConstants.currentUser.bio = snapshot["bio"] ?? "";
-        AppConstants.currentUser.city = snapshot["city"] ?? "";
-        AppConstants.currentUser.country = snapshot["country"] ?? "";
-        AppConstants.currentUser.isHost = snapshot["isHost"] ?? false;
-        
-
-
-      }
-
-      getImageFromStrorage(userID) async
-      {
-        if(AppConstants.currentUser.displayImage == null)
-        {
-          return AppConstants.currentUser.displayImage;
-        }
-
-        final imageDataInBytes = await FirebaseStorage.instance.ref()
+    final imageDataInBytes = await FirebaseStorage.instance
+        .ref()
         .child("userImages")
         .child(userID)
         .child(userID + ".png")
         .getData(1024 * 1024);
 
-        AppConstants.currentUser.displayImage =  MemoryImage(imageDataInBytes!);
+    AppConstants.currentUser.displayImage = MemoryImage(imageDataInBytes!);
 
-        return AppConstants.currentUser.displayImage;
-      }
+    return AppConstants.currentUser.displayImage;
+  }
 
-      becomeHost(String userID) async
-      {
-         
-         userModel.isHost = true;
+  becomeHost(String userID) async {
+    userModel.isHost = true;
 
-         Map<String, dynamic> dataMap = 
-         {
-            "isHost" : true,
-         };
+    Map<String, dynamic> dataMap = {
+      "isHost": true,
+    };
 
-         await FirebaseFirestore.instance.collection("users").doc(userID).update(dataMap);
+    await FirebaseFirestore.instance
+        .collection("users")
+        .doc(userID)
+        .update(dataMap);
+  }
 
-      }
-
-      modifyCurrentlyHosting(bool isHosting)
-      {
-           userModel.isCurrentlyHosting = isHosting;
-      }
-
+  modifyCurrentlyHosting(bool isHosting) {
+    userModel.isCurrentlyHosting = isHosting;
+  }
 }
