@@ -18,6 +18,9 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_11.toString()
     }
+    sourceSet {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
@@ -43,5 +46,6 @@ flutter {
     source = "../.."
 }
 
+dependencies {}
 
 apply plugin: 'com.google.gms.google-services'
