@@ -6,7 +6,7 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="24"
-9        android:targetSdkVersion="35" />
+9        android:targetSdkVersion="33" />
 10    <!--
 11         The INTERNET permission is required for development. Specifically,
 12         the Flutter tool needs it to communicate with the running application
