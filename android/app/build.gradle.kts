@@ -1,8 +1,8 @@
 plugins {
     id("com.android.application")
     id("kotlin-android")
-    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
+    id("com.google.gms.google-services") // Correct plugin usage
 }
 
 android {
@@ -18,26 +18,24 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_11.toString()
     }
-    sourceSet {
-        main.java.srcDirs += 'src/main/kotlin'
+
+    sourceSets {
+        getByName("main") {
+            java.srcDirs("src/main/kotlin") // Corrected
+        }
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId = "com.example.housify"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdkVersion 24
-        targetSdkVersion flutter.targetSdkVersion
-        versionCode flutterVersionCode.toInteger()
-        versionName flutterVersionName
+        minSdk = 24  // Corrected
+        targetSdk = flutter.targetSdkVersion  // Corrected
+        versionCode = flutter.versionCode.toInt()  // Corrected
+        versionName = flutter.versionName  // Corrected
     }
 
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = signingConfigs.getByName("debug")  // Keep this only for testing
         }
     }
 }
@@ -46,6 +44,6 @@ flutter {
     source = "../.."
 }
 
-dependencies {}
-
-apply plugin: 'com.google.gms.google-services'
+dependencies {
+    // Add necessary dependencies here
+}
