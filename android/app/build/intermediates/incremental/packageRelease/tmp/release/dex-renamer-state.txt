@@ -1,0 +1,4 @@
+#Fri Mar 07 22:55:16 IST 2025
+base.0=D\:\\Housify\\housify\\android\\app\\build\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
