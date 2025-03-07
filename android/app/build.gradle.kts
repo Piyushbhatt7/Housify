@@ -8,7 +8,8 @@ plugins {
 android {
     namespace = "com.example.housify"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    //ndkVersion = flutter.ndkVersion
+    ndkVersion = "27.0.12077973"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -28,7 +29,8 @@ android {
     defaultConfig {
         applicationId = "com.example.housify"
         minSdk = 24  // Corrected
-        targetSdk = flutter.targetSdkVersion  // Corrected
+        targetSdk = 33
+          // Corrected
         versionCode = flutter.versionCode.toInt()  // Corrected
         versionName = flutter.versionName  // Corrected
     }
